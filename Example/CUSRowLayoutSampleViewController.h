@@ -1,0 +1,17 @@
+//
+//  CUSRowLayoutSampleViewController.h
+//  CUSLayout
+//
+//  Created by zhangyu on 13-4-10.
+//  Copyright (c) 2013年 zhangyu. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "CUSLayout.h"
+#import "CUSLayoutSampleFactory.h"
+@interface CUSRowLayoutSampleViewController : UIViewController
+@property (nonatomic,strong) IBOutlet UIView *contentView;
+@property (nonatomic,strong) IBOutlet UIScrollView *scrollView;
+
+-(IBAction)toolItemClicked:(id)sender;
+@end
