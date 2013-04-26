@@ -45,26 +45,8 @@
 <li>API简单易用，学习成本很低，通过样例程序，即可初步掌握<br>
 心动不如行动，搞起！
 <img src="https://github.com/JJMM/CUSLayout/raw/master/CUSLayoutIntr.gif" alt="image">
-# How to add CUSLayout to your project
-The easiest way to do add CUSLayout to your existing project is to add it as a git SubModule, and then import the project as part of yours:</li>
-</ul><p>In Xcode:</p>
-
-<p>1、open YOUR existing project (or create a new one)
-drag and drop the CUSLayout.xcodeproj file downloaded from github previously from Finder to your project (either root or under Frameworks)</p>
-
-<p>2、In YOUR project configuration:
-in the Build Phases, Add CUSLayout (the lib, not the example app) as a Target Dependency
-in the Link Binary With Libraries section, add the libCUSLayout.a library
-In YOUR Prefix.pch file, add:</p>
-
-<p>3、#import </p>
-
-<p>In YOUR project configuration, on the “Build Settings” tab</p>
-
-<p>4、locate the “User Header Search Paths” setting, and set the Release value to "${PROJECT_DIR}/CUSLayout" (including quotes!) and check the “Recursive” check box.
-The Debug value should already be set, but if it’s not, change that as well.
-5、Also locate the “Always Search User Paths” value and set it to YES.
-That should be all there is. Change the build target to “iOS Device” , and run Product-&gt;Archive. Good luck!</p>
+</li>
+</ul>
       </section>
     </div>
 
