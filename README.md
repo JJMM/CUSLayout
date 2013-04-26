@@ -14,3 +14,5 @@ https://github.com/JJMM/CUSLayout
 后续会推出新的布局类型及完善布局算法，请关注add star，多谢支持。
 
  ![image](https://github.com/JJMM/CUSLayout/raw/master/CUSLayoutIntr.gif)
+
+Plese look the WiKi to use CUSLayout.
