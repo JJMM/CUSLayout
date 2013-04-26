@@ -15,4 +15,5 @@ https://github.com/JJMM/CUSLayout<br>
 
  ![image](https://github.com/JJMM/CUSLayout/raw/master/CUSLayoutIntr.gif)
 =========
-Plese look the WiKi to use CUSLayout.
+Plese look the WiKi to use CUSLayout.<br>
+https://github.com/JJMM/CUSLayout/wiki
