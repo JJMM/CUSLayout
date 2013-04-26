@@ -11,5 +11,6 @@ CUSLayout为iOS下提供托管定位机制，系统提供的绝对定位方式�
 5、API简单易用，学习成本很低，通过样例程序，即可初步掌握
 https://github.com/JJMM/CUSLayout
 心动不如行动，搞起！
+后续会推出新的布局类型及完善布局算法，请关注add star，多谢支持。
 
  ![image](https://github.com/JJMM/CUSLayout/raw/master/CUSLayoutIntr.gif)
