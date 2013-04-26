@@ -12,4 +12,4 @@ CUSLayout为iOS下提供托管定位机制，系统提供的绝对定位方式�
 https://github.com/JJMM/CUSLayout
 心动不如行动，搞起！
 
- ![image](https://github.com/JJMM/CUSLayout/blob/master/CUSLayoutIntr.gif)
+ ![image](https://github.com/JJMM/CUSLayout/raw/master/CUSLayoutIntr.gif)
