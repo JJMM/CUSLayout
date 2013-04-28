@@ -19,7 +19,8 @@
         self.dataItems = [NSMutableArray array];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"作者：",@"张宇", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"版本：",@"1.0", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"邮箱：",@"iosdes@163.com", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"邮箱：",@"cuslayout@163.com", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"微薄：",@"http://weibo.com/cuslayout", nil]];
     }
     return self;
 }
