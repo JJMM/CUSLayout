@@ -3,7 +3,7 @@ CUSLayout
 
 ENGLISH
 =========
-Auto layout for iOS.Simlar to Android,SWT,SWING API.It solves the problem of iPhone, iPhone5, iPad, resolution, rotation etc.
+Open source release of automatic layout framework for iOS,which is simlar to Android,SWT,SWING API.It solves the problem of iPhone, iPhone5, iPad, resolution, rotation etc.
 
 CUSLayout for iOS managed positioning mechanism, the iOS SDK provides absolute positioning is very inconvenient to use, in addition to the emergence of 4-inch screen of the iPhone and iPad to make iOS developer need to spend more time in the layout, however iOS6.0 AutoLayout the mechanism is disappointing, I refer to Android, SWT, Swing layout mechanism, the preparation of for iOS CUSLayout, use CUSLayout has the following advantages:1.Simplify coding, you do not need to take into account the pixel level, only for regional programming, which greatly improves the efficiency of programming2.Good readability, layout type can be a preliminary understanding of layout intent and child controls roughly placed, eliminating the need for a very tedious restore coordinate steps3.When the the UIView container Flip, size change, supporting multiple resolutions, automatic processing4.CUSLayou UIView layout, perfect to migrate to any Application species, will not affect the original application5.The API is simple and easy-to-use, low cost learning through the sample program to preliminary masterFollow-up will launch a new type of layout and perfect layout algorithm, please pay attention to add Star, your support is my greatest motivation, thank you.To on github demand, advice and bugs
 中文
