@@ -12,10 +12,18 @@
 @synthesize contentView;
 @synthesize scrollView;
 
+//rotation
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    
-    self.scrollView.contentSize = CGSizeMake(320 * 2, 44);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, 44);
+    [self.scrollView CUSLayout];
+}
+
+//for ipad of ios4
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, 44);
+    [self.scrollView CUSLayout];
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -29,9 +37,13 @@
     CUSRowLayout *layout = [[CUSRowLayout alloc]init];
     self.contentView.layoutFrame = layout;
     
-    self.scrollView.contentSize = CGSizeMake(320 * 2, 44);
-
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, 44);
+    
+    CUSFillLayout *fillLayout = [[CUSFillLayout alloc]init];
+    fillLayout.spacing = 0;
+    self.scrollView.layoutFrame = fillLayout;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
