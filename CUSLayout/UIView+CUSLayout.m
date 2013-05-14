@@ -90,3 +90,14 @@ static BOOL UIView_CUSLayout_loaded;
 
 
 @end
+
+
+@implementation UIScrollView(UIScrollView_CUSLayout)
+-(CGRect)getClientArea{
+    if(self.contentSize.width == 0 && self.contentSize.height == 0){
+        return self.bounds;
+    }else{
+        return CGRectMake(0, 0, self.contentSize.width, self.contentSize.height);
+    }
+}
+@end

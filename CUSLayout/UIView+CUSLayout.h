@@ -33,3 +33,7 @@
 -(void)CUSLayout:(BOOL)animate;
 -(void)CUSLayout:(BOOL)animate withDuration:(NSTimeInterval)duration;
 @end
+
+@interface UIScrollView(UIScrollView_CUSLayout){
+}
+@end
