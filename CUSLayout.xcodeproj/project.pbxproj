@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2A1D5CD717278775005651B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D5CD617278775005651B6 /* README.txt */; };
+		2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */; };
+		2AAA2286174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
+		2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
+		2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */; };
+		2AAA228C174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */; };
 		2AFF1ED61728D38E002E0C63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B0E3713E052DF00FA85CA /* UIKit.framework */; };
 		2AFF1F361728E142002E0C63 /* CUSFillLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F1C1728E142002E0C63 /* CUSFillLayout.h */; };
 		2AFF1F371728E142002E0C63 /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */; };
@@ -72,6 +77,11 @@
 
 /* Begin PBXFileReference section */
 		2A1D5CD617278775005651B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutDesignerView.h; sourceTree = "<group>"; };
+		2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutDesignerView.m; sourceTree = "<group>"; };
+		2AAA2288174A255B0013A683 /* CUSLayoutManagerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutManagerSampleViewController.h; sourceTree = "<group>"; };
+		2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutManagerSampleViewController.m; sourceTree = "<group>"; };
+		2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLayoutManagerSampleViewController.xib; sourceTree = "<group>"; };
 		2AFF1F1C1728E142002E0C63 /* CUSFillLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayout.h; sourceTree = "<group>"; };
 		2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayout.m; sourceTree = "<group>"; };
 		2AFF1F1E1728E142002E0C63 /* CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayout.h; sourceTree = "<group>"; };
@@ -168,6 +178,9 @@
 		2A4DFA6C17256CC2007FD0C5 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				2AAA2288174A255B0013A683 /* CUSLayoutManagerSampleViewController.h */,
+				2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */,
+				2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */,
 				2AFF1F601728E187002E0C63 /* CUSAboutViewController.h */,
 				2AFF1F611728E187002E0C63 /* CUSAboutViewController.m */,
 				2AFF1F621728E187002E0C63 /* CUSAboutViewController.xib */,
@@ -220,6 +233,8 @@
 				2AFF1F251728E142002E0C63 /* CUSLayoutObject+Util.m */,
 				2AFF1F261728E142002E0C63 /* CUSLayoutUtil.h */,
 				2AFF1F271728E142002E0C63 /* CUSLayoutUtil.m */,
+				2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */,
+				2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */,
 			);
 			path = CUSLayout;
 			sourceTree = "<group>";
@@ -313,6 +328,7 @@
 				2AFF1F561728E142002E0C63 /* CUSTableLayout.h in Headers */,
 				2AFF1F591728E142002E0C63 /* UIView+CUSLayout.h in Headers */,
 				2AFF1F5F1728E166002E0C63 /* libCUSLayout-Prefix.pch in Headers */,
+				2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +409,7 @@
 				2AFF1F7E1728E187002E0C63 /* CUSTableLayoutSampleViewController.xib in Resources */,
 				2AFF1F811728E197002E0C63 /* Icon.png in Resources */,
 				2AFF1F821728E197002E0C63 /* Icon@2x.png in Resources */,
+				2AAA228C174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +432,7 @@
 				2AFF1F551728E142002E0C63 /* CUSTableData.m in Sources */,
 				2AFF1F581728E142002E0C63 /* CUSTableLayout.m in Sources */,
 				2AFF1F5B1728E142002E0C63 /* UIView+CUSLayout.m in Sources */,
+				2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +461,8 @@
 				2AFF1F7A1728E187002E0C63 /* CUSMainViewController.m in Sources */,
 				2AFF1F7B1728E187002E0C63 /* CUSRowLayoutSampleViewController.m in Sources */,
 				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
+				2AAA2286174A25060013A683 /* CUSLayoutDesignerView.m in Sources */,
+				2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/libCUSLayout.dst;
@@ -469,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/libCUSLayout.dst;
@@ -543,6 +565,7 @@
 		D80B0E4C13E052DF00FA85CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 宇 张 (W4AYU56LV3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 宇 张 (W4AYU56LV3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -563,6 +586,7 @@
 		D80B0E4D13E052DF00FA85CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 宇 张 (W4AYU56LV3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 宇 张 (W4AYU56LV3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
