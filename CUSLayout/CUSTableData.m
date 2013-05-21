@@ -69,12 +69,11 @@ static CUSValue* CUSValueInstance;
 }
 
 + (CUSValue *)shareValue{
+    if (!CUSValueInstance) {
+        CUSValueInstance = [[CUSValue alloc]init];
+    }
     return CUSValueInstance;
 }
-+(void)load{
-    CUSValueInstance = [[CUSValue alloc]init];
-}
-
 
 @end
 

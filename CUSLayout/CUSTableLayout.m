@@ -839,7 +839,7 @@ static CUSTableData *CUSTableDataInstance;
 -(CGRect) getControlBoundsByTableData:(UIView *)control rect:(CGRect)rect{
     CUSTableData *data = [self getLayoutDataByControll:control];
     if (data == nil) {
-        data = CUSTableDataInstance;
+        data = [CUSTableLayout shareTableDataInstance];
     }
 //    CGSize size = [self comupteControlSize:control width:rect.size.width height:rect.size.height];
     
@@ -902,7 +902,10 @@ static CUSTableData *CUSTableDataInstance;
     }
 }
 
-+(void)load{
-    CUSTableDataInstance = [[CUSTableData alloc]init];
++(CUSTableData *)shareTableDataInstance{
+    if (!CUSTableDataInstance) {
+        CUSTableDataInstance = [[CUSTableData alloc]init];
+    }
+    return CUSTableDataInstance;
 }
 @end

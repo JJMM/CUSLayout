@@ -48,13 +48,9 @@ static CUSLayoutUtil  *CUSLayoutInstance;
 }
 
 +(CUSLayoutUtil *)getShareInstance{
-    return CUSLayoutInstance;
-}
-
-+(void)load{
-    //初始化，仅须有初始化一次，以后不要重复调用
     if (!CUSLayoutInstance) {
         CUSLayoutInstance = [[CUSLayoutUtil alloc]init];
     }
+    return CUSLayoutInstance;
 }
 @end
