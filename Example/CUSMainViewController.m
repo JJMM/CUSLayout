@@ -20,7 +20,7 @@
         [self.dataItems addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"流式布局：类似HTML中的布局或Android中的LinnerLayout",@"CUSLinnerLayoutSampleViewController", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"RowLayout",@"行列布局：子控件以行或列的形式布局，可设置折行、均匀等复杂操作",@"CUSRowLayoutSampleViewController", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"TableLayout",@"表格布局：类似HTML中使用Table标签控制布局",@"CUSTableLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"布局设计器：可视化布局设计",@"CUSLayoutManagerSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"布局设计器：Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
         
     }
     return self;
@@ -101,7 +101,7 @@
     Class controllerClass=NSClassFromString(name);
     if(controllerClass){
         UIViewController* backController=[[controllerClass alloc]initWithNibName:name bundle:nil];
-        backController.title = @"演示";
+        backController.title = @"DEMO";
         [self.navigationController pushViewController:backController animated:YES];
         return YES;
     }
