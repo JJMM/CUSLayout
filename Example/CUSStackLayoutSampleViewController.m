@@ -15,13 +15,11 @@
     [super viewDidLoad];
     
     for (int i = 0; i < 4; i++) {
-        
         UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
         [self.contentView addSubview:view];
     }
     CUSStackLayout *layout = [[CUSStackLayout alloc]init];
     self.contentView.layoutFrame = layout;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,12 +40,12 @@
         
         //You could use the next code to design animation by you self
         /*
-        [self.contentView CUSLayout];
-        [UIView beginAnimations:@"animation" context:nil];
-        [UIView setAnimationDuration:0.5f];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.contentView cache:YES];
-        [UIView commitAnimations];
+         [self.contentView CUSLayout];
+         [UIView beginAnimations:@"animation" context:nil];
+         [UIView setAnimationDuration:0.5f];
+         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.contentView cache:YES];
+         [UIView commitAnimations];
          */
     }else if(btn.tag == 11){
         NSArray *array = self.contentView.subviews;
