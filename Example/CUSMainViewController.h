@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "CUSAboutViewController.h"
-#import "CUSLayout.h"
 
 @interface CUSMainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) NSMutableArray *dataItems;

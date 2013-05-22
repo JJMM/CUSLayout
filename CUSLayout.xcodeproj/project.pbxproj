@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2A1D5CD717278775005651B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D5CD617278775005651B6 /* README.txt */; };
 		2A4FBCE5174CAA0C000CE0A7 /* libCUSLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C542393145ADEBD0026A152 /* libCUSLayout.a */; };
+		2A4FBCE8174CAAAD000CE0A7 /* CUSStackLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */; };
+		2A4FBCE9174CAAAD000CE0A7 /* CUSStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */; };
+		2A53EFC9174CBF3000483110 /* CUSRealSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A53EFC7174CBF3000483110 /* CUSRealSingleton.h */; };
+		2A53EFCA174CBF3000483110 /* CUSRealSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A53EFC8174CBF3000483110 /* CUSRealSingleton.m */; };
 		2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */; };
 		2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
 		2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */; };
@@ -74,6 +78,10 @@
 
 /* Begin PBXFileReference section */
 		2A1D5CD617278775005651B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayout.h; sourceTree = "<group>"; };
+		2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayout.m; sourceTree = "<group>"; };
+		2A53EFC7174CBF3000483110 /* CUSRealSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRealSingleton.h; sourceTree = "<group>"; };
+		2A53EFC8174CBF3000483110 /* CUSRealSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRealSingleton.m; sourceTree = "<group>"; };
 		2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutDesignerView.h; sourceTree = "<group>"; };
 		2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutDesignerView.m; sourceTree = "<group>"; };
 		2AAA2288174A255B0013A683 /* CUSLayoutManagerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutManagerSampleViewController.h; sourceTree = "<group>"; };
@@ -225,6 +233,8 @@
 				2AFF1F311728E142002E0C63 /* CUSTableData.m */,
 				2AFF1F321728E142002E0C63 /* CUSTableLayout.h */,
 				2AFF1F331728E142002E0C63 /* CUSTableLayout.m */,
+				2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */,
+				2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */,
 				2AFF1F341728E142002E0C63 /* UIView+CUSLayout.h */,
 				2AFF1F351728E142002E0C63 /* UIView+CUSLayout.m */,
 				2AFF1F241728E142002E0C63 /* CUSLayoutObject+Util.h */,
@@ -233,6 +243,8 @@
 				2AFF1F271728E142002E0C63 /* CUSLayoutUtil.m */,
 				2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */,
 				2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */,
+				2A53EFC7174CBF3000483110 /* CUSRealSingleton.h */,
+				2A53EFC8174CBF3000483110 /* CUSRealSingleton.m */,
 			);
 			path = CUSLayout;
 			sourceTree = "<group>";
@@ -324,8 +336,10 @@
 				2AFF1F501728E142002E0C63 /* CUSRowLayout.h in Headers */,
 				2AFF1F531728E142002E0C63 /* CUSTableData.h in Headers */,
 				2AFF1F561728E142002E0C63 /* CUSTableLayout.h in Headers */,
+				2A4FBCE8174CAAAD000CE0A7 /* CUSStackLayout.h in Headers */,
 				2AFF1F591728E142002E0C63 /* UIView+CUSLayout.h in Headers */,
 				2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */,
+				2A53EFC9174CBF3000483110 /* CUSRealSingleton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +435,7 @@
 				2AFF1F381728E142002E0C63 /* CUSFillLayout.m in Sources */,
 				2AFF1F3D1728E142002E0C63 /* CUSLayoutData.m in Sources */,
 				2AFF1F401728E142002E0C63 /* CUSLayoutFrame.m in Sources */,
+				2AFF1F5B1728E142002E0C63 /* UIView+CUSLayout.m in Sources */,
 				2AFF1F431728E142002E0C63 /* CUSLayoutObject+Util.m in Sources */,
 				2AFF1F461728E142002E0C63 /* CUSLayoutUtil.m in Sources */,
 				2AFF1F491728E142002E0C63 /* CUSLinnerData.m in Sources */,
@@ -429,8 +444,9 @@
 				2AFF1F521728E142002E0C63 /* CUSRowLayout.m in Sources */,
 				2AFF1F551728E142002E0C63 /* CUSTableData.m in Sources */,
 				2AFF1F581728E142002E0C63 /* CUSTableLayout.m in Sources */,
-				2AFF1F5B1728E142002E0C63 /* UIView+CUSLayout.m in Sources */,
+				2A4FBCE9174CAAAD000CE0A7 /* CUSStackLayout.m in Sources */,
 				2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */,
+				2A53EFCA174CBF3000483110 /* CUSRealSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,8 +462,8 @@
 				2AFF1F781728E187002E0C63 /* CUSLinnerLayoutSampleViewController.m in Sources */,
 				2AFF1F7A1728E187002E0C63 /* CUSMainViewController.m in Sources */,
 				2AFF1F7B1728E187002E0C63 /* CUSRowLayoutSampleViewController.m in Sources */,
-				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
 				2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */,
+				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

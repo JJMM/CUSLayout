@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CUSLayout.h"
 #import "CUSLayoutSampleFactory.h"
 @interface CUSLinnerLayoutSampleViewController : UIViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;

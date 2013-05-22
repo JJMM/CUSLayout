@@ -9,11 +9,11 @@
 #import "UIView+CUSLayout.h"
 #import <objc/runtime.h>
 #import "CUSLayoutFrame.h"
+#import "CUSRealSingleton.h"
 
 static NSString *UIView_CUSLayoutFrame;
 static NSString *UIView_CUSLayoutData;
 static NSString *UIView_ChildFrameChanged;
-static BOOL UIView_CUSLayout_loaded;
 
 @implementation UIView(UIView_CUSLayout)
 @dynamic layoutFrame;
@@ -110,18 +110,17 @@ static BOOL UIView_CUSLayout_loaded;
 //因此将布局递归机制通过交换方法实现
 + (void) load
 {
-    if(!UIView_CUSLayout_loaded){
-        UIView_CUSLayout_loaded = YES;
+    if(![CUSRealSingleton shareInstance].sValue){
+        [CUSRealSingleton shareInstance].sValue = YES;
+        
+        
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(layoutSubviewsExt)), class_getInstanceMethod([self class], @selector(layoutSubviews)));
             method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setFrameExt:)), class_getInstanceMethod([self class], @selector(setFrame:)));
         });
     }
-    
 }
-
-
 @end
 
 

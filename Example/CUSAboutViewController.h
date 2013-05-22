@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CUSLayout.h"
 
 @interface CUSAboutViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) IBOutlet UITableView *table;
