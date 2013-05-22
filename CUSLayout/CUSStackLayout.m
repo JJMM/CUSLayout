@@ -35,10 +35,14 @@
     
     for (int i = 0; i < [children count];i++) {
         UIView *child = [children objectAtIndex:i];
-        if(i == showViewIndex){
+        CGRect childFrame = child.frame;
+        if(childFrame.origin.x != x || childFrame.origin.y != y || childFrame.size.width != width || childFrame.size.height != height){
             child.frame = CGRectMake(x, y, width, height);
+        }
+        if(i == showViewIndex){
+            child.alpha = 1;
         }else{
-            child.frame = CGRectMake(10000, 0, width, height);
+            child.alpha = 0;
         }
     }
 }

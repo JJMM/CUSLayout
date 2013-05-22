@@ -20,7 +20,7 @@
         [self.dataItems addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"流式布局：类似HTML中的布局或Android中的LinnerLayout",@"CUSLinnerLayoutSampleViewController", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"RowLayout",@"行列布局：子控件以行或列的形式布局，可设置折行、均匀等复杂操作",@"CUSRowLayoutSampleViewController", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"TableLayout",@"表格布局：类似HTML中使用Table标签控制布局",@"CUSTableLayoutSampleViewController", nil]];
-//        [self.dataItems addObject:[NSArray arrayWithObjects:@"StackLayout",@"堆栈布局：层叠式显示",@"CUSStackLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"StackLayout",@"堆栈布局：层叠式显示",@"CUSStackLayoutSampleViewController", nil]];
         [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"布局设计器：Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
         
     }
@@ -42,8 +42,6 @@
 }
 
 - (void)aboutButtonClicked{
-    self.view.layoutFrame = CUS_LAYOUT.share_fillLayout_H;
-    [self.view CUSLayout];
     CUSAboutViewController *nextController = [[CUSAboutViewController alloc]initWithNibName:@"CUSAboutViewController" bundle:nil];
     [self.navigationController pushViewController:nextController animated:YES];
 }
