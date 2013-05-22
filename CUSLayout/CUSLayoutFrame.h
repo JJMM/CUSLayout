@@ -18,7 +18,14 @@
  4、提高代码可读性、以模糊区域代替直接设置控件位置大小的抽象性
 */
 @interface CUSLayoutFrame : NSObject
-
+//左边距
+@property (nonatomic,assign) CGFloat marginLeft;
+//上边距
+@property (nonatomic,assign) CGFloat marginTop;
+//右边距
+@property (nonatomic,assign) CGFloat marginRight;
+//下边距
+@property (nonatomic,assign) CGFloat marginBottom;
 
 -(void)layout:(UIView *)view;
 -(NSArray *)getUsealbeChildren:(UIView *)view;

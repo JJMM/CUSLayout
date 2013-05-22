@@ -15,10 +15,6 @@
 @interface CUSFillLayout : CUSLayoutFrame
 //填充方向:默认水平方向
 @property (nonatomic,assign) CUSLayoutType type;
-//上下边距
-@property (nonatomic,assign) CGFloat marginHeight;
-//左右边距
-@property (nonatomic,assign) CGFloat marginWidth;
 //子控件间距
 @property (nonatomic,assign) CGFloat spacing;
 

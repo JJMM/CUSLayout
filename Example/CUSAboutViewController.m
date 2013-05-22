@@ -37,8 +37,8 @@
     CGRect labelframe = CGRectMake(0, 0, 300, 500);
     UIView *labelContainer = [[UIView alloc]initWithFrame:labelframe];
     CUSFillLayout *layout = [[CUSFillLayout alloc]init];
-    layout.marginHeight = 10;
-    layout.marginWidth = 10;
+    layout.marginLeft = layout.marginRight = 10;
+    layout.marginTop = layout.marginBottom = 10;
     labelContainer.layoutFrame = layout;
 
     UILabel *label = [[UILabel alloc] init];

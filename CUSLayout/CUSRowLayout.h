@@ -26,13 +26,4 @@
 //间距适应，平分控件的间距，使控件看上去均匀
 @property (nonatomic,assign) BOOL justify;
 
-//左边距
-@property (nonatomic,assign) CGFloat marginLeft;
-//上边距
-@property (nonatomic,assign) CGFloat marginTop;
-//右边距
-@property (nonatomic,assign) CGFloat marginRight;
-//下边距
-@property (nonatomic,assign) CGFloat marginBottom;
-
 @end

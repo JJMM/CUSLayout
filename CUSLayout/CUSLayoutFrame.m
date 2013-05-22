@@ -10,6 +10,10 @@
 #import "CUSLayoutData.h"
 #
 @implementation CUSLayoutFrame
+@synthesize marginLeft;
+@synthesize marginTop;
+@synthesize marginRight;
+@synthesize marginBottom;
 
 -(NSArray *)getUsealbeChildren:(UIView *)view{
     NSMutableArray * array = [NSMutableArray array];

@@ -88,10 +88,6 @@ static CUSTableData *CUSTableDataInstance;
 @implementation CUSTableLayout
 @synthesize pixelFirst;
 @synthesize spacing;
-@synthesize marginLeft;
-@synthesize marginTop;
-@synthesize marginRight;
-@synthesize marginBottom;
 
 @synthesize columnWidths;
 @synthesize rowHeights;
@@ -104,10 +100,10 @@ static CUSTableData *CUSTableDataInstance;
     self = [super init];
     if (self) {
         spacing = 5;
-        marginLeft = 5;
-        marginTop = 5;
-        marginRight = 5;
-        marginBottom = 5;
+        self.marginLeft = 5;
+        self.marginTop = 5;
+        self.marginRight = 5;
+        self.marginBottom = 5;
     }
     return self;
 }
@@ -336,9 +332,9 @@ static CUSTableData *CUSTableDataInstance;
 	NSArray *children = [self getUsealbeChildren:composite];
 	int count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - marginLeft - marginRight;
-	int height = rect.size.height - marginTop - marginBottom;
-    CGRect tableRect = CGRectMake(rect.origin.x + marginLeft, rect.origin.y + marginTop, width, height);
+	int width = rect.size.width - self.marginLeft - self.marginRight;
+	int height = rect.size.height - self.marginTop - self.marginBottom;
+    CGRect tableRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
 
     NSInteger allWidth = tableRect.size.width - (([self getColumnCount] - 1)*spacing);
     NSInteger allHeight = tableRect.size.height - (([self getRowCount] - 1)*spacing);
@@ -354,9 +350,9 @@ static CUSTableData *CUSTableDataInstance;
  * @return
  */
 -(CGRect)computeTableBounds:(CGRect) rect {
-	int width = rect.size.width - marginLeft - marginRight;
-	int height = rect.size.height - marginTop - marginBottom;
-    CGRect tableRect = CGRectMake(rect.origin.x + marginLeft, rect.origin.y + marginTop, width, height);
+	int width = rect.size.width - self.marginLeft - self.marginRight;
+	int height = rect.size.height - self.marginTop - self.marginBottom;
+    CGRect tableRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
 
     return tableRect;
 }

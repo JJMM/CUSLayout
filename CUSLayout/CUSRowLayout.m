@@ -16,10 +16,7 @@
 @synthesize fill;
 @synthesize pack;
 @synthesize justify;
-@synthesize marginLeft;
-@synthesize marginTop;
-@synthesize marginRight;
-@synthesize marginBottom;
+
 
 - (id)init
 {
@@ -31,10 +28,10 @@
         pack = YES;
         justify = NO;
         
-        marginLeft = 5;
-        marginTop = 5;
-        marginRight = 5;
-        marginBottom = 5;
+        self.marginLeft = 5;
+        self.marginTop = 5;
+        self.marginRight = 5;
+        self.marginBottom = 5;
     }
     return self;
 }

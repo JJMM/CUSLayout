@@ -8,51 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		2A1D5CD717278775005651B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D5CD617278775005651B6 /* README.txt */; };
+		2A4FBCE5174CAA0C000CE0A7 /* libCUSLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C542393145ADEBD0026A152 /* libCUSLayout.a */; };
 		2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */; };
-		2AAA2286174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
 		2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
 		2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */; };
 		2AAA228C174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */; };
 		2AFF1ED61728D38E002E0C63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B0E3713E052DF00FA85CA /* UIKit.framework */; };
 		2AFF1F361728E142002E0C63 /* CUSFillLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F1C1728E142002E0C63 /* CUSFillLayout.h */; };
-		2AFF1F371728E142002E0C63 /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */; };
 		2AFF1F381728E142002E0C63 /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */; };
 		2AFF1F391728E142002E0C63 /* CUSLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F1E1728E142002E0C63 /* CUSLayout.h */; };
 		2AFF1F3A1728E142002E0C63 /* CUSLayoutConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F1F1728E142002E0C63 /* CUSLayoutConstant.h */; };
 		2AFF1F3B1728E142002E0C63 /* CUSLayoutData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F201728E142002E0C63 /* CUSLayoutData.h */; };
-		2AFF1F3C1728E142002E0C63 /* CUSLayoutData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F211728E142002E0C63 /* CUSLayoutData.m */; };
 		2AFF1F3D1728E142002E0C63 /* CUSLayoutData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F211728E142002E0C63 /* CUSLayoutData.m */; };
 		2AFF1F3E1728E142002E0C63 /* CUSLayoutFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F221728E142002E0C63 /* CUSLayoutFrame.h */; };
-		2AFF1F3F1728E142002E0C63 /* CUSLayoutFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F231728E142002E0C63 /* CUSLayoutFrame.m */; };
 		2AFF1F401728E142002E0C63 /* CUSLayoutFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F231728E142002E0C63 /* CUSLayoutFrame.m */; };
 		2AFF1F411728E142002E0C63 /* CUSLayoutObject+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F241728E142002E0C63 /* CUSLayoutObject+Util.h */; };
-		2AFF1F421728E142002E0C63 /* CUSLayoutObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F251728E142002E0C63 /* CUSLayoutObject+Util.m */; };
 		2AFF1F431728E142002E0C63 /* CUSLayoutObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F251728E142002E0C63 /* CUSLayoutObject+Util.m */; };
 		2AFF1F441728E142002E0C63 /* CUSLayoutUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F261728E142002E0C63 /* CUSLayoutUtil.h */; };
-		2AFF1F451728E142002E0C63 /* CUSLayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F271728E142002E0C63 /* CUSLayoutUtil.m */; };
 		2AFF1F461728E142002E0C63 /* CUSLayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F271728E142002E0C63 /* CUSLayoutUtil.m */; };
 		2AFF1F471728E142002E0C63 /* CUSLinnerData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F281728E142002E0C63 /* CUSLinnerData.h */; };
-		2AFF1F481728E142002E0C63 /* CUSLinnerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F291728E142002E0C63 /* CUSLinnerData.m */; };
 		2AFF1F491728E142002E0C63 /* CUSLinnerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F291728E142002E0C63 /* CUSLinnerData.m */; };
 		2AFF1F4A1728E142002E0C63 /* CUSLinnerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F2A1728E142002E0C63 /* CUSLinnerLayout.h */; };
-		2AFF1F4B1728E142002E0C63 /* CUSLinnerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2B1728E142002E0C63 /* CUSLinnerLayout.m */; };
 		2AFF1F4C1728E142002E0C63 /* CUSLinnerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2B1728E142002E0C63 /* CUSLinnerLayout.m */; };
 		2AFF1F4D1728E142002E0C63 /* CUSRowData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F2C1728E142002E0C63 /* CUSRowData.h */; };
-		2AFF1F4E1728E142002E0C63 /* CUSRowData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2D1728E142002E0C63 /* CUSRowData.m */; };
 		2AFF1F4F1728E142002E0C63 /* CUSRowData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2D1728E142002E0C63 /* CUSRowData.m */; };
 		2AFF1F501728E142002E0C63 /* CUSRowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F2E1728E142002E0C63 /* CUSRowLayout.h */; };
-		2AFF1F511728E142002E0C63 /* CUSRowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2F1728E142002E0C63 /* CUSRowLayout.m */; };
 		2AFF1F521728E142002E0C63 /* CUSRowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F2F1728E142002E0C63 /* CUSRowLayout.m */; };
 		2AFF1F531728E142002E0C63 /* CUSTableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F301728E142002E0C63 /* CUSTableData.h */; };
-		2AFF1F541728E142002E0C63 /* CUSTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F311728E142002E0C63 /* CUSTableData.m */; };
 		2AFF1F551728E142002E0C63 /* CUSTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F311728E142002E0C63 /* CUSTableData.m */; };
 		2AFF1F561728E142002E0C63 /* CUSTableLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F321728E142002E0C63 /* CUSTableLayout.h */; };
-		2AFF1F571728E142002E0C63 /* CUSTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F331728E142002E0C63 /* CUSTableLayout.m */; };
 		2AFF1F581728E142002E0C63 /* CUSTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F331728E142002E0C63 /* CUSTableLayout.m */; };
 		2AFF1F591728E142002E0C63 /* UIView+CUSLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F341728E142002E0C63 /* UIView+CUSLayout.h */; };
-		2AFF1F5A1728E142002E0C63 /* UIView+CUSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F351728E142002E0C63 /* UIView+CUSLayout.m */; };
 		2AFF1F5B1728E142002E0C63 /* UIView+CUSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F351728E142002E0C63 /* UIView+CUSLayout.m */; };
-		2AFF1F5F1728E166002E0C63 /* libCUSLayout-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F5E1728E166002E0C63 /* libCUSLayout-Prefix.pch */; };
 		2AFF1F731728E187002E0C63 /* CUSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F611728E187002E0C63 /* CUSAboutViewController.m */; };
 		2AFF1F741728E187002E0C63 /* CUSAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AFF1F621728E187002E0C63 /* CUSAboutViewController.xib */; };
 		2AFF1F751728E187002E0C63 /* CUSFillLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F641728E187002E0C63 /* CUSFillLayoutSampleViewController.m */; };
@@ -74,6 +61,16 @@
 		D811F90213EC907200E3922B /* ExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D811F8EC13EC907200E3922B /* ExampleAppDelegate.m */; };
 		D8A3DD87146045F000DE3528 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8A3DD86146045F000DE3528 /* Localizable.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A4FBCE3174CAA07000CE0A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D80B0E2A13E052DF00FA85CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = CUSLayout;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2A1D5CD617278775005651B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -159,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4FBCE5174CAA0C000CE0A7 /* libCUSLayout.a in Frameworks */,
 				D80B0E3813E052DF00FA85CA /* UIKit.framework in Frameworks */,
 				D80B0E3A13E052DF00FA85CA /* Foundation.framework in Frameworks */,
 			);
@@ -327,7 +325,6 @@
 				2AFF1F531728E142002E0C63 /* CUSTableData.h in Headers */,
 				2AFF1F561728E142002E0C63 /* CUSTableLayout.h in Headers */,
 				2AFF1F591728E142002E0C63 /* UIView+CUSLayout.h in Headers */,
-				2AFF1F5F1728E166002E0C63 /* libCUSLayout-Prefix.pch in Headers */,
 				2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +360,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2A4FBCE4174CAA07000CE0A7 /* PBXTargetDependency */,
 			);
 			name = CUSLayoutExample;
 			productName = CUSLayoutformexample;
@@ -442,18 +440,6 @@
 			files = (
 				D811F90013EC907200E3922B /* main.m in Sources */,
 				D811F90213EC907200E3922B /* ExampleAppDelegate.m in Sources */,
-				2AFF1F371728E142002E0C63 /* CUSFillLayout.m in Sources */,
-				2AFF1F3C1728E142002E0C63 /* CUSLayoutData.m in Sources */,
-				2AFF1F3F1728E142002E0C63 /* CUSLayoutFrame.m in Sources */,
-				2AFF1F421728E142002E0C63 /* CUSLayoutObject+Util.m in Sources */,
-				2AFF1F451728E142002E0C63 /* CUSLayoutUtil.m in Sources */,
-				2AFF1F481728E142002E0C63 /* CUSLinnerData.m in Sources */,
-				2AFF1F4B1728E142002E0C63 /* CUSLinnerLayout.m in Sources */,
-				2AFF1F4E1728E142002E0C63 /* CUSRowData.m in Sources */,
-				2AFF1F511728E142002E0C63 /* CUSRowLayout.m in Sources */,
-				2AFF1F541728E142002E0C63 /* CUSTableData.m in Sources */,
-				2AFF1F571728E142002E0C63 /* CUSTableLayout.m in Sources */,
-				2AFF1F5A1728E142002E0C63 /* UIView+CUSLayout.m in Sources */,
 				2AFF1F731728E187002E0C63 /* CUSAboutViewController.m in Sources */,
 				2AFF1F751728E187002E0C63 /* CUSFillLayoutSampleViewController.m in Sources */,
 				2AFF1F771728E187002E0C63 /* CUSLayoutSampleFactory.m in Sources */,
@@ -461,12 +447,19 @@
 				2AFF1F7A1728E187002E0C63 /* CUSMainViewController.m in Sources */,
 				2AFF1F7B1728E187002E0C63 /* CUSRowLayoutSampleViewController.m in Sources */,
 				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
-				2AAA2286174A25060013A683 /* CUSLayoutDesignerView.m in Sources */,
 				2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A4FBCE4174CAA07000CE0A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C542392145ADEBD0026A152 /* CUSLayout */;
+			targetProxy = 2A4FBCE3174CAA07000CE0A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C54239B145ADEBE0026A152 /* Debug */ = {

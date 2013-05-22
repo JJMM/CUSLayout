@@ -10,8 +10,6 @@
 
 @implementation CUSFillLayout
 @synthesize type;
-@synthesize marginHeight;
-@synthesize marginWidth;
 @synthesize spacing;
 
 - (id)init
@@ -19,8 +17,8 @@
     self = [super init];
     if (self) {
         type = CUSLayoutTypeHorizontal;
-        marginHeight = 0.0;
-        marginWidth = 0.0;
+//        marginHeight = 0.0;
+//        marginWidth = 0.0;
         spacing = 5.0;
     }
     return self;
@@ -30,12 +28,12 @@
 	NSArray *children = [self getUsealbeChildren:composite];
 	int count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - marginWidth * 2;
-	int height = rect.size.height - marginHeight * 2;
+	int width = rect.size.width - (self.marginLeft + self.marginRight);
+	int height = rect.size.height - (self.marginTop + self.marginBottom) * 2;
 	if (type == CUSLayoutTypeHorizontal) {
 		width -= (count - 1) * spacing;
-		int x = rect.origin.x + marginWidth, extra = width % count;
-		int y = rect.origin.y + marginHeight, cellWidth = width / count;
+		int x = rect.origin.x + self.marginLeft, extra = width % count;
+		int y = rect.origin.y + self.marginTop, cellWidth = width / count;
 		for (int i=0; i<count; i++) {
 			UIView *child = [children objectAtIndex:i];
 			int childWidth = cellWidth;
@@ -49,8 +47,8 @@
 		}
 	} else {
 		height -= (count - 1) * spacing;
-		int x = rect.origin.x + marginWidth, cellHeight = height / count;
-		int y = rect.origin.y + marginHeight, extra = height % count;
+		int x = rect.origin.x + self.marginLeft, cellHeight = height / count;
+		int y = rect.origin.y + self.marginTop, extra = height % count;
 		for (int i=0; i<count; i++) {
 			UIView *child = [children objectAtIndex:i];
 			int childHeight = cellHeight;

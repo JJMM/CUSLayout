@@ -17,14 +17,6 @@
 
 //子控件间距
 @property (nonatomic,assign) CGFloat spacing;
-//左边距
-@property (nonatomic,assign) CGFloat marginLeft;
-//上边距
-@property (nonatomic,assign) CGFloat marginTop;
-//右边距
-@property (nonatomic,assign) CGFloat marginRight;
-//下边距
-@property (nonatomic,assign) CGFloat marginBottom;
 
 //构造方法，其中参数数组columnWiths、rowHeights中的对象必须是CUSValue类型
 - (id)initWithcolumns:(NSArray *)columnWiths rows:(NSArray *)rowHeights;

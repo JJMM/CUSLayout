@@ -12,10 +12,6 @@
 @synthesize type;
 @synthesize alignment;
 @synthesize spacing;
-@synthesize marginLeft;
-@synthesize marginTop;
-@synthesize marginRight;
-@synthesize marginBottom;
 
 - (id)init
 {
@@ -25,10 +21,10 @@
         alignment = CUSLayoutAlignmentFill;
         spacing = 5;
         
-        marginLeft = 5;
-        marginTop = 5;
-        marginRight = 5;
-        marginBottom = 5;
+        self.marginLeft = 5;
+        self.marginTop = 5;
+        self.marginRight = 5;
+        self.marginBottom = 5;
     }
     return self;
 }
@@ -38,14 +34,14 @@
 	NSArray *children = [self getUsealbeChildren:composite];
 	int count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - marginLeft - marginRight;
-	int height = rect.size.height - marginTop - marginBottom;
+	int width = rect.size.width - self.marginLeft - self.marginRight;
+	int height = rect.size.height - self.marginTop - self.marginBottom;
     CGRect areaRect;
     //调换坐标，通过调换，仅一种布局算法，即可支持水平垂直2中方向的布局
     if(self.type == CUSLayoutTypeHorizontal){
-        areaRect = CGRectMake(rect.origin.x + marginLeft, rect.origin.y + marginTop, width, height);
+        areaRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
     }else{
-        areaRect = CGRectMake(rect.origin.y + marginTop,rect.origin.x + marginLeft ,height, width);
+        areaRect = CGRectMake(rect.origin.y + self.marginTop,rect.origin.x + self.marginLeft ,height, width);
     }
     NSMutableArray *boudns = [self computeSizes:children clientAreaSize:areaRect];
     
