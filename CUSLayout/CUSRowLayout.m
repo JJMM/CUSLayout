@@ -313,18 +313,18 @@
                 
 				if (data != nil && data.alignment != CUSLayoutAlignmentLeft) {
 					if (data.alignment == CUSLayoutAlignmentCenter) {
-                        control.frame = CGRectMake(rectangle.origin.x, rectangle.origin.y + (max - rectangle.size.height) / 2,
-                                                   rectangle.size.width, rectangle.size.height);
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x, rectangle.origin.y + (max - rectangle.size.height) / 2,
+                                                                           rectangle.size.width, rectangle.size.height)];
                     } else if (data.alignment == CUSLayoutAlignmentRight) {
-                        control.frame = CGRectMake(rectangle.origin.x, rectangle.origin.y + max
-                                                   - rectangle.size.height, rectangle.size.width,
-                                                   rectangle.size.height);
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x, rectangle.origin.y + max
+                                                                           - rectangle.size.height, rectangle.size.width,
+                                                                           rectangle.size.height)];
 					} else if (data.alignment == CUSLayoutAlignmentFill) {
-                        control.frame = CGRectMake(rectangle.origin.x, rectangle.origin.y,
-                                                   rectangle.size.width, max);
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x, rectangle.origin.y,
+                                                                           rectangle.size.width, max)];
 					}
 				} else {
-                    control.frame = rectangle;
+                    [self setControlFrame:control withFrame:rectangle];
 				}
 			}
 		} else if (self.type == CUSLayoutTypeVertical) {
@@ -339,20 +339,20 @@
                 
 				if (data != nil && data.alignment != CUSLayoutAlignmentLeft) {
 					if (data.alignment == CUSLayoutAlignmentCenter) {
-                        control.frame = CGRectMake(rectangle.origin.x + (max - rectangle.size.width)
-                                                   / 2, rectangle.origin.y, rectangle.size.width,
-                                                   rectangle.size.height);
-
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x + (max - rectangle.size.width)
+                                                                           / 2, rectangle.origin.y, rectangle.size.width,
+                                                                           rectangle.size.height)];
+                        
 					} else if (data.alignment == CUSLayoutAlignmentRight) {
-                        control.frame = CGRectMake(rectangle.origin.x + max - rectangle.size.width,
-                                                   rectangle.origin.y, rectangle.size.width, rectangle.size.height);
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x + max - rectangle.size.width,
+                                                                           rectangle.origin.y, rectangle.size.width, rectangle.size.height)];
 
 					} else if (data.alignment == CUSLayoutAlignmentFill) {
-                        control.frame = CGRectMake(rectangle.origin.x, rectangle.origin.y, max,
-                                                   rectangle.size.height);
+                        [self setControlFrame:control withFrame:CGRectMake(rectangle.origin.x, rectangle.origin.y, max,
+                                                                           rectangle.size.height)];
 					}
 				} else {
-					control.frame = rectangle;
+                    [self setControlFrame:control withFrame:rectangle];
 				}
 			}
 		}

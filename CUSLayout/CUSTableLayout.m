@@ -751,7 +751,8 @@ static CUSTableData *CUSTableDataInstance;
             CGRect rect = CGRectMake(x, y, w, h);
             UIView *control = [children objectAtIndex:childIndex];
             CGRect bounds = [self getControlBoundsByTableData:control rect:rect];
-            control.frame = CGRectMake(clientArea.origin.x + bounds.origin.x, clientArea.origin.y + bounds.origin.y, bounds.size.width, bounds.size.height);
+        
+            [self setControlFrame:control withFrame:CGRectMake(clientArea.origin.x + bounds.origin.x, clientArea.origin.y + bounds.origin.y, bounds.size.width, bounds.size.height)];
         }
     }
     
@@ -760,7 +761,7 @@ static CUSTableData *CUSTableDataInstance;
         for (int i = childIndex + 1; i < [children count]; i++) {
             CGRect rect = CGRectMake(-1, -1, 0, 0);
             UIView *control = [children objectAtIndex:i];
-            control.frame = rect;
+            [self setControlFrame:control withFrame:rect];
         }
     }
 }

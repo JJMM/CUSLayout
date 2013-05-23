@@ -37,7 +37,7 @@
         UIView *child = [children objectAtIndex:i];
         CGRect childFrame = child.frame;
         if(childFrame.origin.x != x || childFrame.origin.y != y || childFrame.size.width != width || childFrame.size.height != height){
-            child.frame = CGRectMake(x, y, width, height);
+            [self setControlFrame:child withFrame:CGRectMake(x, y, width, height)];
         }
         if(i == showViewIndex){
             child.alpha = 1;

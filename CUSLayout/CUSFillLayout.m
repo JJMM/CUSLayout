@@ -42,7 +42,7 @@
 			} else {
 				if (i == count - 1) childWidth += (extra + 1) / 2;
 			}
-            child.frame = CGRectMake(x, y, childWidth, height);
+            [self setControlFrame:child withFrame:CGRectMake(x, y, childWidth, height)];
 			x += childWidth + spacing;
 		}
 	} else {
@@ -57,7 +57,7 @@
 			} else {
 				if (i == count - 1) childHeight += (extra + 1) / 2;
 			}
-            child.frame = CGRectMake(x, y, width, childHeight);
+            [self setControlFrame:child withFrame:CGRectMake(x, y, width, childHeight)];
 			y += childHeight + spacing;
 		}
 	}

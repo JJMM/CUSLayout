@@ -190,7 +190,7 @@
 		UIView * control = [children objectAtIndex:i];
         NSValue *listValue = [bounds objectAtIndex:i];
         CGRect rectangle = [listValue CGRectValue];
-        control.frame = rectangle;
+        [self setControlFrame:control withFrame:rectangle];
 	}
 };
 @end

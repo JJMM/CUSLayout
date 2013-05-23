@@ -29,5 +29,6 @@
 
 -(void)layout:(UIView *)view;
 -(NSArray *)getUsealbeChildren:(UIView *)view;
+-(void)setControlFrame:(UIView *)view withFrame:(CGRect)frame;
 
 @end

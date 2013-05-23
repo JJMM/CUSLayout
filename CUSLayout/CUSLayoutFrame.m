@@ -34,5 +34,8 @@
     NSLog(@"super layout");
 }
 
+-(void)setControlFrame:(UIView *)view withFrame:(CGRect)frame{
+    view.frame = frame;
+}
 
 @end
