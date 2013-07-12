@@ -11,7 +11,6 @@
 
 #import "CUSLayoutConstant.h"
 #import "UIView+CUSLayout.h"
-#import "UIView+CUSLayout.m"
 #import "CUSLayoutFrame.h"
 #import "CUSLayoutData.h"
 
