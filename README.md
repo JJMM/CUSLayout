@@ -18,7 +18,7 @@ https://github.com/JJMM/CUSLayout<br>
 心动不如行动，搞起！<br>
 后续会推出新的布局类型及完善布局算法，请关注add star，多谢支持。<br>
 
- ![image](https://raw.github.com/JJMM/CUSResources/master/CUSLayoutIntr.gif)
+ ![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayoutIntr.gif)
 =========
 Plese look the WiKi to use CUSLayout.<br>
 https://github.com/JJMM/CUSLayout/wiki
