@@ -31,8 +31,8 @@ static CUSLayoutUtil  *CUSLayoutInstance;
         self.share_fillLayout_V.type = CUSLayoutTypeVertical;
         
         self.share_rowLayout_H = [[CUSRowLayout alloc]init];
-        self.share_rowLayout_H = [[CUSRowLayout alloc]init];
-        self.share_rowLayout_H.type = CUSLayoutTypeVertical;
+        self.share_rowLayout_V = [[CUSRowLayout alloc]init];
+        self.share_rowLayout_V.type = CUSLayoutTypeVertical;
         
         self.share_rowData = [[CUSRowData alloc]init];
         

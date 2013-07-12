@@ -60,9 +60,11 @@
  * @param flushCache
  * @return
  */
--(CGSize)computeSize:(UIView *)composite wHint:(int)wHint hHint:(int)hHint flushCache:(BOOL)flushCache{
+-(CGSize)computeSize:(UIView *)composite wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
 	NSArray *children = [self getUsealbeChildren:composite];
 	NSMutableArray *bounds = [NSMutableArray array];
+    BOOL flushCache = NO;
+    
 	CGSize size;
 	if (wHint != CUS_LAY_DEFAULT && hHint != CUS_LAY_DEFAULT) {
 		size = CGSizeMake(wHint, hHint);
@@ -367,7 +369,7 @@
 		wHint = data.width;
 		hHint = data.height;
 	}
-    size = [control sizeThatFits:CGSizeMake(wHint, hHint)];
+    size = [control computeSize:CGSizeMake(wHint, hHint)];
     
     if (data != nil) {
 		if(data.width != CUS_LAY_DEFAULT){

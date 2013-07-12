@@ -19,6 +19,41 @@
     }
     return self;
 }
+
+-(CGSize)computeSize:(UIView *)composite wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
+	CGFloat marginWidth = self.marginLeft + self.marginRight;
+	CGFloat marginHeight = self.marginTop + self.marginBottom;
+    
+	if (wHint != CUS_LAY_DEFAULT && hHint != CUS_LAY_DEFAULT) {
+		return CGSizeMake(wHint, hHint);
+	}
+	NSArray *children = [self getUsealbeChildren:composite];
+	int count = [children count];
+	if (count == 0) {
+		return CGSizeMake(wHint != CUS_LAY_DEFAULT ? wHint : 0,
+                          hHint != CUS_LAY_DEFAULT ? hHint : 0);
+	} else {
+		CGFloat maxWidth = 0, maxHeight = 0;
+		for (int i=0; i<count; i++) {
+			UIView *child = [children objectAtIndex:i];
+			CGSize size = [self computeChildSize:child wHint:wHint hHint:hHint];
+			maxWidth = MAX(maxWidth, size.width);
+			maxHeight = MAX(maxHeight, size.height);
+		}
+		CGFloat width = 0, height = 0;
+        
+		width = maxWidth + marginWidth;
+        height = maxHeight + marginHeight;
+		if (wHint != CUS_LAY_DEFAULT) {
+			width = wHint;
+		}
+		if (hHint != CUS_LAY_DEFAULT) {
+			height = hHint;
+		}
+		return CGSizeMake(width, height);
+	}
+};
+
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
@@ -46,5 +81,8 @@
         }
     }
 }
-
+-(CGSize)computeChildSize:(UIView *)control wHint:(int)wHint hHint:(int)hHint{
+    CGSize size = [control computeSize:CGSizeMake(wHint, hHint)];
+    return size;
+};
 @end

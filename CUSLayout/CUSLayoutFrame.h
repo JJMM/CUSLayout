@@ -26,8 +26,11 @@
 @property (nonatomic,assign) CGFloat marginRight;
 //下边距
 @property (nonatomic,assign) CGFloat marginBottom;
-
+//API
 -(void)layout:(UIView *)view;
+-(CGSize)computeSize:(UIView *)view;
+-(CGSize)computeSize:(UIView *)view wHint:(CGFloat)wHint hHint:(CGFloat)hHint;
+//Helper
 -(NSArray *)getUsealbeChildren:(UIView *)view;
 -(void)setControlFrame:(UIView *)view withFrame:(CGRect)frame;
 

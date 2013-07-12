@@ -29,6 +29,47 @@
     return self;
 }
 
+-(CGSize)computeSize:(UIView *)composite wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
+	CGFloat marginWidth = self.marginLeft + self.marginRight;
+	CGFloat marginHeight = self.marginTop + self.marginBottom;
+    
+	if (wHint != CUS_LAY_DEFAULT && hHint != CUS_LAY_DEFAULT) {
+		return CGSizeMake(wHint, hHint);
+	}
+	NSArray *children = [self getUsealbeChildren:composite];
+	int count = [children count];
+	if (count == 0) {
+		return CGSizeMake(wHint != CUS_LAY_DEFAULT ? wHint : 0,
+                          hHint != CUS_LAY_DEFAULT ? hHint : 0);
+	} else {
+		CGFloat width = 0, height = 0;
+		for (int i=0; i<count; i++) {
+			UIView *child = [children objectAtIndex:i];
+			CGSize size = [self computeChildSize:child wHint:CUS_LAY_DEFAULT hHint:CUS_LAY_DEFAULT];
+            width += size.width;
+            height += size.height;
+            
+            if (i != 0) {
+                if (type == CUSLayoutTypeHorizontal) {
+                    width +=spacing;
+                }else{
+                    height +=spacing;
+                }
+            }
+		}
+		
+		if (wHint != CUS_LAY_DEFAULT) {
+			width = wHint;
+		}
+		if (hHint != CUS_LAY_DEFAULT) {
+			height = hHint;
+		}
+        width += marginWidth;
+        height += marginHeight;
+		return CGSizeMake(width, height);
+	}
+};
+
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
@@ -75,7 +116,7 @@
     for (int i=0; i<[children count]; i++) {
         UIView *child = [children objectAtIndex:i];
         if(![self isFillControl:child]){
-            CGSize childSize = [self computeSize:child];
+            CGSize childSize = [self computeChildSizeWithDirection:child wHint:-1 hHint:-1];
             CGRect rect = CGRectMake(0, 0, childSize.width, childSize.height);
             
             if(self.alignment == CUSLayoutAlignmentFill){
@@ -86,7 +127,7 @@
             [boudns addObject:value];
         }else{
             fillControllCounter++;
-            CGSize childSize = [self computeSize:child];
+            CGSize childSize = [self computeChildSizeWithDirection:child wHint:-1 hHint:-1];
             CGRect rect = CGRectMake(0, 0, childSize.width, childSize.height);
             if(self.alignment == CUSLayoutAlignmentFill){
                 rect.size.height = areaRect.size.height;
@@ -152,15 +193,24 @@
     return NO;
 }
 
--(CGSize)computeSize:(UIView *)control{
-    int wHint = CUS_LAY_DEFAULT, hHint = CUS_LAY_DEFAULT;
+-(CGSize)computeChildSizeWithDirection:(UIView *)control wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
+    CGSize size = [self computeChildSize:control wHint:wHint hHint:hHint];
+    if(self.type != CUSLayoutTypeHorizontal){
+        NSInteger t = size.width;
+        size.width = size.height;
+        size.height = t;
+    }
+    return size;
+}
+
+-(CGSize)computeChildSize:(UIView *)control wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
     CGSize size = CGSizeMake(0, 0);
 	CUSLinnerData *data = [self getLayoutDataByControll:control];
 	if (data != nil) {
 		wHint = data.width;
 		hHint = data.height;
 	}
-    size = [control sizeThatFits:CGSizeMake(wHint, hHint)];
+    size = [control computeSize:CGSizeMake(wHint, hHint)];
     if (data != nil) {
 		if(data.width != CUS_LAY_DEFAULT){
             size.width = data.width;
@@ -169,11 +219,6 @@
             size.height = data.height;
         }
 	}
-    if(self.type != CUSLayoutTypeHorizontal){
-        NSInteger t = size.width;
-        size.width = size.height;
-        size.height = t;
-    }
     return size;
 }
 -(CUSLinnerData *)getLayoutDataByControll:(UIView *)control{

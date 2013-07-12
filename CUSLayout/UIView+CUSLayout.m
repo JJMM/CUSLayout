@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 #import "CUSLayoutFrame.h"
 #import "CUSRealSingleton.h"
-
+#import "CUSLayoutConstant.h"
 static NSString *UIView_CUSLayoutFrame;
 static NSString *UIView_CUSLayoutData;
 static NSString *UIView_ChildFrameChanged;
@@ -59,7 +59,37 @@ static NSString *UIView_ChildFrameChanged;
 -(CGRect)getClientArea{
     return self.bounds;
 }
-
+-(CGSize)computeSize:(CGSize)size{
+    if (size.width != CUS_LAY_DEFAULT && size.width != CUS_LAY_DEFAULT) {
+		return size;
+	}
+    CGSize s = CGSizeMake(size.width, size.height);
+    if(self.layoutFrame == nil){
+        s = [self sizeThatFits:size];
+    }else{
+        s = [self.layoutFrame computeSize:self wHint:size.width hHint:size.height];
+    }
+    
+    if (s.width <= 0 || s.height <= 0) {
+        CGFloat maxWidth = s.width;
+        CGFloat maxHeight = s.height;
+        for (UIView *subView in self.subviews) {
+            maxWidth = MAX(maxWidth, subView.frame.origin.x + subView.frame.size.width);
+            maxHeight = MAX(maxHeight, subView.frame.origin.y + subView.frame.size.height);
+        }
+        s = CGSizeMake(maxWidth, maxHeight);
+    }
+    
+    if(size.width != CUS_LAY_DEFAULT){
+        s.width = size.width;
+    }
+    if(size.height != CUS_LAY_DEFAULT){
+        s.height = size.height;
+    }
+    
+    NSLog(@"%@:%@",[[self class] description],NSStringFromCGSize(s));
+    return s;
+}
 -(void)setLayoutFrame:(CUSLayoutFrame *)layoutFrame{
     objc_setAssociatedObject(self, &UIView_CUSLayoutFrame,
                              layoutFrame, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

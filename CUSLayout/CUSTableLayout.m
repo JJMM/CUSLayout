@@ -253,8 +253,7 @@ static CUSTableData *CUSTableDataInstance;
     return nil;
 }
 
--(CGSize)computeSize:(UIView *)control{
-    int wHint = CUS_LAY_DEFAULT, hHint = CUS_LAY_DEFAULT;
+-(CGSize)computeSize:(UIView *)control wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
     CGSize size = CGSizeMake(0, 0);
 	CUSTableData *data = [self getLayoutDataByControll:control];
 	if (data != nil) {
@@ -265,7 +264,7 @@ static CUSTableData *CUSTableDataInstance;
             hHint = [data.height getValue];
         }
 	}
-    size = [control sizeThatFits:CGSizeMake(wHint, hHint)];
+    size = [control computeSize:CGSizeMake(wHint, hHint)];
     if (data != nil) {
         if([data.width getDataType] == CUSLayoutDataTypeFloat){
             if([data.width getValue]!= CUS_LAY_DEFAULT){
