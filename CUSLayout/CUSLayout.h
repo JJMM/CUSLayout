@@ -7,7 +7,7 @@
 //  email:mgmgb@163.com
 //
 
-//头文件包，请将此头文件添加.pch中
+//please add #import "CUSLayout.h" to pch file
 
 #import "CUSLayoutConstant.h"
 #import "UIView+CUSLayout.h"
@@ -22,5 +22,7 @@
 #import "CUSTableLayout.h"
 #import "CUSTableData.h"
 #import "CUSStackLayout.h"
+#import "CUSGridLayout.h"
+#import "CUSGridData.h"
 #import "CUSLayoutUtil.h"
 #import "CUSLayoutDesignerView.h"

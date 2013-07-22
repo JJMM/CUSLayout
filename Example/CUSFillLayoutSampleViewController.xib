@@ -48,35 +48,35 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<array class="NSMutableArray" key="IBUIItems">
 							<object class="IBUIBarButtonItem" id="974804835">
-								<string key="IBUITitle">垂直</string>
+								<string key="IBUITitle">VER</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="14867509"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="920987423">
 								<int key="IBUITag">1</int>
-								<string key="IBUITitle">间距-</string>
+								<string key="IBUITitle">space-</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="14867509"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="323390649">
 								<int key="IBUITag">2</int>
-								<string key="IBUITitle">间距+</string>
+								<string key="IBUITitle">space+</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="14867509"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="371847617">
 								<int key="IBUITag">3</int>
-								<string key="IBUITitle">控-</string>
+								<string key="IBUITitle">view-</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="14867509"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="218921354">
 								<int key="IBUITag">4</int>
-								<string key="IBUITitle">控+</string>
+								<string key="IBUITitle">view+</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="14867509"/>

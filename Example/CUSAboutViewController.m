@@ -17,10 +17,10 @@
     if (self) {
         self.title = @"About";
         self.dataItems = [NSMutableArray array];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"作者：",@"张宇", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"版本：",@"1.0", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"邮箱：",@"cuslayout@163.com", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"微薄：",@"http://weibo.com/cuslayout", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"Author:",@"zhangyu", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"Version:",@"1.0", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"e-mail:",@"cuslayout@163.com", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"Blog",@"http://weibo.com/cuslayout", nil]];
     }
     return self;
 }
@@ -34,7 +34,7 @@
     //    将txt到string对象中，编码类型为NSUTF8StringEncoding
     NSString *string = [[NSString  alloc] initWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil];
     
-    CGRect labelframe = CGRectMake(0, 0, 300, 500);
+    CGRect labelframe = CGRectMake(0, 0, 300, 550);
     UIView *labelContainer = [[UIView alloc]initWithFrame:labelframe];
     CUSFillLayout *layout = [[CUSFillLayout alloc]init];
     layout.marginLeft = layout.marginRight = 10;

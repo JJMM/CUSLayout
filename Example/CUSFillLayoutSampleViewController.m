@@ -41,10 +41,10 @@
     if(btn.tag == 0){
         if(layout.type == CUSLayoutTypeHorizontal){
             layout.type = CUSLayoutTypeVertical;
-            [btn setTitle:@"水平"];
+            [btn setTitle:@"HOR"];
         }else{
             layout.type = CUSLayoutTypeHorizontal;
-            [btn setTitle:@"垂直"];
+            [btn setTitle:@"VER"];
         }
     }else if(btn.tag == 1){
         layout.spacing -= 5;

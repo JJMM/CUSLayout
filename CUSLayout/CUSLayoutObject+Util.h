@@ -19,3 +19,13 @@
 -(void)replaceRectAtIndex:(NSUInteger)index withRect:(CGRect)value;
 -(CGRect)CGRectAtIndex:(NSUInteger)index;
 @end
+
+
+@interface CUS2DArray : NSObject
+@property (nonatomic,assign) NSInteger rowCount;
+@property (nonatomic,assign,readonly) NSInteger columnCount;
+-(id)init:(NSUInteger)rowCount atColumnCount:(NSUInteger)columnCount;
+- (id)objectAtRow:(NSUInteger)row atColumn:(NSUInteger)column;
+- (void)addObject:(id)anObject atRow:(NSUInteger)row atColumn:(NSUInteger)column;
+- (void)removeObjectAtRow:(NSUInteger)row_ atColumn:(NSUInteger)column_;
+@end

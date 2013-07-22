@@ -60,7 +60,7 @@ static NSString *UIView_ChildFrameChanged;
     return self.bounds;
 }
 -(CGSize)computeSize:(CGSize)size{
-    if (size.width != CUS_LAY_DEFAULT && size.width != CUS_LAY_DEFAULT) {
+    if (size.width != CUS_LAY_DEFAULT && size.height != CUS_LAY_DEFAULT) {
 		return size;
 	}
     CGSize s = CGSizeMake(size.width, size.height);
@@ -86,8 +86,6 @@ static NSString *UIView_ChildFrameChanged;
     if(size.height != CUS_LAY_DEFAULT){
         s.height = size.height;
     }
-    
-    NSLog(@"%@:%@",[[self class] description],NSStringFromCGSize(s));
     return s;
 }
 -(void)setLayoutFrame:(CUSLayoutFrame *)layoutFrame{

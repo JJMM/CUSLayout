@@ -15,10 +15,16 @@
 		2A53EFCA174CBF3000483110 /* CUSRealSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A53EFC8174CBF3000483110 /* CUSRealSingleton.m */; };
 		2A53EFD4174CCB4D00483110 /* CUSStackLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A53EFD2174CCB4D00483110 /* CUSStackLayoutSampleViewController.m */; };
 		2A53EFD5174CCB4D00483110 /* CUSStackLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A53EFD3174CCB4D00483110 /* CUSStackLayoutSampleViewController.xib */; };
+		2A56D72417962C730042CA5C /* CUSGridData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A56D72217962C730042CA5C /* CUSGridData.h */; };
+		2A56D72617962C730042CA5C /* CUSGridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56D72317962C730042CA5C /* CUSGridData.m */; };
+		2A56D7291796324C0042CA5C /* CUSGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A56D7271796324C0042CA5C /* CUSGridLayout.h */; };
+		2A56D72B1796324C0042CA5C /* CUSGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56D7281796324C0042CA5C /* CUSGridLayout.m */; };
 		2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */; };
 		2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */; };
 		2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */; };
 		2AAA228C174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */; };
+		2AC621EC17993B4A0088D445 /* CUSGridLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC621EA17993B4A0088D445 /* CUSGridLayoutSampleViewController.m */; };
+		2AC621ED17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC621EB17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib */; };
 		2AFF1ED61728D38E002E0C63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B0E3713E052DF00FA85CA /* UIKit.framework */; };
 		2AFF1F361728E142002E0C63 /* CUSFillLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF1F1C1728E142002E0C63 /* CUSFillLayout.h */; };
 		2AFF1F381728E142002E0C63 /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */; };
@@ -87,11 +93,18 @@
 		2A53EFD1174CCB4D00483110 /* CUSStackLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayoutSampleViewController.h; sourceTree = "<group>"; };
 		2A53EFD2174CCB4D00483110 /* CUSStackLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayoutSampleViewController.m; sourceTree = "<group>"; };
 		2A53EFD3174CCB4D00483110 /* CUSStackLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSStackLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A56D72217962C730042CA5C /* CUSGridData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridData.h; sourceTree = "<group>"; };
+		2A56D72317962C730042CA5C /* CUSGridData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridData.m; sourceTree = "<group>"; };
+		2A56D7271796324C0042CA5C /* CUSGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridLayout.h; sourceTree = "<group>"; };
+		2A56D7281796324C0042CA5C /* CUSGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridLayout.m; sourceTree = "<group>"; };
 		2AAA2283174A25060013A683 /* CUSLayoutDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutDesignerView.h; sourceTree = "<group>"; };
 		2AAA2284174A25060013A683 /* CUSLayoutDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutDesignerView.m; sourceTree = "<group>"; };
 		2AAA2288174A255B0013A683 /* CUSLayoutManagerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutManagerSampleViewController.h; sourceTree = "<group>"; };
 		2AAA2289174A255B0013A683 /* CUSLayoutManagerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutManagerSampleViewController.m; sourceTree = "<group>"; };
 		2AAA228A174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLayoutManagerSampleViewController.xib; sourceTree = "<group>"; };
+		2AC621E917993B4A0088D445 /* CUSGridLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2AC621EA17993B4A0088D445 /* CUSGridLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2AC621EB17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSGridLayoutSampleViewController.xib; sourceTree = "<group>"; };
 		2AFF1F1C1728E142002E0C63 /* CUSFillLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayout.h; sourceTree = "<group>"; };
 		2AFF1F1D1728E142002E0C63 /* CUSFillLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayout.m; sourceTree = "<group>"; };
 		2AFF1F1E1728E142002E0C63 /* CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayout.h; sourceTree = "<group>"; };
@@ -214,6 +227,9 @@
 				2A53EFD1174CCB4D00483110 /* CUSStackLayoutSampleViewController.h */,
 				2A53EFD2174CCB4D00483110 /* CUSStackLayoutSampleViewController.m */,
 				2A53EFD3174CCB4D00483110 /* CUSStackLayoutSampleViewController.xib */,
+				2AC621E917993B4A0088D445 /* CUSGridLayoutSampleViewController.h */,
+				2AC621EA17993B4A0088D445 /* CUSGridLayoutSampleViewController.m */,
+				2AC621EB17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -243,6 +259,10 @@
 				2AFF1F331728E142002E0C63 /* CUSTableLayout.m */,
 				2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */,
 				2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */,
+				2A56D7271796324C0042CA5C /* CUSGridLayout.h */,
+				2A56D7281796324C0042CA5C /* CUSGridLayout.m */,
+				2A56D72217962C730042CA5C /* CUSGridData.h */,
+				2A56D72317962C730042CA5C /* CUSGridData.m */,
 				2AFF1F341728E142002E0C63 /* UIView+CUSLayout.h */,
 				2AFF1F351728E142002E0C63 /* UIView+CUSLayout.m */,
 				2AFF1F241728E142002E0C63 /* CUSLayoutObject+Util.h */,
@@ -348,6 +368,8 @@
 				2AFF1F591728E142002E0C63 /* UIView+CUSLayout.h in Headers */,
 				2AAA2285174A25060013A683 /* CUSLayoutDesignerView.h in Headers */,
 				2A53EFC9174CBF3000483110 /* CUSRealSingleton.h in Headers */,
+				2A56D72417962C730042CA5C /* CUSGridData.h in Headers */,
+				2A56D7291796324C0042CA5C /* CUSGridLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +453,7 @@
 				2AFF1F821728E197002E0C63 /* Icon@2x.png in Resources */,
 				2AAA228C174A255B0013A683 /* CUSLayoutManagerSampleViewController.xib in Resources */,
 				2A53EFD5174CCB4D00483110 /* CUSStackLayoutSampleViewController.xib in Resources */,
+				2AC621ED17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +479,8 @@
 				2A4FBCE9174CAAAD000CE0A7 /* CUSStackLayout.m in Sources */,
 				2AAA2287174A25060013A683 /* CUSLayoutDesignerView.m in Sources */,
 				2A53EFCA174CBF3000483110 /* CUSRealSingleton.m in Sources */,
+				2A56D72617962C730042CA5C /* CUSGridData.m in Sources */,
+				2A56D72B1796324C0042CA5C /* CUSGridLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +499,7 @@
 				2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */,
 				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
 				2A53EFD4174CCB4D00483110 /* CUSStackLayoutSampleViewController.m in Sources */,
+				2AC621EC17993B4A0088D445 /* CUSGridLayoutSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

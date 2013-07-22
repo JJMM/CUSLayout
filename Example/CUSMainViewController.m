@@ -16,12 +16,16 @@
     if (self) {
         self.title = @"CUSLayout";
         self.dataItems = [NSMutableArray array];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"FillLayout",@"填充布局：简单、易用、高效",@"CUSFillLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"流式布局：类似HTML中的布局或Android中的LinnerLayout",@"CUSLinnerLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"RowLayout",@"行列布局：子控件以行或列的形式布局，可设置折行、均匀等复杂操作",@"CUSRowLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"TableLayout",@"表格布局：类似HTML中使用Table标签控制布局",@"CUSTableLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"StackLayout",@"堆栈布局：层叠式显示",@"CUSStackLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"布局设计器：Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"FillLayout",@"Simple, easy to use, efficient",@"CUSFillLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"Simple to HTML or LinnerLayout in Android",@"CUSLinnerLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"RowLayout",@"Layout in a row",@"CUSRowLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"TableLayout",@"Simple to HTML Table Tag Layout",@"CUSTableLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"StackLayout",@"Cascading Display",@"CUSStackLayoutSampleViewController", nil]];
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"GridLayout",@"Flat style? So easy",@"CUSGridLayoutSampleViewController", nil]];
+        
+        
+        [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
+        
         
     }
     return self;
@@ -88,7 +92,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray *array = [self.dataItems objectAtIndex:indexPath.row];
     if (array && [array count] >= 2) {
-        BOOL flag = [self loadViewWithClassName:[array objectAtIndex:2]];
+        BOOL flag = [self loadViewWithClassName:[array objectAtIndex:2] title:[array objectAtIndex:0]];
         if(!flag){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该布局算法没有实现，将在后续版本中提供" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [alert show];
@@ -98,11 +102,11 @@
     }
 }
 
--(BOOL)loadViewWithClassName:(NSString*)name{
+-(BOOL)loadViewWithClassName:(NSString*)name title:(NSString*)title {
     Class controllerClass=NSClassFromString(name);
     if(controllerClass){
         UIViewController* backController=[[controllerClass alloc]initWithNibName:name bundle:nil];
-        backController.title = @"DEMO";
+        backController.title = title;
         [self.navigationController pushViewController:backController animated:YES];
         return YES;
     }
