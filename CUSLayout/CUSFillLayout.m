@@ -78,7 +78,7 @@
 	int count = [children count];
 	if (count == 0) return;
 	int width = rect.size.width - (self.marginLeft + self.marginRight);
-	int height = rect.size.height - (self.marginTop + self.marginBottom) * 2;
+	int height = rect.size.height - (self.marginTop + self.marginBottom);
 	if (type == CUSLayoutTypeHorizontal) {
 		width -= (count - 1) * spacing;
 		int x = rect.origin.x + self.marginLeft, extra = width % count;

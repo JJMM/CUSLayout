@@ -47,10 +47,10 @@ static NSString *UIView_ChildFrameChanged;
                              nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(void)setFrameExt:(CGRect)frame{
-    if(self.superview){
-        objc_setAssociatedObject(self.superview, &UIView_ChildFrameChanged,
-                                 [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
+//    if(self.superview){
+//        objc_setAssociatedObject(self.superview, &UIView_ChildFrameChanged,
+//                                 [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//    }
     [self setFrameExt:frame];
     
 }
