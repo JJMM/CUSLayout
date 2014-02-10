@@ -27,6 +27,11 @@
 //下边距
 @property (nonatomic,assign) CGFloat marginBottom;
 //API
+
+-(void)setMargin:(CGFloat)margin;//同时设置上下左右边距
+-(void)setMarginWidth:(CGFloat)margin;//同时设置左右边距
+-(void)setMarginHeight:(CGFloat)margin;//同时设置上下边距
+
 -(void)layout:(UIView *)view;
 -(CGSize)computeSize:(UIView *)view;
 -(CGSize)computeSize:(UIView *)view wHint:(CGFloat)wHint hHint:(CGFloat)hHint;

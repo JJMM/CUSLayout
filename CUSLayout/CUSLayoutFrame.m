@@ -55,4 +55,17 @@
     view.frame = frame;
 }
 
+-(void)setMargin:(CGFloat)margin{
+    [self setMarginWidth:margin];
+    [self setMarginHeight:margin];
+}
+
+-(void)setMarginWidth:(CGFloat)margin{
+    self.marginLeft = self.marginRight = margin;
+}
+
+-(void)setMarginHeight:(CGFloat)margin{
+    self.marginTop = self.marginBottom = margin;
+}
+
 @end

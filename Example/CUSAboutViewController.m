@@ -61,7 +61,7 @@
 #pragma mark - Table view data source
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"联系方式";
+    return @"Contact Us";
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
