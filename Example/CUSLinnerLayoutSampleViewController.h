@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CUSLayoutSampleFactory.h"
-@interface CUSLinnerLayoutSampleViewController : UIViewController
+@interface CUSLinnerLayoutSampleViewController : CUSViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;
 
 -(IBAction)toolItemClicked:(id)sender;

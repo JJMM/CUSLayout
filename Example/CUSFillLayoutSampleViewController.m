@@ -8,7 +8,6 @@
 
 #import "CUSFillLayoutSampleViewController.h"
 
-
 @implementation CUSFillLayoutSampleViewController
 @synthesize contentView;
 

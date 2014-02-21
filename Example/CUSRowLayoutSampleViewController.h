@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CUSLayoutSampleFactory.h"
-@interface CUSRowLayoutSampleViewController : UIViewController
+@interface CUSRowLayoutSampleViewController : CUSViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;
 @property (nonatomic,strong) IBOutlet UIScrollView *scrollView;
 

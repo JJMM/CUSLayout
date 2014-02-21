@@ -10,7 +10,7 @@
 #import <QuartzCore/CALayer.h>
 @implementation CUSLayoutSampleFactory
 
-+(UILabel *)createControl{
++(UIView *)createControl{
     NSString *str = @"abcdefghijklmnopqrstuvwxyz";
     NSInteger r = 1 + random()%15;
     NSString *title = [str substringToIndex:r];
@@ -18,11 +18,13 @@
     return [CUSLayoutSampleFactory createControl:title];
 }
 
-+(UILabel *)createControl:(NSString *)title{
-    UILabel *label = [[UILabel alloc] init];
-    label.text=title;
-    label.textAlignment = UITextAlignmentCenter;
++(UIView *)createControl:(NSString *)title{
+//    UILabel *label = [[UILabel alloc] init];
+    UIButton *label = [UIButton buttonWithType:UIButtonTypeCustom];
+//    label.text=title;
+//    label.textAlignment = UITextAlignmentCenter;
  
+    [label setTitle:title forState:UIControlStateNormal];
     label.backgroundColor = [CUSLayoutSampleFactory randomLightingColor];
     label.layer.cornerRadius = 5;
 

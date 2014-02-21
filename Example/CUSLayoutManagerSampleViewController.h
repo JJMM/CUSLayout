@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CUSLayoutSampleFactory.h"
-@interface CUSLayoutManagerSampleViewController : UIViewController
+@interface CUSLayoutManagerSampleViewController : CUSViewController
 
 @property (nonatomic,strong) CUSLayoutDesignerView * designerView;
 //@property (nonatomic,strong) UIView * designerView;

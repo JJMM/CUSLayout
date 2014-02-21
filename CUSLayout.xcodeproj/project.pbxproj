@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A1D5CD717278775005651B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D5CD617278775005651B6 /* README.txt */; };
+		2A3208AA18B6ECD400EDCE80 /* CUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3208A918B6ECD400EDCE80 /* CUSViewController.m */; };
 		2A4FBCE5174CAA0C000CE0A7 /* libCUSLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C542393145ADEBD0026A152 /* libCUSLayout.a */; };
 		2A4FBCE8174CAAAD000CE0A7 /* CUSStackLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */; };
 		2A4FBCE9174CAAAD000CE0A7 /* CUSStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */; };
@@ -86,6 +87,8 @@
 
 /* Begin PBXFileReference section */
 		2A1D5CD617278775005651B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2A3208A818B6ECD400EDCE80 /* CUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSViewController.h; sourceTree = "<group>"; };
+		2A3208A918B6ECD400EDCE80 /* CUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSViewController.m; sourceTree = "<group>"; };
 		2A4FBCE6174CAAAD000CE0A7 /* CUSStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayout.h; sourceTree = "<group>"; };
 		2A4FBCE7174CAAAD000CE0A7 /* CUSStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayout.m; sourceTree = "<group>"; };
 		2A53EFC7174CBF3000483110 /* CUSRealSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRealSingleton.h; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				2AC621E917993B4A0088D445 /* CUSGridLayoutSampleViewController.h */,
 				2AC621EA17993B4A0088D445 /* CUSGridLayoutSampleViewController.m */,
 				2AC621EB17993B4A0088D445 /* CUSGridLayoutSampleViewController.xib */,
+				2A3208A818B6ECD400EDCE80 /* CUSViewController.h */,
+				2A3208A918B6ECD400EDCE80 /* CUSViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				2AFF1F7B1728E187002E0C63 /* CUSRowLayoutSampleViewController.m in Sources */,
 				2AAA228B174A255B0013A683 /* CUSLayoutManagerSampleViewController.m in Sources */,
 				2AFF1F7D1728E187002E0C63 /* CUSTableLayoutSampleViewController.m in Sources */,
+				2A3208AA18B6ECD400EDCE80 /* CUSViewController.m in Sources */,
 				2A53EFD4174CCB4D00483110 /* CUSStackLayoutSampleViewController.m in Sources */,
 				2AC621EC17993B4A0088D445 /* CUSGridLayoutSampleViewController.m in Sources */,
 			);

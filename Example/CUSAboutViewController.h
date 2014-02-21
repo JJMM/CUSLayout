@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CUSAboutViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+#import "CUSViewController.h"
+@interface CUSAboutViewController : CUSViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) IBOutlet UITableView *table;
 @property (nonatomic,strong) NSMutableArray *dataItems;
 @end

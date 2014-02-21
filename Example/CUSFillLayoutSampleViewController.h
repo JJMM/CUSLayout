@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CUSLayout.h"
 #import "CUSLayoutSampleFactory.h"
-@interface CUSFillLayoutSampleViewController : UIViewController
+@interface CUSFillLayoutSampleViewController : CUSViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;
 
 

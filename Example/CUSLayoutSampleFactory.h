@@ -5,11 +5,12 @@
 //  Created by zhangyu on 13-4-24.
 //
 //
+#import "CUSViewController.h"
 
 @interface CUSLayoutSampleFactory : NSObject
 
-+(UILabel *)createControl;
++(UIView *)createControl;
 
-+(UILabel *)createControl:(NSString *)title;
++(UIView *)createControl:(NSString *)title;
 +(UIColor *)randomLightingColor;
 @end

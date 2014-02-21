@@ -25,12 +25,17 @@
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, 44);
     [self.scrollView CUSLayout];
 }
+
+-(void)buttonClicked:(id)sender{
+    NSLog(@"buttonClicked:%@",sender);
+}
 - (void)viewDidLoad{
     [super viewDidLoad];
     
     for (int i = 0; i < 15; i++) {
-        UIView *button = [CUSLayoutSampleFactory createControl];
+        UIButton *button = (UIButton *)[CUSLayoutSampleFactory createControl];
         button.layoutData = CUS_LAYOUT.share_rowData;
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:button];
     }
     

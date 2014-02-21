@@ -10,7 +10,7 @@
 #import "CUSLayout.h"
 #import "CUSLayoutSampleFactory.h"
 
-@interface CUSStackLayoutSampleViewController : UIViewController
+@interface CUSStackLayoutSampleViewController : CUSViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;
 
 

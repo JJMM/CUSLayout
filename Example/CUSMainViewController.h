@@ -10,6 +10,6 @@
 
 #import "CUSAboutViewController.h"
 
-@interface CUSMainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface CUSMainViewController : CUSViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) NSMutableArray *dataItems;
 @end
