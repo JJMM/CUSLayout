@@ -1,13 +1,14 @@
-//
-//  CUSLayout.h
-//  CUSLayout
-//
-//  Created by zhangyu on 13-4-9.
-//  Copyright (c) 2013年 zhangyu. All rights reserved.
-//  email:mgmgb@163.com
-//
+/**
+ @header CUSLayout.h
+ @abstract Automatic Layout Manager
+ @discussion please add #import "CUSLayout.h" to pch file
+ @code
 
-//please add #import "CUSLayout.h" to pch file
+ @link
+ https://github.com/JJMM/CUSLayout
+ @version 1.00 2013/4/9 Creation
+ @copyright Copyright (c) 2013 zhangyu. All rights reserved.
+ */
 
 #import "CUSLayoutConstant.h"
 #import "UIView+CUSLayout.h"

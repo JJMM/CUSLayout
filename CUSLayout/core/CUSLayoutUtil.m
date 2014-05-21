@@ -1,0 +1,53 @@
+/**
+ @version 1.00 2013/4/9 Creation
+ @copyright Copyright (c) 2013 zhangyu. All rights reserved.
+ */
+
+#import "CUSLayoutUtil.h"
+
+static CUSLayoutUtil  *CUSLayoutInstance;
+@implementation CUSLayoutUtil
+@synthesize share_fillLayout_H;
+@synthesize share_fillLayout_V;
+
+@synthesize share_linnerLayout_H;
+@synthesize share_linnerLayout_V;
+@synthesize share_linnerData;
+
+@synthesize share_rowLayout_H;
+@synthesize share_rowLayout_V;
+@synthesize share_rowData;
+
+@synthesize share_tableData;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.share_fillLayout_H = [[CUSFillLayout alloc]init];
+        self.share_fillLayout_V = [[CUSFillLayout alloc]init];
+        self.share_fillLayout_V.type = CUSLayoutTypeVertical;
+        
+        self.share_rowLayout_H = [[CUSRowLayout alloc]init];
+        self.share_rowLayout_V = [[CUSRowLayout alloc]init];
+        self.share_rowLayout_V.type = CUSLayoutTypeVertical;
+        
+        self.share_rowData = [[CUSRowData alloc]init];
+        
+        self.share_linnerLayout_H = [[CUSLinnerLayout alloc]init];
+        self.share_linnerLayout_H.type = CUSLayoutTypeHorizontal;
+        self.share_linnerLayout_V = [[CUSLinnerLayout alloc]init];
+
+        self.share_linnerData = [[CUSLinnerData alloc]init];
+        self.share_tableData =  [[CUSTableData alloc]init];
+        
+    }
+    return self;
+}
+
++(CUSLayoutUtil *)getShareInstance{
+    if (!CUSLayoutInstance) {
+        CUSLayoutInstance = [[CUSLayoutUtil alloc]init];
+    }
+    return CUSLayoutInstance;
+}
+@end

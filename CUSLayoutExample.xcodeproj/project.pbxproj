@@ -1,0 +1,981 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A33302A192C8E0F00998BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333029192C8E0F00998BBF /* Foundation.framework */; };
+		2A33302C192C8E0F00998BBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33302B192C8E0F00998BBF /* CoreGraphics.framework */; };
+		2A33302E192C8E0F00998BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33302D192C8E0F00998BBF /* UIKit.framework */; };
+		2A333034192C8E0F00998BBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A333032192C8E0F00998BBF /* InfoPlist.strings */; };
+		2A333036192C8E0F00998BBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333035192C8E0F00998BBF /* main.m */; };
+		2A33303A192C8E0F00998BBF /* CUSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333039192C8E0F00998BBF /* CUSAppDelegate.m */; };
+		2A33303C192C8E0F00998BBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A33303B192C8E0F00998BBF /* Images.xcassets */; };
+		2A333043192C8E0F00998BBF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333042192C8E0F00998BBF /* XCTest.framework */; };
+		2A333044192C8E0F00998BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333029192C8E0F00998BBF /* Foundation.framework */; };
+		2A333045192C8E0F00998BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33302D192C8E0F00998BBF /* UIKit.framework */; };
+		2A33304D192C8E0F00998BBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A33304B192C8E0F00998BBF /* InfoPlist.strings */; };
+		2A33304F192C8E0F00998BBF /* CUSLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33304E192C8E0F00998BBF /* CUSLayoutExampleTests.m */; };
+		2A33305D192C8E4C00998BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333029192C8E0F00998BBF /* Foundation.framework */; };
+		2A33306A192C8E4C00998BBF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333042192C8E0F00998BBF /* XCTest.framework */; };
+		2A33306B192C8E4C00998BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A333029192C8E0F00998BBF /* Foundation.framework */; };
+		2A33306C192C8E4C00998BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33302D192C8E0F00998BBF /* UIKit.framework */; };
+		2A33306F192C8E4C00998BBF /* libCUSLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33305C192C8E4C00998BBF /* libCUSLayout.a */; };
+		2A333075192C8E4C00998BBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A333073192C8E4C00998BBF /* InfoPlist.strings */; };
+		2A333077192C8E4C00998BBF /* CUSLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333076192C8E4C00998BBF /* CUSLayoutTests.m */; };
+		2A333090192C8F6F00998BBF /* CUSLayoutFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333085192C8F6F00998BBF /* CUSLayoutFrame.m */; };
+		2A333091192C8F6F00998BBF /* CUSLayoutData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333087192C8F6F00998BBF /* CUSLayoutData.m */; };
+		2A333092192C8F6F00998BBF /* UIView+CUSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */; };
+		2A333093192C8F6F00998BBF /* CUSLayoutObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */; };
+		2A333094192C8F6F00998BBF /* CUSLayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */; };
+		2A333095192C8F6F00998BBF /* CUSRealSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308F192C8F6F00998BBF /* CUSRealSingleton.m */; };
+		2A3330AB192C8FB000998BBF /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333098192C8FB000998BBF /* CUSFillLayout.m */; };
+		2A3330AC192C8FB000998BBF /* CUSLinnerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309A192C8FB000998BBF /* CUSLinnerData.m */; };
+		2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */; };
+		2A3330AE192C8FB000998BBF /* CUSRowData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309E192C8FB000998BBF /* CUSRowData.m */; };
+		2A3330AF192C8FB000998BBF /* CUSRowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A0192C8FB000998BBF /* CUSRowLayout.m */; };
+		2A3330B0192C8FB000998BBF /* CUSTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A2192C8FB000998BBF /* CUSTableData.m */; };
+		2A3330B1192C8FB000998BBF /* CUSTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A4192C8FB000998BBF /* CUSTableLayout.m */; };
+		2A3330B2192C8FB000998BBF /* CUSStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A6192C8FB000998BBF /* CUSStackLayout.m */; };
+		2A3330B3192C8FB000998BBF /* CUSGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A8192C8FB000998BBF /* CUSGridLayout.m */; };
+		2A3330B4192C8FB000998BBF /* CUSGridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330AA192C8FB000998BBF /* CUSGridData.m */; };
+		2A3330D7192C8FFC00998BBF /* CUSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330BA192C8FFC00998BBF /* CUSAboutViewController.m */; };
+		2A3330D8192C8FFC00998BBF /* CUSAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330BB192C8FFC00998BBF /* CUSAboutViewController.xib */; };
+		2A3330D9192C8FFC00998BBF /* CUSFillLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330BD192C8FFC00998BBF /* CUSFillLayoutSampleViewController.m */; };
+		2A3330DA192C8FFC00998BBF /* CUSFillLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330BE192C8FFC00998BBF /* CUSFillLayoutSampleViewController.xib */; };
+		2A3330DB192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330C0192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m */; };
+		2A3330DC192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330C1192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib */; };
+		2A3330DD192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330C3192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m */; };
+		2A3330DE192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330C4192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib */; };
+		2A3330DF192C8FFC00998BBF /* CUSLayoutSampleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330C6192C8FFC00998BBF /* CUSLayoutSampleFactory.m */; };
+		2A3330E0192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330C8192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.m */; };
+		2A3330E1192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330C9192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.xib */; };
+		2A3330E2192C8FFC00998BBF /* CUSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330CB192C8FFC00998BBF /* CUSMainViewController.m */; };
+		2A3330E3192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330CD192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m */; };
+		2A3330E4192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330CE192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib */; };
+		2A3330E5192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330D0192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m */; };
+		2A3330E6192C8FFC00998BBF /* CUSStackLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330D1192C8FFC00998BBF /* CUSStackLayoutSampleViewController.xib */; };
+		2A3330E7192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330D3192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m */; };
+		2A3330E8192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330D4192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib */; };
+		2A3330E9192C8FFC00998BBF /* CUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330D6192C8FFC00998BBF /* CUSViewController.m */; };
+		2A3330ED192C904C00998BBF /* CUSLayoutDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330EC192C904C00998BBF /* CUSLayoutDesignerView.m */; };
+		2A3330F0192C90A400998BBF /* libCUSLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A33305C192C8E4C00998BBF /* libCUSLayout.a */; };
+		2A3330F4192C912D00998BBF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F2192C912D00998BBF /* Icon.png */; };
+		2A3330F5192C912D00998BBF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F3192C912D00998BBF /* Icon@2x.png */; };
+		2A3330F7192C920800998BBF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F6192C920800998BBF /* README.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A333046192C8E0F00998BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A33301E192C8E0F00998BBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A333025192C8E0F00998BBF;
+			remoteInfo = CUSLayoutExample;
+		};
+		2A33306D192C8E4C00998BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A33301E192C8E0F00998BBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A33305B192C8E4C00998BBF;
+			remoteInfo = CUSLayout;
+		};
+		2A3330EE192C90A000998BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A33301E192C8E0F00998BBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A33305B192C8E4C00998BBF;
+			remoteInfo = CUSLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A33305A192C8E4C00998BBF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A333026192C8E0F00998BBF /* CUSLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CUSLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A333029192C8E0F00998BBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A33302B192C8E0F00998BBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A33302D192C8E0F00998BBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2A333031192C8E0F00998BBF /* CUSLayoutExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CUSLayoutExample-Info.plist"; sourceTree = "<group>"; };
+		2A333033192C8E0F00998BBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A333035192C8E0F00998BBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A333037192C8E0F00998BBF /* CUSLayoutExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CUSLayoutExample-Prefix.pch"; sourceTree = "<group>"; };
+		2A333038192C8E0F00998BBF /* CUSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUSAppDelegate.h; sourceTree = "<group>"; };
+		2A333039192C8E0F00998BBF /* CUSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUSAppDelegate.m; sourceTree = "<group>"; };
+		2A33303B192C8E0F00998BBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2A333041192C8E0F00998BBF /* CUSLayoutExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CUSLayoutExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A333042192C8E0F00998BBF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2A33304A192C8E0F00998BBF /* CUSLayoutExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CUSLayoutExampleTests-Info.plist"; sourceTree = "<group>"; };
+		2A33304C192C8E0F00998BBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A33304E192C8E0F00998BBF /* CUSLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutExampleTests.m; sourceTree = "<group>"; };
+		2A33305C192C8E4C00998BBF /* libCUSLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCUSLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A333069192C8E4C00998BBF /* CUSLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CUSLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A333072192C8E4C00998BBF /* CUSLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CUSLayoutTests-Info.plist"; sourceTree = "<group>"; };
+		2A333074192C8E4C00998BBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A333076192C8E4C00998BBF /* CUSLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutTests.m; sourceTree = "<group>"; };
+		2A33307E192C8EBE00998BBF /* CUSLayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CUSLayout-Prefix.pch"; sourceTree = "<group>"; };
+		2A333083192C8F6F00998BBF /* CUSLayoutConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutConstant.h; sourceTree = "<group>"; };
+		2A333084192C8F6F00998BBF /* CUSLayoutFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutFrame.h; sourceTree = "<group>"; };
+		2A333085192C8F6F00998BBF /* CUSLayoutFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutFrame.m; sourceTree = "<group>"; };
+		2A333086192C8F6F00998BBF /* CUSLayoutData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutData.h; sourceTree = "<group>"; };
+		2A333087192C8F6F00998BBF /* CUSLayoutData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutData.m; sourceTree = "<group>"; };
+		2A333088192C8F6F00998BBF /* UIView+CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CUSLayout.h"; sourceTree = "<group>"; };
+		2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CUSLayout.m"; sourceTree = "<group>"; };
+		2A33308A192C8F6F00998BBF /* CUSLayoutObject+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CUSLayoutObject+Util.h"; sourceTree = "<group>"; };
+		2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CUSLayoutObject+Util.m"; sourceTree = "<group>"; };
+		2A33308C192C8F6F00998BBF /* CUSLayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutUtil.h; sourceTree = "<group>"; };
+		2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutUtil.m; sourceTree = "<group>"; };
+		2A33308E192C8F6F00998BBF /* CUSRealSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRealSingleton.h; sourceTree = "<group>"; };
+		2A33308F192C8F6F00998BBF /* CUSRealSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRealSingleton.m; sourceTree = "<group>"; };
+		2A333096192C8F8000998BBF /* CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayout.h; sourceTree = "<group>"; };
+		2A333097192C8FB000998BBF /* CUSFillLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayout.h; sourceTree = "<group>"; };
+		2A333098192C8FB000998BBF /* CUSFillLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayout.m; sourceTree = "<group>"; };
+		2A333099192C8FB000998BBF /* CUSLinnerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerData.h; sourceTree = "<group>"; };
+		2A33309A192C8FB000998BBF /* CUSLinnerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerData.m; sourceTree = "<group>"; };
+		2A33309B192C8FB000998BBF /* CUSLinnerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerLayout.h; sourceTree = "<group>"; };
+		2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerLayout.m; sourceTree = "<group>"; };
+		2A33309D192C8FB000998BBF /* CUSRowData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRowData.h; sourceTree = "<group>"; };
+		2A33309E192C8FB000998BBF /* CUSRowData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRowData.m; sourceTree = "<group>"; };
+		2A33309F192C8FB000998BBF /* CUSRowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRowLayout.h; sourceTree = "<group>"; };
+		2A3330A0192C8FB000998BBF /* CUSRowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRowLayout.m; sourceTree = "<group>"; };
+		2A3330A1192C8FB000998BBF /* CUSTableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSTableData.h; sourceTree = "<group>"; };
+		2A3330A2192C8FB000998BBF /* CUSTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSTableData.m; sourceTree = "<group>"; };
+		2A3330A3192C8FB000998BBF /* CUSTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSTableLayout.h; sourceTree = "<group>"; };
+		2A3330A4192C8FB000998BBF /* CUSTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSTableLayout.m; sourceTree = "<group>"; };
+		2A3330A5192C8FB000998BBF /* CUSStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayout.h; sourceTree = "<group>"; };
+		2A3330A6192C8FB000998BBF /* CUSStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayout.m; sourceTree = "<group>"; };
+		2A3330A7192C8FB000998BBF /* CUSGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridLayout.h; sourceTree = "<group>"; };
+		2A3330A8192C8FB000998BBF /* CUSGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridLayout.m; sourceTree = "<group>"; };
+		2A3330A9192C8FB000998BBF /* CUSGridData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridData.h; sourceTree = "<group>"; };
+		2A3330AA192C8FB000998BBF /* CUSGridData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridData.m; sourceTree = "<group>"; };
+		2A3330B9192C8FFC00998BBF /* CUSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSAboutViewController.h; sourceTree = "<group>"; };
+		2A3330BA192C8FFC00998BBF /* CUSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSAboutViewController.m; sourceTree = "<group>"; };
+		2A3330BB192C8FFC00998BBF /* CUSAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSAboutViewController.xib; sourceTree = "<group>"; };
+		2A3330BC192C8FFC00998BBF /* CUSFillLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330BD192C8FFC00998BBF /* CUSFillLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330BE192C8FFC00998BBF /* CUSFillLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSFillLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330BF192C8FFC00998BBF /* CUSGridLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330C0192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330C1192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSGridLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330C2192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutManagerSampleViewController.h; sourceTree = "<group>"; };
+		2A3330C3192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutManagerSampleViewController.m; sourceTree = "<group>"; };
+		2A3330C4192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLayoutManagerSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330C5192C8FFC00998BBF /* CUSLayoutSampleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutSampleFactory.h; sourceTree = "<group>"; };
+		2A3330C6192C8FFC00998BBF /* CUSLayoutSampleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutSampleFactory.m; sourceTree = "<group>"; };
+		2A3330C7192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330C8192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330C9192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLinnerLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330CA192C8FFC00998BBF /* CUSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSMainViewController.h; sourceTree = "<group>"; };
+		2A3330CB192C8FFC00998BBF /* CUSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSMainViewController.m; sourceTree = "<group>"; };
+		2A3330CC192C8FFC00998BBF /* CUSRowLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRowLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330CD192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRowLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330CE192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSRowLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330CF192C8FFC00998BBF /* CUSStackLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330D0192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330D1192C8FFC00998BBF /* CUSStackLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSStackLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330D2192C8FFC00998BBF /* CUSTableLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSTableLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A3330D3192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSTableLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A3330D4192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSTableLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A3330D5192C8FFC00998BBF /* CUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSViewController.h; sourceTree = "<group>"; };
+		2A3330D6192C8FFC00998BBF /* CUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSViewController.m; sourceTree = "<group>"; };
+		2A3330EB192C904C00998BBF /* CUSLayoutDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutDesignerView.h; sourceTree = "<group>"; };
+		2A3330EC192C904C00998BBF /* CUSLayoutDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutDesignerView.m; sourceTree = "<group>"; };
+		2A3330F2192C912D00998BBF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2A3330F3192C912D00998BBF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		2A3330F6192C920800998BBF /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A333023192C8E0F00998BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3330F0192C90A400998BBF /* libCUSLayout.a in Frameworks */,
+				2A33302C192C8E0F00998BBF /* CoreGraphics.framework in Frameworks */,
+				2A33302E192C8E0F00998BBF /* UIKit.framework in Frameworks */,
+				2A33302A192C8E0F00998BBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A33303E192C8E0F00998BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A333043192C8E0F00998BBF /* XCTest.framework in Frameworks */,
+				2A333045192C8E0F00998BBF /* UIKit.framework in Frameworks */,
+				2A333044192C8E0F00998BBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A333059192C8E4C00998BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A33305D192C8E4C00998BBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A333066192C8E4C00998BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A33306A192C8E4C00998BBF /* XCTest.framework in Frameworks */,
+				2A33306F192C8E4C00998BBF /* libCUSLayout.a in Frameworks */,
+				2A33306C192C8E4C00998BBF /* UIKit.framework in Frameworks */,
+				2A33306B192C8E4C00998BBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A33301D192C8E0F00998BBF = {
+			isa = PBXGroup;
+			children = (
+				2A33307E192C8EBE00998BBF /* CUSLayout-Prefix.pch */,
+				2A33305E192C8E4C00998BBF /* CUSLayout */,
+				2A33302F192C8E0F00998BBF /* CUSLayoutExample */,
+				2A333048192C8E0F00998BBF /* CUSLayoutExampleTests */,
+				2A333070192C8E4C00998BBF /* CUSLayoutTests */,
+				2A333028192C8E0F00998BBF /* Frameworks */,
+				2A333027192C8E0F00998BBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A333027192C8E0F00998BBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A333026192C8E0F00998BBF /* CUSLayoutExample.app */,
+				2A333041192C8E0F00998BBF /* CUSLayoutExampleTests.xctest */,
+				2A33305C192C8E4C00998BBF /* libCUSLayout.a */,
+				2A333069192C8E4C00998BBF /* CUSLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A333028192C8E0F00998BBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A333029192C8E0F00998BBF /* Foundation.framework */,
+				2A33302B192C8E0F00998BBF /* CoreGraphics.framework */,
+				2A33302D192C8E0F00998BBF /* UIKit.framework */,
+				2A333042192C8E0F00998BBF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A33302F192C8E0F00998BBF /* CUSLayoutExample */ = {
+			isa = PBXGroup;
+			children = (
+				2A3330F1192C912D00998BBF /* Resources */,
+				2A3330B8192C8FFC00998BBF /* controller */,
+				2A333038192C8E0F00998BBF /* CUSAppDelegate.h */,
+				2A333039192C8E0F00998BBF /* CUSAppDelegate.m */,
+				2A33303B192C8E0F00998BBF /* Images.xcassets */,
+				2A333030192C8E0F00998BBF /* Supporting Files */,
+			);
+			path = CUSLayoutExample;
+			sourceTree = "<group>";
+		};
+		2A333030192C8E0F00998BBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A333031192C8E0F00998BBF /* CUSLayoutExample-Info.plist */,
+				2A333032192C8E0F00998BBF /* InfoPlist.strings */,
+				2A333035192C8E0F00998BBF /* main.m */,
+				2A333037192C8E0F00998BBF /* CUSLayoutExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A333048192C8E0F00998BBF /* CUSLayoutExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A33304E192C8E0F00998BBF /* CUSLayoutExampleTests.m */,
+				2A333049192C8E0F00998BBF /* Supporting Files */,
+			);
+			path = CUSLayoutExampleTests;
+			sourceTree = "<group>";
+		};
+		2A333049192C8E0F00998BBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A33304A192C8E0F00998BBF /* CUSLayoutExampleTests-Info.plist */,
+				2A33304B192C8E0F00998BBF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A33305E192C8E4C00998BBF /* CUSLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2A333096192C8F8000998BBF /* CUSLayout.h */,
+				2A333080192C8F4500998BBF /* core */,
+				2A33307F192C8F4500998BBF /* algorithm */,
+				2A3330EA192C904C00998BBF /* extend */,
+			);
+			path = CUSLayout;
+			sourceTree = "<group>";
+		};
+		2A333070192C8E4C00998BBF /* CUSLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A333076192C8E4C00998BBF /* CUSLayoutTests.m */,
+				2A333071192C8E4C00998BBF /* Supporting Files */,
+			);
+			path = CUSLayoutTests;
+			sourceTree = "<group>";
+		};
+		2A333071192C8E4C00998BBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A333072192C8E4C00998BBF /* CUSLayoutTests-Info.plist */,
+				2A333073192C8E4C00998BBF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A33307F192C8F4500998BBF /* algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				2A333097192C8FB000998BBF /* CUSFillLayout.h */,
+				2A333098192C8FB000998BBF /* CUSFillLayout.m */,
+				2A333099192C8FB000998BBF /* CUSLinnerData.h */,
+				2A33309A192C8FB000998BBF /* CUSLinnerData.m */,
+				2A33309B192C8FB000998BBF /* CUSLinnerLayout.h */,
+				2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */,
+				2A33309D192C8FB000998BBF /* CUSRowData.h */,
+				2A33309E192C8FB000998BBF /* CUSRowData.m */,
+				2A33309F192C8FB000998BBF /* CUSRowLayout.h */,
+				2A3330A0192C8FB000998BBF /* CUSRowLayout.m */,
+				2A3330A1192C8FB000998BBF /* CUSTableData.h */,
+				2A3330A2192C8FB000998BBF /* CUSTableData.m */,
+				2A3330A3192C8FB000998BBF /* CUSTableLayout.h */,
+				2A3330A4192C8FB000998BBF /* CUSTableLayout.m */,
+				2A3330A5192C8FB000998BBF /* CUSStackLayout.h */,
+				2A3330A6192C8FB000998BBF /* CUSStackLayout.m */,
+				2A3330A7192C8FB000998BBF /* CUSGridLayout.h */,
+				2A3330A8192C8FB000998BBF /* CUSGridLayout.m */,
+				2A3330A9192C8FB000998BBF /* CUSGridData.h */,
+				2A3330AA192C8FB000998BBF /* CUSGridData.m */,
+			);
+			path = algorithm;
+			sourceTree = "<group>";
+		};
+		2A333080192C8F4500998BBF /* core */ = {
+			isa = PBXGroup;
+			children = (
+				2A333083192C8F6F00998BBF /* CUSLayoutConstant.h */,
+				2A333084192C8F6F00998BBF /* CUSLayoutFrame.h */,
+				2A333085192C8F6F00998BBF /* CUSLayoutFrame.m */,
+				2A333086192C8F6F00998BBF /* CUSLayoutData.h */,
+				2A333087192C8F6F00998BBF /* CUSLayoutData.m */,
+				2A333088192C8F6F00998BBF /* UIView+CUSLayout.h */,
+				2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */,
+				2A33308A192C8F6F00998BBF /* CUSLayoutObject+Util.h */,
+				2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */,
+				2A33308C192C8F6F00998BBF /* CUSLayoutUtil.h */,
+				2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */,
+				2A33308E192C8F6F00998BBF /* CUSRealSingleton.h */,
+				2A33308F192C8F6F00998BBF /* CUSRealSingleton.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		2A3330B8192C8FFC00998BBF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A3330B9192C8FFC00998BBF /* CUSAboutViewController.h */,
+				2A3330BA192C8FFC00998BBF /* CUSAboutViewController.m */,
+				2A3330BB192C8FFC00998BBF /* CUSAboutViewController.xib */,
+				2A3330BC192C8FFC00998BBF /* CUSFillLayoutSampleViewController.h */,
+				2A3330BD192C8FFC00998BBF /* CUSFillLayoutSampleViewController.m */,
+				2A3330BE192C8FFC00998BBF /* CUSFillLayoutSampleViewController.xib */,
+				2A3330BF192C8FFC00998BBF /* CUSGridLayoutSampleViewController.h */,
+				2A3330C0192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m */,
+				2A3330C1192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib */,
+				2A3330C2192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.h */,
+				2A3330C3192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m */,
+				2A3330C4192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib */,
+				2A3330C5192C8FFC00998BBF /* CUSLayoutSampleFactory.h */,
+				2A3330C6192C8FFC00998BBF /* CUSLayoutSampleFactory.m */,
+				2A3330C7192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.h */,
+				2A3330C8192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.m */,
+				2A3330C9192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.xib */,
+				2A3330CA192C8FFC00998BBF /* CUSMainViewController.h */,
+				2A3330CB192C8FFC00998BBF /* CUSMainViewController.m */,
+				2A3330CC192C8FFC00998BBF /* CUSRowLayoutSampleViewController.h */,
+				2A3330CD192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m */,
+				2A3330CE192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib */,
+				2A3330CF192C8FFC00998BBF /* CUSStackLayoutSampleViewController.h */,
+				2A3330D0192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m */,
+				2A3330D1192C8FFC00998BBF /* CUSStackLayoutSampleViewController.xib */,
+				2A3330D2192C8FFC00998BBF /* CUSTableLayoutSampleViewController.h */,
+				2A3330D3192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m */,
+				2A3330D4192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib */,
+				2A3330D5192C8FFC00998BBF /* CUSViewController.h */,
+				2A3330D6192C8FFC00998BBF /* CUSViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		2A3330EA192C904C00998BBF /* extend */ = {
+			isa = PBXGroup;
+			children = (
+				2A3330EB192C904C00998BBF /* CUSLayoutDesignerView.h */,
+				2A3330EC192C904C00998BBF /* CUSLayoutDesignerView.m */,
+			);
+			path = extend;
+			sourceTree = "<group>";
+		};
+		2A3330F1192C912D00998BBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A3330F6192C920800998BBF /* README.txt */,
+				2A3330F2192C912D00998BBF /* Icon.png */,
+				2A3330F3192C912D00998BBF /* Icon@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A333025192C8E0F00998BBF /* CUSLayoutExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A333052192C8E0F00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutExample" */;
+			buildPhases = (
+				2A333022192C8E0F00998BBF /* Sources */,
+				2A333023192C8E0F00998BBF /* Frameworks */,
+				2A333024192C8E0F00998BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A3330EF192C90A000998BBF /* PBXTargetDependency */,
+			);
+			name = CUSLayoutExample;
+			productName = CUSLayoutExample;
+			productReference = 2A333026192C8E0F00998BBF /* CUSLayoutExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A333040192C8E0F00998BBF /* CUSLayoutExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A333055192C8E0F00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutExampleTests" */;
+			buildPhases = (
+				2A33303D192C8E0F00998BBF /* Sources */,
+				2A33303E192C8E0F00998BBF /* Frameworks */,
+				2A33303F192C8E0F00998BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A333047192C8E0F00998BBF /* PBXTargetDependency */,
+			);
+			name = CUSLayoutExampleTests;
+			productName = CUSLayoutExampleTests;
+			productReference = 2A333041192C8E0F00998BBF /* CUSLayoutExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A33305B192C8E4C00998BBF /* CUSLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A33307C192C8E4C00998BBF /* Build configuration list for PBXNativeTarget "CUSLayout" */;
+			buildPhases = (
+				2A333058192C8E4C00998BBF /* Sources */,
+				2A333059192C8E4C00998BBF /* Frameworks */,
+				2A33305A192C8E4C00998BBF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CUSLayout;
+			productName = CUSLayout;
+			productReference = 2A33305C192C8E4C00998BBF /* libCUSLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2A333068192C8E4C00998BBF /* CUSLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A33307D192C8E4C00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutTests" */;
+			buildPhases = (
+				2A333065192C8E4C00998BBF /* Sources */,
+				2A333066192C8E4C00998BBF /* Frameworks */,
+				2A333067192C8E4C00998BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A33306E192C8E4C00998BBF /* PBXTargetDependency */,
+			);
+			name = CUSLayoutTests;
+			productName = CUSLayoutTests;
+			productReference = 2A333069192C8E4C00998BBF /* CUSLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A33301E192C8E0F00998BBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CUS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = zhangyu;
+				TargetAttributes = {
+					2A333040192C8E0F00998BBF = {
+						TestTargetID = 2A333025192C8E0F00998BBF;
+					};
+					2A333068192C8E4C00998BBF = {
+						TestTargetID = 2A333025192C8E0F00998BBF;
+					};
+				};
+			};
+			buildConfigurationList = 2A333021192C8E0F00998BBF /* Build configuration list for PBXProject "CUSLayoutExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A33301D192C8E0F00998BBF;
+			productRefGroup = 2A333027192C8E0F00998BBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A333025192C8E0F00998BBF /* CUSLayoutExample */,
+				2A333040192C8E0F00998BBF /* CUSLayoutExampleTests */,
+				2A33305B192C8E4C00998BBF /* CUSLayout */,
+				2A333068192C8E4C00998BBF /* CUSLayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A333024192C8E0F00998BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3330E6192C8FFC00998BBF /* CUSStackLayoutSampleViewController.xib in Resources */,
+				2A3330F5192C912D00998BBF /* Icon@2x.png in Resources */,
+				2A3330DE192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib in Resources */,
+				2A3330F7192C920800998BBF /* README.txt in Resources */,
+				2A333034192C8E0F00998BBF /* InfoPlist.strings in Resources */,
+				2A3330E8192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib in Resources */,
+				2A33303C192C8E0F00998BBF /* Images.xcassets in Resources */,
+				2A3330DC192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib in Resources */,
+				2A3330D8192C8FFC00998BBF /* CUSAboutViewController.xib in Resources */,
+				2A3330E1192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.xib in Resources */,
+				2A3330F4192C912D00998BBF /* Icon.png in Resources */,
+				2A3330DA192C8FFC00998BBF /* CUSFillLayoutSampleViewController.xib in Resources */,
+				2A3330E4192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A33303F192C8E0F00998BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A33304D192C8E0F00998BBF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A333067192C8E4C00998BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A333075192C8E4C00998BBF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A333022192C8E0F00998BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3330DB192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m in Sources */,
+				2A3330E3192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m in Sources */,
+				2A3330D7192C8FFC00998BBF /* CUSAboutViewController.m in Sources */,
+				2A3330E0192C8FFC00998BBF /* CUSLinnerLayoutSampleViewController.m in Sources */,
+				2A3330DF192C8FFC00998BBF /* CUSLayoutSampleFactory.m in Sources */,
+				2A3330E7192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m in Sources */,
+				2A3330DD192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m in Sources */,
+				2A3330E5192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m in Sources */,
+				2A33303A192C8E0F00998BBF /* CUSAppDelegate.m in Sources */,
+				2A333036192C8E0F00998BBF /* main.m in Sources */,
+				2A3330E9192C8FFC00998BBF /* CUSViewController.m in Sources */,
+				2A3330E2192C8FFC00998BBF /* CUSMainViewController.m in Sources */,
+				2A3330D9192C8FFC00998BBF /* CUSFillLayoutSampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A33303D192C8E0F00998BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A33304F192C8E0F00998BBF /* CUSLayoutExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A333058192C8E4C00998BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A333090192C8F6F00998BBF /* CUSLayoutFrame.m in Sources */,
+				2A333095192C8F6F00998BBF /* CUSRealSingleton.m in Sources */,
+				2A3330AE192C8FB000998BBF /* CUSRowData.m in Sources */,
+				2A3330B4192C8FB000998BBF /* CUSGridData.m in Sources */,
+				2A333094192C8F6F00998BBF /* CUSLayoutUtil.m in Sources */,
+				2A3330ED192C904C00998BBF /* CUSLayoutDesignerView.m in Sources */,
+				2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */,
+				2A333091192C8F6F00998BBF /* CUSLayoutData.m in Sources */,
+				2A3330B2192C8FB000998BBF /* CUSStackLayout.m in Sources */,
+				2A3330B1192C8FB000998BBF /* CUSTableLayout.m in Sources */,
+				2A3330B0192C8FB000998BBF /* CUSTableData.m in Sources */,
+				2A3330AB192C8FB000998BBF /* CUSFillLayout.m in Sources */,
+				2A333093192C8F6F00998BBF /* CUSLayoutObject+Util.m in Sources */,
+				2A3330B3192C8FB000998BBF /* CUSGridLayout.m in Sources */,
+				2A333092192C8F6F00998BBF /* UIView+CUSLayout.m in Sources */,
+				2A3330AF192C8FB000998BBF /* CUSRowLayout.m in Sources */,
+				2A3330AC192C8FB000998BBF /* CUSLinnerData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A333065192C8E4C00998BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A333077192C8E4C00998BBF /* CUSLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A333047192C8E0F00998BBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A333025192C8E0F00998BBF /* CUSLayoutExample */;
+			targetProxy = 2A333046192C8E0F00998BBF /* PBXContainerItemProxy */;
+		};
+		2A33306E192C8E4C00998BBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A33305B192C8E4C00998BBF /* CUSLayout */;
+			targetProxy = 2A33306D192C8E4C00998BBF /* PBXContainerItemProxy */;
+		};
+		2A3330EF192C90A000998BBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A33305B192C8E4C00998BBF /* CUSLayout */;
+			targetProxy = 2A3330EE192C90A000998BBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A333032192C8E0F00998BBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A333033192C8E0F00998BBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A33304B192C8E0F00998BBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A33304C192C8E0F00998BBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A333073192C8E4C00998BBF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A333074192C8E4C00998BBF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A333050192C8E0F00998BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A333051192C8E0F00998BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A333053192C8E0F00998BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayoutExample/CUSLayoutExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOURCE_ROOT)/Build",
+				);
+				INFOPLIST_FILE = "CUSLayoutExample/CUSLayoutExample-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2A333054192C8E0F00998BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayoutExample/CUSLayoutExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOURCE_ROOT)/Build",
+				);
+				INFOPLIST_FILE = "CUSLayoutExample/CUSLayoutExample-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2A333056192C8E0F00998BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CUSLayoutExample.app/CUSLayoutExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayoutExample/CUSLayoutExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CUSLayoutExampleTests/CUSLayoutExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2A333057192C8E0F00998BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CUSLayoutExample.app/CUSLayoutExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayoutExample/CUSLayoutExample-Prefix.pch";
+				INFOPLIST_FILE = "CUSLayoutExampleTests/CUSLayoutExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		2A333078192C8E4C00998BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CUSLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayout-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2A333079192C8E4C00998BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CUSLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayout-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2A33307A192C8E4C00998BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CUSLayoutExample.app/CUSLayoutExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayout/CUSLayout-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CUSLayoutTests/CUSLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2A33307B192C8E4C00998BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CUSLayoutExample.app/CUSLayoutExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CUSLayout/CUSLayout-Prefix.pch";
+				INFOPLIST_FILE = "CUSLayoutTests/CUSLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A333021192C8E0F00998BBF /* Build configuration list for PBXProject "CUSLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A333050192C8E0F00998BBF /* Debug */,
+				2A333051192C8E0F00998BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A333052192C8E0F00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A333053192C8E0F00998BBF /* Debug */,
+				2A333054192C8E0F00998BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A333055192C8E0F00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A333056192C8E0F00998BBF /* Debug */,
+				2A333057192C8E0F00998BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A33307C192C8E4C00998BBF /* Build configuration list for PBXNativeTarget "CUSLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A333078192C8E4C00998BBF /* Debug */,
+				2A333079192C8E4C00998BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A33307D192C8E4C00998BBF /* Build configuration list for PBXNativeTarget "CUSLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A33307A192C8E4C00998BBF /* Debug */,
+				2A33307B192C8E4C00998BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A33301E192C8E0F00998BBF /* Project object */;
+}
