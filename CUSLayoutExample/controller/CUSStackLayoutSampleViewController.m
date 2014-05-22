@@ -16,6 +16,7 @@
     
     for (int i = 0; i < 4; i++) {
         UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
+        view.alpha = 0.5;
         [self.contentView addSubview:view];
     }
     CUSStackLayout *layout = [[CUSStackLayout alloc]init];
@@ -56,7 +57,16 @@
         [self.contentView CUSLayout];
     }else if(btn.tag == 12){
         UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",[self.contentView.subviews count]]];
+        view.alpha = 0.5;
         [self.contentView addSubview:view];
+        [self.contentView CUSLayout];
+    }else if(btn.tag == 13){
+        if (layout.hideOther) {
+            [btn setTitle:@"showOther"];
+        }else{
+            [btn setTitle:@"hideOther"];
+        }
+        layout.hideOther = !layout.hideOther;
         [self.contentView CUSLayout];
     }
 }

@@ -7,12 +7,21 @@
 
 @implementation CUSStackLayout
 @synthesize showViewIndex;
-
+@synthesize hideOther;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.hideOther = YES;
+    }
+    return self;
+}
 - (id)initWithIndex:(NSInteger)index
 {
     self = [super init];
     if (self) {
         self.showViewIndex = index;
+        self.hideOther = YES;
     }
     return self;
 }
@@ -64,7 +73,6 @@
     if(showViewIndex < 0 || showViewIndex >= [children count]){
         return;
     }
-    
     for (int i = 0; i < [children count];i++) {
         UIView *child = [children objectAtIndex:i];
         CGRect childFrame = child.frame;
@@ -72,9 +80,13 @@
             [self setControlFrame:child withFrame:CGRectMake(x, y, width, height)];
         }
         if(i == showViewIndex){
-            child.alpha = 1;
+            child.hidden = NO;
         }else{
-            child.alpha = 0;
+            if (self.hideOther) {
+                child.hidden = YES;
+            }else{
+                child.hidden = NO;
+            }
         }
     }
 }

@@ -17,6 +17,10 @@
  @abstract Full screen display a view from subviews.
  */
 @interface CUSStackLayout : CUSLayoutFrame
+
 //The index of view.If "CUSLayoutData.exclude = YES;",it do not need to count.
 @property (nonatomic,assign) NSInteger showViewIndex;
+
+//Default:YES.If NO,through the current view, show background view.
+@property (nonatomic,assign) BOOL hideOther;
 @end

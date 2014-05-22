@@ -361,7 +361,7 @@ static CUSTableData *CUSTableDataInstance;
 -(NSMutableArray *)computeValueByCurrent:(NSInteger)allWidth userSet:(NSArray *)userSet composite:(UIView *)composite isComputingHeight:(BOOL)isComputingHeight{
     NSMutableArray *localRealColumnWidths = [NSMutableArray array];
     NSNumber *number = [NSNumber numberWithFloat:0];
-    for (CUSValue *value in userSet) {
+    for (int i = 0; i < [userSet count]; i++) {
         [localRealColumnWidths addObject:number];
     }
     
