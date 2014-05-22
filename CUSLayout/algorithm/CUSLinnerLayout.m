@@ -14,14 +14,10 @@
 {
     self = [super init];
     if (self) {
-        type = CUSLayoutTypeVertical;
-        alignment = CUSLayoutAlignmentFill;
-        spacing = 5;
-        
-        self.marginLeft = 5;
-        self.marginTop = 5;
-        self.marginRight = 5;
-        self.marginBottom = 5;
+        [self setMargin:5];
+        self.type = CUSLayoutTypeVertical;
+        self.alignment = CUSLayoutAlignmentFill;
+        self.spacing = 5;
     }
     return self;
 }
@@ -75,7 +71,7 @@
 	int width = rect.size.width - self.marginLeft - self.marginRight;
 	int height = rect.size.height - self.marginTop - self.marginBottom;
     CGRect areaRect;
-    //调换坐标，通过调换，仅一种布局算法，即可支持水平垂直2中方向的布局
+    //Replace the coordinates, through the exchange, only a layout algorithm, can support for horizontal and vertical direction in the layout
     if(self.type == CUSLayoutTypeHorizontal){
         areaRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
     }else{
@@ -84,7 +80,7 @@
     NSMutableArray *boudns = [self computeSizes:children clientAreaSize:areaRect];
     
     if(self.type != CUSLayoutTypeHorizontal){
-        //x，y坐标调换，width，height调换
+        //Replacex,y.   width,height
         for (int i = 0; i<[boudns count]; i++) {
             NSValue *value = [boudns objectAtIndex:i];
             CGRect rect = [value CGRectValue];
@@ -109,7 +105,7 @@
     int count = [children count];
 	NSInteger width = areaRect.size.width - (count - 1) * spacing;
     NSInteger fillControllCounter = 0;
-    //计算unfill的大小
+    //compute unfill size
     for (int i=0; i<[children count]; i++) {
         UIView *child = [children objectAtIndex:i];
         if(![self isFillControl:child]){
@@ -138,7 +134,7 @@
         if(perFillWidth<0){
             perFillWidth = 0;
         }
-        //计算fill的大小
+        //compute fill
         for (int i=0; i<[children count]; i++) {
             UIView *child = [children objectAtIndex:i];
             if([self isFillControl:child]){
@@ -154,7 +150,7 @@
     
     NSInteger startX = areaRect.origin.x;
     NSInteger startY = areaRect.origin.y;
-    //重新计算location
+    //recompute location
     for (int i = 0; i<[boudns count]; i++) {
         NSValue *value = [boudns objectAtIndex:i];
         CGRect rect = [value CGRectValue];

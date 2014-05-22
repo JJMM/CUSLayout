@@ -14,16 +14,28 @@
 
 /**
  @class CUSValue
- @abstract 不变对象，不能改变value，如果需要改变，请重新创建
+ @code
+    [CUSValue initWithFloat:100];
+    [CUSValue valueWithPercent:0.25];
+ @abstract const object.Renew an object when you want to changing the value
  */
 @interface CUSValue : NSObject{
     CUSLayoutDataType dataType;
     CGFloat value;
 }
 
+/**
+ @abstract init.
+ @param floatValue (1 , ∞). Set value type to CUSLayoutDataTypeFloat.
+ */
 - (id)initWithFloat:(CGFloat)floatValue;
 
+/**
+ @abstract init.
+ @param percentValue (0 ,1]. Set value type to CUSLayoutDataTypePercent.
+ */
 - (id)initWithPercent:(CGFloat)percentValue;
+
 -(CUSLayoutDataType)getDataType;
 -(CGFloat)getValue;
 
@@ -39,13 +51,13 @@
  @abstract
  */
 @interface CUSTableData : CUSLayoutData
-@property (nonatomic,strong) CUSValue *width;
-@property (nonatomic,strong) CUSValue *height;
-@property (nonatomic,assign) CGFloat horizontalIndent;
-@property (nonatomic,assign) CGFloat verticalIndent;
+@property (nonatomic,strong) CUSValue *width;//Default:[CUSValue shareValue]
+@property (nonatomic,strong) CUSValue *height;//Default:[CUSValue shareValue]
+@property (nonatomic,assign) CGFloat horizontalIndent;//Default:0
+@property (nonatomic,assign) CGFloat verticalIndent;//Default:0
 
-@property (nonatomic,assign) CUSLayoutAlignmentType horizontalAlignment;
-@property (nonatomic,assign) CUSLayoutAlignmentType verticalAlignment;
+@property (nonatomic,assign) CUSLayoutAlignmentType horizontalAlignment;//Default:CUSLayoutAlignmentFill
+@property (nonatomic,assign) CUSLayoutAlignmentType verticalAlignment;//Default:CUSLayoutAlignmentFill
 
 @end
 

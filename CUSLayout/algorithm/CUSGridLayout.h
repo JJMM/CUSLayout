@@ -16,10 +16,14 @@
  @abstract
  */
 @interface CUSGridLayout : CUSLayoutFrame
-@property (nonatomic,assign) NSInteger numColumns;
-@property (nonatomic,assign) BOOL makeColumnsEqualWidth;
-@property (nonatomic,assign) CGFloat horizontalSpacing;
-@property (nonatomic,assign) CGFloat verticalSpacing;
+@property (nonatomic,assign) NSInteger numColumns;//Default:1
+@property (nonatomic,assign) BOOL makeColumnsEqualWidth;//Default:YES
+@property (nonatomic,assign) CGFloat horizontalSpacing;//Default:5
+@property (nonatomic,assign) CGFloat verticalSpacing;//Default:5
 
+/**
+ @abstract init.
+ @param numColumns
+ */
 - (id)initWithNumColumns:(NSInteger)numColumns;
 @end

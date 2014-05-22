@@ -11,5 +11,4 @@
 @interface CUSLayoutManagerSampleViewController : CUSViewController
 
 @property (nonatomic,strong) CUSLayoutDesignerView * designerView;
-//@property (nonatomic,strong) UIView * designerView;
 @end

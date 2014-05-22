@@ -14,9 +14,7 @@
 
 /**
  @class CUSStackLayout
- @abstract
- 堆栈布局：一种简单的布局，以充满的形式，仅显示一个子控件
- 简单、高效率，推荐使用
+ @abstract Full screen display a view from subviews.
  */
 @interface CUSStackLayout : CUSLayoutFrame
 //The index of view.If "CUSLayoutData.exclude = YES;",it do not need to count.

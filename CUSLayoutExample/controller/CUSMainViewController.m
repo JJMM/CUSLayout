@@ -16,15 +16,33 @@
     if (self) {
         self.title = @"CUSLayout";
         self.dataItems = [NSMutableArray array];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"FillLayout",@"Simple, easy to use, efficient",@"CUSFillLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"Simple to HTML or LinnerLayout in Android",@"CUSLinnerLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"RowLayout",@"Layout in a row",@"CUSRowLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"TableLayout",@"Simple to HTML Table Tag Layout",@"CUSTableLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"StackLayout",@"Cascading Display",@"CUSStackLayoutSampleViewController", nil]];
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"GridLayout",@"Flat style? So easy",@"CUSGridLayoutSampleViewController", nil]];
+        //
+        NSMutableArray *groupArray0 = [NSMutableArray array];
+         [groupArray0 addObject:[NSArray arrayWithObjects:@"FillLayout",@"Simple, easy to use, efficient",@"CUSFillLayoutSampleViewController", nil]];
+        [groupArray0 addObject:[NSArray arrayWithObjects:@"StackLayout",@"Cascading Display",@"CUSStackLayoutSampleViewController", nil]];
+        [groupArray0 addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"Simple to HTML or LinnerLayout in Android",@"CUSLinnerLayoutSampleViewController", nil]];
+        [self.dataItems addObject:groupArray0];
+        
+        NSMutableArray *groupArray1 = [NSMutableArray array];
+        [groupArray1 addObject:[NSArray arrayWithObjects:@"RowLayout",@"Layout in a row",@"CUSRowLayoutSampleViewController", nil]];
+        [groupArray1 addObject:[NSArray arrayWithObjects:@"TableLayout",@"Simple to HTML Table Tag Layout",@"CUSTableLayoutSampleViewController", nil]];
+        
+        [groupArray1 addObject:[NSArray arrayWithObjects:@"GridLayout",@"Flat style? So easy",@"CUSGridLayoutSampleViewController", nil]];
         
         
-        [self.dataItems addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
+        [self.dataItems addObject:groupArray1];
+        
+        NSMutableArray *groupArray2 = [NSMutableArray array];
+        [groupArray2 addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
+        [self.dataItems addObject:groupArray1];
+        
+        
+       
+        
+        
+        
+        
+        
         
         
     }
@@ -34,7 +52,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 	
-    UITableView *talbeView = [[UITableView alloc]init];
+    UITableView *talbeView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     talbeView.dataSource = self;
     talbeView.delegate = self;
     
@@ -49,37 +67,43 @@
     CUSAboutViewController *nextController = [[CUSAboutViewController alloc]initWithNibName:@"CUSAboutViewController" bundle:nil];
     [self.navigationController pushViewController:nextController animated:YES];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return [self.dataItems count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.dataItems count];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSArray *sectionArray = [self.dataItems objectAtIndex:section];
+    return [sectionArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"Base Layout";
+    }else if (section == 1) {
+        return @"Advance Layout";
+    }else if (section == 2) {
+        return @"Other";
+    }else{
+        return @"";
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    NSArray *array = [self.dataItems objectAtIndex:indexPath.row];
+    NSArray *sectionArray = [self.dataItems objectAtIndex:indexPath.section];
+    NSArray *array = [sectionArray objectAtIndex:indexPath.row];
     if (array && [array count] >= 1) {
         cell.textLabel.text = [array objectAtIndex:0];
         cell.detailTextLabel.text = [array objectAtIndex:1];
@@ -90,15 +114,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *array = [self.dataItems objectAtIndex:indexPath.row];
+    NSArray *sectionArray = [self.dataItems objectAtIndex:indexPath.section];
+    NSArray *array = [sectionArray objectAtIndex:indexPath.row];
     if (array && [array count] >= 2) {
         BOOL flag = [self loadViewWithClassName:[array objectAtIndex:2] title:[array objectAtIndex:0]];
         if(!flag){
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该布局算法没有实现，将在后续版本中提供" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"notice" message:@"Not impletmented" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [alert show];
         }
     }else{
-        NSLog(@"dataItems 数据格式错误");
+        NSLog(@"dataItems error");
     }
 }
 

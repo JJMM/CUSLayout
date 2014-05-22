@@ -13,10 +13,9 @@
 {
     self = [super init];
     if (self) {
-        type = CUSLayoutTypeHorizontal;
-//        marginHeight = 0.0;
-//        marginWidth = 0.0;
-        spacing = 5.0;
+        [self setMargin:0];
+        self.type = CUSLayoutTypeHorizontal;
+        self.spacing = 5.0;
     }
     return self;
 }

@@ -86,12 +86,12 @@ static CUSValue* CUSValueInstance;
 {
     self = [super init];
     if (self) {
-        width = [CUSValue shareValue];
-        height = [CUSValue shareValue];
-        horizontalIndent = 0.0;
-        verticalIndent = 0.0;
-        horizontalAlignment = CUSLayoutAlignmentFill;
-        verticalAlignment = CUSLayoutAlignmentFill;
+        self.width = [CUSValue shareValue];
+        self.height = [CUSValue shareValue];
+        self.horizontalIndent = 0.0;
+        self.verticalIndent = 0.0;
+        self.horizontalAlignment = CUSLayoutAlignmentFill;
+        self.verticalAlignment = CUSLayoutAlignmentFill;
     }
     return self;
 }

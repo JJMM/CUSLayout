@@ -19,15 +19,11 @@
 {
     self = [super init];
     if (self) {
+        [self setMargin:5];
         self.numColumns = 1;
         self.makeColumnsEqualWidth = YES;
         self.horizontalSpacing = 5;
         self.verticalSpacing = 5;
-        
-        self.marginLeft = 5;
-        self.marginTop = 5;
-        self.marginRight = 5;
-        self.marginBottom = 5;
     }
     return self;
 }

@@ -29,9 +29,7 @@
 {
     [super viewDidLoad];
     
-    //    获取txt文件路径
     NSString *txtPath = [[NSBundle mainBundle] pathForResource:@"README" ofType:@"txt"];
-    //    将txt到string对象中，编码类型为NSUTF8StringEncoding
     NSString *string = [[NSString  alloc] initWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil];
     
     CGRect labelframe = CGRectMake(0, 0, 300, 550);

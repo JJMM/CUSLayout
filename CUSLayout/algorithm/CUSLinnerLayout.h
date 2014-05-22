@@ -14,15 +14,10 @@
 
 /**
  @class CUSLinnerLayout
- @abstract
- 流式布局：一种简单的布局，RowLayou的简化版，类似HTML中的布局或Android中的LinnerLayout
- 简单、高效率，推荐使用
+ @abstract A simple and efficient layout.Similar to HTML layout or Android LinnerLayout.
  */
 @interface CUSLinnerLayout : CUSLayoutFrame
-//填充方向：默认水平方向
-@property (nonatomic,assign) CUSLayoutType type;
-//对齐：受布局水平或垂直类型影响
-@property (nonatomic,assign) CUSLayoutAlignmentType alignment;
-//子控件间距
-@property (nonatomic,assign) CGFloat spacing;
+@property (nonatomic,assign) CUSLayoutType type;//Default:CUSLayoutTypeVertical
+@property (nonatomic,assign) CUSLayoutAlignmentType alignment;//Default:CUSLayoutAlignmentFill
+@property (nonatomic,assign) CGFloat spacing;//Default:5
 @end

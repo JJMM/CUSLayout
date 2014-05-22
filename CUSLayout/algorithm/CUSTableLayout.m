@@ -26,8 +26,8 @@
 
 
 @implementation TableCellInfo
-@synthesize column;
-@synthesize row;
+@synthesize column = _column;
+@synthesize row = _row;
 @synthesize columnSpan;
 @synthesize rowSpan;
 
@@ -40,31 +40,31 @@
 {
     self = [super init];
     if (self) {
-        column = 0;
-        row = 0;
-        columnSpan = 1;
-        rowSpan = 1;
-        parent = nil;
-        isSpan = NO;
-        ignore = NO;
+        self.column = 0;
+        self.row = 0;
+        self.columnSpan = 1;
+        self.rowSpan = 1;
+        self.parent = nil;
+        self.isSpan = NO;
+        self.ignore = NO;
     }
     return self;
 }
 /**
  * 表格单元格构造方法
  */
-- (id)initWithColumn:(NSInteger)column_ column:(NSInteger)row_{
+- (id)initWithColumn:(NSInteger)column column:(NSInteger)row{
     self = [self init];
     if (self) {
-        self.column = column_;
-        self.row = row_;
+        self.column = column;
+        self.row = row;
     }
     return self;
 }
 
 -(NSString *)description{
     NSMutableString *des = [NSMutableString stringWithFormat:@"TableCellInfo:"];
-    [des appendString:[NSString stringWithFormat:@"column:%i row:%i ",column ,row]];
+    [des appendString:[NSString stringWithFormat:@"column:%i row:%i ",self.column ,self.row]];
     [des appendString:[NSString stringWithFormat:@"columnSpan:%i rowSpan:%i ",columnSpan ,rowSpan]];
     [des appendString:[NSString stringWithFormat:@"isSpan:%@ ignore:%@ ",isSpan?@"YES":@"NO" ,ignore?@"YES":@"NO"]];
     
@@ -86,8 +86,8 @@ static CUSTableData *CUSTableDataInstance;
 @synthesize pixelFirst;
 @synthesize spacing;
 
-@synthesize columnWidths;
-@synthesize rowHeights;
+@synthesize columnWidths = _columnWidths;
+@synthesize rowHeights = _rowHeights;
 @synthesize cellInfos;
 
 @synthesize realColumnWidths;
@@ -96,20 +96,17 @@ static CUSTableData *CUSTableDataInstance;
 {
     self = [super init];
     if (self) {
-        spacing = 5;
-        self.marginLeft = 5;
-        self.marginTop = 5;
-        self.marginRight = 5;
-        self.marginBottom = 5;
+        [self setMargin:5];
+        self.spacing = 5;
     }
     return self;
 }
 
-- (id)initWithcolumns:(NSArray *)columnWiths_ rows:(NSArray *)rowHeights_{
+- (id)initWithcolumns:(NSArray *)columnWiths rows:(NSArray *)rowHeights{
     self = [self init];
     if (self) {
-        self.columnWidths = columnWiths_;
-        self.rowHeights = rowHeights_;
+        self.columnWidths = columnWiths;
+        self.rowHeights = rowHeights;
         
         [self checkArrayAvailable:self.columnWidths];
         [self checkArrayAvailable:self.rowHeights];

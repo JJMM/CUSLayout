@@ -32,13 +32,12 @@
 }
 
 +(UIColor *)randomLightingColor{
-    //随即出3个0-255之间整数
     int numberArray[3];
     numberArray[0] = random()%255;
     numberArray[1] = random()%255;
     numberArray[2] = random()%255;
     
-    //处理接近白色和黑色的数值
+    //
     if(numberArray[0] + numberArray[1] < 40){
         numberArray[2] = 125 + random()%125;
     }
@@ -46,7 +45,7 @@
         numberArray[2] = random()%125;
     }
     
-    //混淆一次，也可混淆多次
+
     int i = random()%3;
     int t = numberArray[i];
     numberArray[i] = numberArray[2 - i];

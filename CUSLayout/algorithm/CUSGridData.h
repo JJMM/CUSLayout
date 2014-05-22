@@ -17,22 +17,23 @@
  @abstract
  */
 @interface CUSGridData : CUSLayoutData
-@property (nonatomic,assign) CUSLayoutAlignmentType  horizontalAlignment;
-@property (nonatomic,assign) CUSLayoutAlignmentType  verticalAlignment;
-@property (nonatomic,assign) NSInteger  horizontalIndent;
-@property (nonatomic,assign) NSInteger  verticalIndent;
-@property (nonatomic,assign) NSInteger  horizontalSpan;//default:1
-@property (nonatomic,assign) NSInteger  verticalSpan;//default:1
-@property (nonatomic,assign) NSInteger  widthHint;
-@property (nonatomic,assign) NSInteger  heightHint;
-@property (nonatomic,assign) BOOL grabExcessHorizontalSpace;
-@property (nonatomic,assign) BOOL grabExcessVerticalSpace;
-@property (nonatomic,assign) CGFloat minimumWidth;
-@property (nonatomic,assign) CGFloat minimumHeight;
+@property (nonatomic,assign) CUSLayoutAlignmentType  horizontalAlignment;//Default:CUSLayoutAlignmentFill
+@property (nonatomic,assign) CUSLayoutAlignmentType  verticalAlignment;//Default:CUSLayoutAlignmentFill
+@property (nonatomic,assign) NSInteger  horizontalIndent;//Default:0
+@property (nonatomic,assign) NSInteger  verticalIndent;//Default:0
+@property (nonatomic,assign) NSInteger  horizontalSpan;//Default:1
+@property (nonatomic,assign) NSInteger  verticalSpan;//Default:1
+@property (nonatomic,assign) NSInteger  widthHint;//Default:CUS_LAY_DEFAULT
+@property (nonatomic,assign) NSInteger  heightHint;//Default:CUS_LAY_DEFAULT
+@property (nonatomic,assign) BOOL grabExcessHorizontalSpace;//Default:NO
+@property (nonatomic,assign) BOOL grabExcessVerticalSpace;//Default:NO
+@property (nonatomic,assign) CGFloat minimumWidth;//Default:0
+@property (nonatomic,assign) CGFloat minimumHeight;//Default:0
 
 //===========internel
-@property (nonatomic,assign) int cacheWidth;
-@property (nonatomic,assign) int cacheHeight;
+@property (nonatomic,assign) int cacheWidth;//Default:-1
+@property (nonatomic,assign) int cacheHeight;//Default:-1
+
 -(void) computeSize:(UIView *)control wHint:(int)wHint hHint:(int)hHint flushCache:(BOOL)flushCache;
 -(void) flushCache;
 @end
@@ -42,6 +43,18 @@
  @abstract
  */
 @interface CUSGridData(Factory)
+
+/**
+ @abstract init.
+ @param width
+ @param height
+ @result CUSGridData *
+ */
 +(CUSGridData *)createWithWidth:(CGFloat)width withHeight:(CGFloat)height;
+
+/**
+ @abstract init.
+ @result CUSGridData *
+ */
 +(CUSGridData *)createGrab;
 @end

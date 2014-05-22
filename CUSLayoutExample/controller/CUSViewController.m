@@ -24,9 +24,6 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.modalPresentationCapturesStatusBarAppearance = NO;
         
-        self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
-        self.tabBarController.tabBar.barTintColor = [UIColor grayColor];
-        
         self.navigationController.navigationBar.translucent = NO;
         self.tabBarController.tabBar.translucent = NO;
     }

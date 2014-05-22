@@ -17,8 +17,8 @@
  @abstract
  */
 @interface CUSLinnerData : CUSLayoutData
-@property (nonatomic,assign) CGFloat width;
-@property (nonatomic,assign) CGFloat height;
-@property (nonatomic,assign) BOOL fill;
+@property (nonatomic,assign) CGFloat width;//Default:CUS_LAY_DEFAULT
+@property (nonatomic,assign) CGFloat height;//Default:CUS_LAY_DEFAULT
+@property (nonatomic,assign) BOOL fill;//Default:NO
 
 @end

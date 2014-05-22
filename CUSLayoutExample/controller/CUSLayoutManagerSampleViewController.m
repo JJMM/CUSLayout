@@ -44,7 +44,7 @@
     }
     
     CUSTableLayout *layout = [[CUSTableLayout alloc]initWithcolumns:colums rows:rows];
-    //合并单元格演示
+
     [layout merge:1 row:1 colspan:2 rowspan:2];
     self.designerView.layoutFrame = layout;
 }

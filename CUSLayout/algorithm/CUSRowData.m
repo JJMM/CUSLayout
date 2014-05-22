@@ -6,8 +6,8 @@
 #import "CUSRowData.h"
 
 @implementation CUSRowData
-@synthesize width;
-@synthesize height;
+@synthesize width = _width;
+@synthesize height = _height;
 @synthesize fill;
 @synthesize alignment;
 
@@ -15,19 +15,19 @@
 {
     self = [super init];
     if (self) {
-        width = CUS_LAY_DEFAULT;
-        height = CUS_LAY_DEFAULT;
-        fill = NO;
-        alignment = CUSLayoutAlignmentFill;
+        self.width = CUS_LAY_DEFAULT;
+        self.height = CUS_LAY_DEFAULT;
+        self.fill = NO;
+        self.alignment = CUSLayoutAlignmentFill;
     }
     return self;
 }
 
-- (id)initWithWidth:(CGFloat)width_ height:(CGFloat)height_{
+- (id)initWithWidth:(CGFloat)width height:(CGFloat)height{
     self = [super init];
     if (self) {
-        width = width_;
-        height = height_;
+        self.width = width;
+        self.height = height;
     }
     return self;
 }

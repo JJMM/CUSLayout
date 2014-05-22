@@ -19,16 +19,12 @@
 {
     self = [super init];
     if (self) {
-        type = CUSLayoutTypeHorizontal;
-        spacing = 5;
-        wrap = YES;
-        pack = YES;
-        justify = NO;
-        
-        self.marginLeft = 5;
-        self.marginTop = 5;
-        self.marginRight = 5;
-        self.marginBottom = 5;
+        [self setMargin:5];
+        self.type = CUSLayoutTypeHorizontal;
+        self.spacing = 5;
+        self.wrap = YES;
+        self.pack = YES;
+        self.justify = NO;
     }
     return self;
 }
@@ -38,7 +34,7 @@
     CGRect rect = [self computeUseSize:composite flushCache:flushCache];
 	NSArray *children = [self getUsealbeChildren:composite];
 	NSMutableArray *bounds = [NSMutableArray array];
-    // fill = true 时，不能折行
+    // fill = true, no warp
 	if (self.fill) {
 		[self processFill:children bounds:bounds rect:rect flushCache:flushCache];
 	} else {
@@ -50,13 +46,7 @@
 	}
 	[self setControlsBounds:children bounds:bounds];
 }
-/**
- * 计算可用区域位置和大小
- *
- * @param composite
- * @param flushCache
- * @return
- */
+
 -(CGSize)computeSize:(UIView *)composite wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
 	NSArray *children = [self getUsealbeChildren:composite];
 	NSMutableArray *bounds = [NSMutableArray array];
@@ -227,7 +217,7 @@
 	return preferSize;
 };
 /**
- * 取得控件统一大小
+ * get the size of view
  *
  * @param children
  * @param flushCache
@@ -248,7 +238,7 @@
 	return packSize;
 };
 /**
- * 设定justify时，重新分配控件剩余位置
+ * reset the size on justify
  *
  * @param bounds
  * @param rectAll

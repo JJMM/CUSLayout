@@ -13,9 +13,9 @@
 {
     self = [super init];
     if (self) {
-        width = CUS_LAY_DEFAULT;
-        height = CUS_LAY_DEFAULT;
-        fill = NO;
+        self.width = CUS_LAY_DEFAULT;
+        self.height = CUS_LAY_DEFAULT;
+        self.fill = NO;
     }
     return self;
 }

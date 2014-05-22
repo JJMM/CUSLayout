@@ -17,12 +17,16 @@
  @abstract
  */
 @interface CUSRowData : CUSLayoutData
-@property (nonatomic,assign) CGFloat width;
-@property (nonatomic,assign) CGFloat height;
-//默认NO，如果时fill，剩余位置分给该控件
-@property (nonatomic,assign) BOOL fill;
-//对齐：受布局水平或垂直类型影响
-@property (nonatomic,assign) CUSLayoutAlignmentType alignment;
+@property (nonatomic,assign) CGFloat width;//Default:CUS_LAY_DEFAULT
+@property (nonatomic,assign) CGFloat height;//Default:CUS_LAY_DEFAULT
+//Dafault:NO  If YES The remaining space to the view
+@property (nonatomic,assign) BOOL fill;//Dafault:NO
+@property (nonatomic,assign) CUSLayoutAlignmentType alignment;//Dafault:CUSLayoutAlignmentFill
 
+/**
+ @abstract init.
+ @param width
+ @param height
+ */
 - (id)initWithWidth:(CGFloat)width height:(CGFloat)height;
 @end
