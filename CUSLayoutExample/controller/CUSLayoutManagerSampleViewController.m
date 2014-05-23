@@ -30,7 +30,7 @@
     
     NSInteger controlCounter = 13;
     for (int i = 0; i < controlCounter; i++) {
-        UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
+        UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"Long press%i",i]];
         [self.designerView addSubview:button];
     }
     

@@ -414,15 +414,15 @@
 				2A3330CC192C8FFC00998BBF /* CUSRowLayoutSampleViewController.h */,
 				2A3330CD192C8FFC00998BBF /* CUSRowLayoutSampleViewController.m */,
 				2A3330CE192C8FFC00998BBF /* CUSRowLayoutSampleViewController.xib */,
+				2A3330D2192C8FFC00998BBF /* CUSTableLayoutSampleViewController.h */,
+				2A3330D3192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m */,
+				2A3330D4192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib */,
 				2A3330BF192C8FFC00998BBF /* CUSGridLayoutSampleViewController.h */,
 				2A3330C0192C8FFC00998BBF /* CUSGridLayoutSampleViewController.m */,
 				2A3330C1192C8FFC00998BBF /* CUSGridLayoutSampleViewController.xib */,
 				2A3330C2192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.h */,
 				2A3330C3192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m */,
 				2A3330C4192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib */,
-				2A3330D2192C8FFC00998BBF /* CUSTableLayoutSampleViewController.h */,
-				2A3330D3192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m */,
-				2A3330D4192C8FFC00998BBF /* CUSTableLayoutSampleViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
