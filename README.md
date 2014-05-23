@@ -1,24 +1,65 @@
 CUSLayout
 =========
+CUSLayout for iOS managed positioning mechanism, the iOS SDK provides absolute positioning is very inconvenient to use, in addition to the emergence of 4-inch screen of the iPhone and iPad to make iOS developer need to spend more time in the layout, however iOS6.0 AutoLayout the mechanism is disappointing, I refer to Android, SWT, Swing layout mechanism, the preparation of for iOS CUSLayout, use CUSLayout has the following advantages:<br>1.Simplify coding, you do not need to take into account the pixel level, only for regional programming, which greatly improves the efficiency of programming<br>2.Good readability, layout type can be a preliminary understanding of layout intent and child controls roughly placed, eliminating the need for a very tedious restore coordinate steps<br>3.When the the UIView container Flip, size change, supporting multiple resolutions, automatic processing<br>4.UIView category which makes it easy to create layout constraints in old code<br>5.The API is simple and easy-to-use, low cost learning through the sample program to preliminary master<br>
 
-ENGLISH
-=========
-Open source release of automatic layout framework for iOS,which is simlar to Android,SWT,SWING API.It solves the problem of iPhone, iPhone5, iPad, resolution, rotation etc.
+------------------------------------
+Adding JSONModel to your project
+====================================
+- 1.Open your existing project (or create a new one)
+- 2.Drag and drop the CUSLayoutExample.xcodeproj file downloaded from github previously from Finder to your project (either root or under Frameworks)
 
-CUSLayout for iOS managed positioning mechanism, the iOS SDK provides absolute positioning is very inconvenient to use, in addition to the emergence of 4-inch screen of the iPhone and iPad to make iOS developer need to spend more time in the layout, however iOS6.0 AutoLayout the mechanism is disappointing, I refer to Android, SWT, Swing layout mechanism, the preparation of for iOS CUSLayout, use CUSLayout has the following advantages:<br>1.Simplify coding, you do not need to take into account the pixel level, only for regional programming, which greatly improves the efficiency of programming<br>2.Good readability, layout type can be a preliminary understanding of layout intent and child controls roughly placed, eliminating the need for a very tedious restore coordinate steps<br>3.When the the UIView container Flip, size change, supporting multiple resolutions, automatic processing<br>4.UIView category which makes it easy to create layout constraints in old code<br>5.The API is simple and easy-to-use, low cost learning through the sample program to preliminary master<br>Follow-up will launch a new type of layout and perfect layout algorithm, please pay attention to add Star, your support is my greatest motivation, thank you.<br>To on github demand, advice and bugs<br>
-中文
-=========
-CUSLayout为iOS下提供托管定位机制，系统提供的绝对定位方式极不方便使用，另外iPhone的4寸屏幕的出现和iPad令iOS开发者在布局需要花更多的时间，然而iOS6.0提供的AutoLayout机制令人失望，所以笔者参考Android、SWT、SWING等布局机制，编写了适合iOS下使用的CUSLayout，使用CUSLayout有以下几个好处：<br>
-1、简化编码，不需要考虑到像素级别，仅针对区域性编程，极大的提高编程效率<br>
-2、良好的可读性，通过布局类型即可初步了解布局意图和子控件大致摆放方式，省去了令人繁琐的还原坐标的步骤<br>
-3、在UIView容器翻转、大小变化、支持多种分辨率时，自动处理<br>
-4、CUSLayou基于UIView布局，可完美迁移到任何应用种，不会影响原有应用<br>
-5、API简单易用，学习成本很低，通过样例程序，即可初步掌握<br>
-https://github.com/JJMM/CUSLayout<br>
-心动不如行动，搞起！<br>
-后续会推出新的布局类型及完善布局算法，请关注add star，多谢支持。<br>
+- 3.In YOUR project configuration:<br>
+in the Build Phases, Add CUSLayout (the lib, not the example app) as a Target Dependency<br>
+in the Link Binary With Libraries section, add the libCUSLayout.a library<br>
+- 4.In YOUR Prefix.pch file, add:
 
- ![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayoutIntr.gif)
-=========
-Plese look the WiKi to use CUSLayout.<br>
-https://github.com/JJMM/CUSLayout/wiki
+    \#import “CUSLayout.h”
+
+- 5.In YOUR project configuration, on the “Build Settings” tab
+
+- locate the “User Header Search Paths” setting, and set the Release value to "${PROJECT_DIR}/CUSLayout" (including quotes!) and check the “Recursive” check box.
+- The Debug value should already be set, but if it’s not, change that as well.
+- Also locate the “Always Search User Paths” value and set it to YES.
+- Finally, find the “Other Linker Flags” option, and add the value -ObjC (no quotes).
+
+------------------------------------
+API
+====================================
+###Base Layout
+CUSFillLayout<br>
+CUSStackLayout<br>
+CUSLinnerLayout<br>
+###Advanced Layout
+CUSRowLayout<br>
+CUSTableLayout<br>
+CUSGridLayout<br>
+
+------------------------------------
+Basic usage
+====================================
+###CUSFillLayout
+```objective-c
+//only one code,auto set the frame of parent to the subview.
+view.layoutFrame = [[CUSFillLayout alloc]init];
+
+```
+
+------------------------------------
+Example
+====================================
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/FillLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/StackLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/LinnerLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/RowLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/TableLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/GridLayout.jpg)
+![image](https://github.com/JJMM/CUSResources/raw/master/CUSLayout/LayoutManager.jpg)
+
+## License
+CUSSerializer is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE) file for full details.
+
+## Contributions
+
+Contributions are totally welcome. We'll review all pull requests and if you send us a good one/are interested we're happy to give you push access to the repo. Or, you know, you could just come work with us.<br>
+
+Please pay attention to add Star, your support is my greatest motivation, thank you.
