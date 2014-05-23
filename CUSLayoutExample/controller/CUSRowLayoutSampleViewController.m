@@ -34,7 +34,7 @@
     
     for (int i = 0; i < 15; i++) {
         UIButton *button = (UIButton *)[CUSLayoutSampleFactory createControl];
-        button.layoutData = CUS_LAYOUT.share_rowData;
+        button.layoutData = CUSLAYOUT.share_rowData;
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:button];
     }

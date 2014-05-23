@@ -22,7 +22,7 @@
             layoutData.fill = YES;
             button.layoutData = layoutData;
         }else{
-            button.layoutData = CUS_LAYOUT.share_linnerData;
+            button.layoutData = CUSLAYOUT.share_linnerData;
         }
         [self.contentView addSubview:button];
         

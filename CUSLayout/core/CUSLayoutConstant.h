@@ -2,7 +2,7 @@
  @header CUSLayoutConstant.h
  @abstract Constant:CUSLayoutType,CUSLayoutAlignmentType,CUSLayoutDataType
  @code
-    use CUS_LAYOUT
+    use CUSLayout
  @link
  https://github.com/JJMM/CUSLayout
  @version 1.00 2013/4/9 Creation
@@ -39,8 +39,8 @@ typedef enum {
     CUSLayoutDataTypeDefault
 }CUSLayoutDataType;
 
-
-#define CUS_LAYOUT ([CUSLayoutUtil getShareInstance])
+#define CUSLAYOUT ([CUSLayoutUtil getShareInstance])
+//#define CUS_LAYOUT ([CUSLayoutUtil getShareInstance])
 #define CUS_LAY_DEFAULT (-1)
 #define CUS_LAY_EMPTY (-999999)
 

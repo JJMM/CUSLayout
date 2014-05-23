@@ -47,7 +47,7 @@
     talbeView.delegate = self;
     
     [self.view addSubview:talbeView];
-    self.view.layoutFrame = CUS_LAYOUT.share_fillLayout_H;
+    self.view.layoutFrame = CUSLAYOUT.share_fillLayout_H;
     
     UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc]initWithTitle:@"about" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonClicked)];
     self.navigationItem.rightBarButtonItem = aboutButton;

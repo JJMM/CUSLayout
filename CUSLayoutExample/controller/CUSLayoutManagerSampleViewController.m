@@ -26,7 +26,7 @@
     
     self.designerView = [[CUSLayoutDesignerView alloc]init];
     [self.view addSubview:self.designerView];
-    self.view.layoutFrame = CUS_LAYOUT.share_fillLayout_H;
+    self.view.layoutFrame = CUSLAYOUT.share_fillLayout_H;
     
     NSInteger controlCounter = 13;
     for (int i = 0; i < controlCounter; i++) {
