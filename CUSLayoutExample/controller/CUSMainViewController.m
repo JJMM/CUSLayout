@@ -34,7 +34,7 @@
         
         NSMutableArray *groupArray2 = [NSMutableArray array];
         [groupArray2 addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
-        [self.dataItems addObject:groupArray1];
+        [self.dataItems addObject:groupArray2];
     }
     return self;
 }
