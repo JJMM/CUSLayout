@@ -9,7 +9,6 @@
 #import "CUSLayoutConstant.h"
 static NSString *UIView_CUSLayoutFrame;
 static NSString *UIView_CUSLayoutData;
-static NSString *UIView_ChildFrameChanged;
 
 @implementation UIView(UIView_CUSLayout)
 @dynamic layoutFrame;
@@ -22,33 +21,10 @@ static NSString *UIView_ChildFrameChanged;
 -(void)layoutSubviewsExt{
     CUSLayoutFrame *layoutFrame = [self getLayoutFrame];
     if(layoutFrame){
-        NSNumber * ChildFrameChanged = objc_getAssociatedObject(self, &UIView_ChildFrameChanged);
-        
-        if(ChildFrameChanged == nil){
-            [layoutFrame layout:self];
-        }else{
-            if([ChildFrameChanged boolValue]){
-                [self clearChildFrameChanged];
-            }else{
-                [layoutFrame layout:self];
-            }
-        }
+        [layoutFrame layout:self];
     }
     //此方法已和layoutSubviews方法互换，并非调用自身，实际上是调用[super layoutSubviews]，所以不会引起死循环
     [self layoutSubviewsExt];
-}
-
--(void)clearChildFrameChanged{
-    objc_setAssociatedObject(self, &UIView_ChildFrameChanged,
-                             nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
--(void)setFrameExt:(CGRect)frame{
-//    if(self.superview){
-//        objc_setAssociatedObject(self.superview, &UIView_ChildFrameChanged,
-//                                 [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//    }
-    [self setFrameExt:frame];
-    
 }
 
 #pragma implement API
@@ -106,7 +82,6 @@ static NSString *UIView_ChildFrameChanged;
 }
 
 -(void)CUSLayout{
-    [self clearChildFrameChanged];
     [self layoutSubviews];
 }
 
@@ -137,7 +112,6 @@ static NSString *UIView_ChildFrameChanged;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(layoutSubviewsExt)), class_getInstanceMethod([self class], @selector(layoutSubviews)));
-        method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setFrameExt:)), class_getInstanceMethod([self class], @selector(setFrame:)));
     });
 }
 @end
