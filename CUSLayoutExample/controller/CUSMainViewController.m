@@ -35,6 +35,16 @@
         NSMutableArray *groupArray2 = [NSMutableArray array];
         [groupArray2 addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
         [self.dataItems addObject:groupArray2];
+        
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CUSTypicalCasesViewController" ofType:@"m"];
+        NSFileManager *file_manager = [NSFileManager defaultManager];
+        NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
+        NSData *data = [file readDataToEndOfFile];//得到xml文件                               //读取到NSDate中
+        
+        NSString* aStr;
+        aStr = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+        NSLog(@"aStr:%@",aStr);
     }
     return self;
 }
@@ -120,13 +130,24 @@
 -(BOOL)loadViewWithClassName:(NSString*)name title:(NSString*)title {
     Class controllerClass=NSClassFromString(name);
     if(controllerClass){
-        UIViewController* backController=[[controllerClass alloc]initWithNibName:name bundle:nil];
-        backController.title = title;
-        [self.navigationController pushViewController:backController animated:YES];
+        UIViewController* nextController = nil;
+        if ([self fileExist:name ofType:@"nib"]) {
+            nextController = [[controllerClass alloc]initWithNibName:name bundle:nil];
+        }else{
+            nextController = [[controllerClass alloc]init];
+        }
+        
+        nextController.title = title;
+        [self.navigationController pushViewController:nextController animated:YES];
         return YES;
     }
     return NO;
 }
 
+-(BOOL)fileExist:(NSString *)fileName ofType:(NSString *)type{
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
+    NSFileManager *file_manager = [NSFileManager defaultManager];
+    return [file_manager fileExistsAtPath:path];
+}
 
 @end

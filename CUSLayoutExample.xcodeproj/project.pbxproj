@@ -65,6 +65,7 @@
 		2A3330F4192C912D00998BBF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F2192C912D00998BBF /* Icon.png */; };
 		2A3330F5192C912D00998BBF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F3192C912D00998BBF /* Icon@2x.png */; };
 		2A3330F7192C920800998BBF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F6192C920800998BBF /* README.txt */; };
+		2ABBDE381936E34200BD8923 /* CUSTypicalCasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDE371936E34200BD8923 /* CUSTypicalCasesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,8 @@
 		2A3330F2192C912D00998BBF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2A3330F3192C912D00998BBF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2A3330F6192C920800998BBF /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2ABBDE361936E34200BD8923 /* CUSTypicalCasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSTypicalCasesViewController.h; sourceTree = "<group>"; };
+		2ABBDE371936E34200BD8923 /* CUSTypicalCasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSTypicalCasesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +426,8 @@
 				2A3330C2192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.h */,
 				2A3330C3192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m */,
 				2A3330C4192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.xib */,
+				2ABBDE361936E34200BD8923 /* CUSTypicalCasesViewController.h */,
+				2ABBDE371936E34200BD8923 /* CUSTypicalCasesViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -610,6 +615,7 @@
 				2A3330E7192C8FFC00998BBF /* CUSTableLayoutSampleViewController.m in Sources */,
 				2A3330DD192C8FFC00998BBF /* CUSLayoutManagerSampleViewController.m in Sources */,
 				2A3330E5192C8FFC00998BBF /* CUSStackLayoutSampleViewController.m in Sources */,
+				2ABBDE381936E34200BD8923 /* CUSTypicalCasesViewController.m in Sources */,
 				2A33303A192C8E0F00998BBF /* CUSAppDelegate.m in Sources */,
 				2A333036192C8E0F00998BBF /* main.m in Sources */,
 				2A3330E9192C8FFC00998BBF /* CUSViewController.m in Sources */,
