@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.authors      = { "JJMM" => "CUSLayout@163.com" }
   s.source       = { :git => "https://github.com/JJMM/CUSLayout.git", :tag => "#{s.version}" }
   s.frameworks   = 'Foundation','UIKit'
-  s.platform     = :ios, '5.0'
-  s.source_files = 'CUSLayout/*'
-  s.source_files = 'CUSLayout/core/*'
-  s.source_files = 'CUSLayout/algorithm/*'
-  s.source_files = 'CUSLayout/extend/*'
+  s.platform     = :ios
+  s.source_files = 'CUSLayout/*.{h,m}'
+  s.source_files = 'CUSLayout/core/*.{h,m}'
+  s.source_files = 'CUSLayout/algorithm/*.{h,m}'
+  s.source_files = 'CUSLayout/extend/*.{h,m}'
   s.requires_arc = true
 end
