@@ -5,8 +5,9 @@
 
 #import "UIView+CUSLayout.h"
 #import <objc/runtime.h>
-#import "CUSLayoutFrame.h"
 #import "CUSLayoutConstant.h"
+#import "CUSLayoutFrame.h"
+#import "CUSLayoutData.h"
 static NSString *UIView_CUSLayoutFrame;
 static NSString *UIView_CUSLayoutData;
 

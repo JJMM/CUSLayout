@@ -7,7 +7,7 @@
 //
 
 #import "CUSAboutViewController.h"
-
+#import "CUSLayout.h"
 @implementation CUSAboutViewController
 @synthesize table;
 @synthesize dataItems;

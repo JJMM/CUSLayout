@@ -4,6 +4,8 @@
  */
 
 #import "CUSLayoutDesignerView.h"
+#import "UIView+CUSLayout.h"
+#import "CUSLayoutData.h"
 
 @implementation CUSLayoutDesignerView{
     UIView *pickedView;

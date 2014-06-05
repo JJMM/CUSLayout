@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache License, Version 2.0"
   s.authors      = { "JJMM" => "CUSLayout@163.com" }
   s.source       = { :git => "https://github.com/JJMM/CUSLayout.git", :tag => "#{s.version}" }
-  s.frameworks   = 'Foundation','UIKit'
+  s.frameworks   = 'Foundation','UIKit','CoreGraphics'
   s.platform     = :ios
   s.source_files = 'CUSLayout/*.{h,m}'
   s.source_files = 'CUSLayout/core/*.{h,m}'

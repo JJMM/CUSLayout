@@ -10,8 +10,6 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "UIView+CUSLayout.h"
-#import "CUSLayoutData.h"
 
 /**
  @class CUSLayoutDesignerView

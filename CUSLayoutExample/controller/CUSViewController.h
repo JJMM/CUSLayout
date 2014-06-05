@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CUSLayout.h"
 @interface CUSViewController : UIViewController
 
 @end

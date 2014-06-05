@@ -9,6 +9,8 @@
  @copyright Copyright (c) 2013 zhangyu. All rights reserved.
  */
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 /**
  @enum CUSLayoutType
  @abstract Layout direction.Used it in LayoutFrame.
