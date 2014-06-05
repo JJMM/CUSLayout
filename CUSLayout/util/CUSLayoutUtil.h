@@ -29,7 +29,7 @@
  静态工具类
  注意，此类中提供的对象是全局共用对象，不能修改任何成员变量，否则会影响到共用此对象的布局
  */
-@class CUSLayoutUtil;
+
 @interface CUSLayoutUtil : NSObject
 @property (nonatomic,strong) CUSFillLayout *share_fillLayout_H;
 @property (nonatomic,strong) CUSFillLayout *share_fillLayout_V;

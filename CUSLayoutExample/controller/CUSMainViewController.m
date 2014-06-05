@@ -35,16 +35,6 @@
         NSMutableArray *groupArray2 = [NSMutableArray array];
         [groupArray2 addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
         [self.dataItems addObject:groupArray2];
-        
-        
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"CUSTypicalCasesViewController" ofType:@"m"];
-        NSFileManager *file_manager = [NSFileManager defaultManager];
-        NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
-        NSData *data = [file readDataToEndOfFile];//得到xml文件                               //读取到NSDate中
-        
-        NSString* aStr;
-        aStr = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-        NSLog(@"aStr:%@",aStr);
     }
     return self;
 }
