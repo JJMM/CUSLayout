@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/JJMM/CUSLayout.git", :tag => "#{s.version}" }
   s.frameworks   = 'Foundation','UIKit','CoreGraphics'
   s.platform     = :ios
-  s.source_files = 'CUSLayout/CUSLayout.h'
+
   s.requires_arc = true
-  
+
   s.subspec 'core' do |ss|
     ss.source_files = 'CUSLayout/core/*'
   end
