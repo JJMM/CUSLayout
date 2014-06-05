@@ -1,6 +1,6 @@
 Pod::Spec.new do |s| 
   s.name         = "CUSLayout"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "iOS Auto Layout Manager."
   s.homepage     = "https://github.com/JJMM/CUSLayout"
   s.license      = "Apache License, Version 2.0"
@@ -9,5 +9,8 @@ Pod::Spec.new do |s|
   s.frameworks   = 'Foundation','UIKit'
   s.platform     = :ios, '5.0'
   s.source_files = 'CUSLayout/*'
+  s.source_files = 'CUSLayout/core/*'
+  s.source_files = 'CUSLayout/algorithm/*'
+  s.source_files = 'CUSLayout/extend/*'
   s.requires_arc = true
 end
