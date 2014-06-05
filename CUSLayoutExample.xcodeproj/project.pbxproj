@@ -30,7 +30,6 @@
 		2A333091192C8F6F00998BBF /* CUSLayoutData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333087192C8F6F00998BBF /* CUSLayoutData.m */; };
 		2A333092192C8F6F00998BBF /* UIView+CUSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */; };
 		2A333093192C8F6F00998BBF /* CUSLayoutObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */; };
-		2A333094192C8F6F00998BBF /* CUSLayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */; };
 		2A3330AB192C8FB000998BBF /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333098192C8FB000998BBF /* CUSFillLayout.m */; };
 		2A3330AC192C8FB000998BBF /* CUSLinnerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309A192C8FB000998BBF /* CUSLinnerData.m */; };
 		2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */; };
@@ -65,6 +64,7 @@
 		2A3330F4192C912D00998BBF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F2192C912D00998BBF /* Icon.png */; };
 		2A3330F5192C912D00998BBF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F3192C912D00998BBF /* Icon@2x.png */; };
 		2A3330F7192C920800998BBF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F6192C920800998BBF /* README.txt */; };
+		2AB5B9DC19405D570011424A /* CUSLayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5B9DB19405D570011424A /* CUSLayoutUtil.m */; };
 		2ABBDE381936E34200BD8923 /* CUSTypicalCasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDE371936E34200BD8923 /* CUSTypicalCasesViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -136,8 +136,6 @@
 		2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CUSLayout.m"; sourceTree = "<group>"; };
 		2A33308A192C8F6F00998BBF /* CUSLayoutObject+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CUSLayoutObject+Util.h"; sourceTree = "<group>"; };
 		2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CUSLayoutObject+Util.m"; sourceTree = "<group>"; };
-		2A33308C192C8F6F00998BBF /* CUSLayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutUtil.h; sourceTree = "<group>"; };
-		2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutUtil.m; sourceTree = "<group>"; };
 		2A333096192C8F8000998BBF /* CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayout.h; sourceTree = "<group>"; };
 		2A333097192C8FB000998BBF /* CUSFillLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayout.h; sourceTree = "<group>"; };
 		2A333098192C8FB000998BBF /* CUSFillLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayout.m; sourceTree = "<group>"; };
@@ -194,6 +192,8 @@
 		2A3330F2192C912D00998BBF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2A3330F3192C912D00998BBF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2A3330F6192C920800998BBF /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2AB5B9DA19405D570011424A /* CUSLayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayoutUtil.h; sourceTree = "<group>"; };
+		2AB5B9DB19405D570011424A /* CUSLayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLayoutUtil.m; sourceTree = "<group>"; };
 		2ABBDE361936E34200BD8923 /* CUSTypicalCasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSTypicalCasesViewController.h; sourceTree = "<group>"; };
 		2ABBDE371936E34200BD8923 /* CUSTypicalCasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSTypicalCasesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -326,6 +326,7 @@
 				2A333080192C8F4500998BBF /* core */,
 				2A33307F192C8F4500998BBF /* algorithm */,
 				2A3330EA192C904C00998BBF /* extend */,
+				2AB5B9D919405D570011424A /* util */,
 			);
 			path = CUSLayout;
 			sourceTree = "<group>";
@@ -387,8 +388,6 @@
 				2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */,
 				2A33308A192C8F6F00998BBF /* CUSLayoutObject+Util.h */,
 				2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */,
-				2A33308C192C8F6F00998BBF /* CUSLayoutUtil.h */,
-				2A33308D192C8F6F00998BBF /* CUSLayoutUtil.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -449,6 +448,15 @@
 				2A3330F3192C912D00998BBF /* Icon@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2AB5B9D919405D570011424A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				2AB5B9DA19405D570011424A /* CUSLayoutUtil.h */,
+				2AB5B9DB19405D570011424A /* CUSLayoutUtil.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,9 +645,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A333090192C8F6F00998BBF /* CUSLayoutFrame.m in Sources */,
+				2AB5B9DC19405D570011424A /* CUSLayoutUtil.m in Sources */,
 				2A3330AE192C8FB000998BBF /* CUSRowData.m in Sources */,
 				2A3330B4192C8FB000998BBF /* CUSGridData.m in Sources */,
-				2A333094192C8F6F00998BBF /* CUSLayoutUtil.m in Sources */,
 				2A3330ED192C904C00998BBF /* CUSLayoutDesignerView.m in Sources */,
 				2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */,
 				2A333091192C8F6F00998BBF /* CUSLayoutData.m in Sources */,

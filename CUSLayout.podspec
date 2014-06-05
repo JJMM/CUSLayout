@@ -16,11 +16,20 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'algorithm' do |ss|
+    ss.dependency 'CUSLayout/core'
     ss.source_files = 'CUSLayout/algorithm/*'
   end
   
   s.subspec 'extend' do |ss|
+    ss.dependency 'CUSLayout/core'
+    ss.dependency 'CUSLayout/algorithm'
     ss.source_files = 'CUSLayout/extend/*'
+  end
+  
+  s.subspec 'util' do |ss|
+    ss.dependency 'CUSLayout/core'
+    ss.dependency 'CUSLayout/algorithm'
+    ss.source_files = 'CUSLayout/util/*'
   end
 end
 
