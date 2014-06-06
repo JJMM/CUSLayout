@@ -3,8 +3,9 @@ CUSLayout
 CUSLayout for iOS managed positioning mechanism, the iOS SDK provides absolute positioning is very inconvenient to use, in addition to the emergence of 4-inch screen of the iPhone and iPad to make iOS developer need to spend more time in the layout, however iOS6.0 AutoLayout the mechanism is disappointing, I refer to Android, SWT, Swing layout mechanism, the preparation of for iOS CUSLayout, use CUSLayout has the following advantages:<br>1.Simplify coding, you do not need to take into account the pixel level, only for regional programming, which greatly improves the efficiency of programming<br>2.Good readability, layout type can be a preliminary understanding of layout intent and child controls roughly placed, eliminating the need for a very tedious restore coordinate steps<br>3.When the the UIView container Flip, size change, supporting multiple resolutions, automatic processing<br>4.UIView category which makes it easy to create layout constraints in old code<br>5.The API is simple and easy-to-use, low cost learning through the sample program to preliminary master<br>
 
 ------------------------------------
-Adding JSONModel to your project
+How To Get Started
 ====================================
+###Use static library
 - 1.Open your existing project (or create a new one)
 - 2.Drag and drop the CUSLayoutExample.xcodeproj file downloaded from github previously from Finder to your project (either root or under Frameworks)
 
@@ -21,6 +22,16 @@ in the Link Binary With Libraries section, add the libCUSLayout.a library<br>
 - The Debug value should already be set, but if it’s not, change that as well.
 - Also locate the “Always Search User Paths” value and set it to YES.
 - Finally, find the “Other Linker Flags” option, and add the value -ObjC (no quotes).
+
+### Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like CUSLayout in your projects. See the ["Getting Started" guide for more information](https://github.com/JJMM/CUSLayout/wiki/Getting-Started-with-CUSLayout).
+
+#### Podfile
+
+```ruby
+platform :ios
+pod “CUSLayout”, "~> 1.0.2”
 
 ------------------------------------
 API
