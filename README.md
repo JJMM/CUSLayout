@@ -32,7 +32,7 @@ in the Link Binary With Libraries section, add the libCUSLayout.a library<br>
 ```ruby
 platform :ios
 pod “CUSLayout”, "~> 1.0.2”
-
+```
 ------------------------------------
 API
 ====================================
