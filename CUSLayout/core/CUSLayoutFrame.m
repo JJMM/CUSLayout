@@ -34,6 +34,18 @@
     }
     
     for (UIView *subView in view.subviews) {
+        //ScrollView has two default UIImageView scroller
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            if ([subView isKindOfClass:[UIImageView class]]) {
+                UIImage *image = ((UIImageView *)subView).image;
+                if ([image isKindOfClass:NSClassFromString(@"_UIResizableImage")]) {
+                    if (image.size.width == 3.5 || image.size.height == 3.5) {
+                        continue;
+                    }
+                }
+            }
+        }
+        
         CUSLayoutData *layoutData = subView.layoutData;
         if(layoutData && layoutData.exclude){
             continue;
