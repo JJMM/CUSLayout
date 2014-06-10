@@ -64,8 +64,8 @@
 
 -(NSString *)description{
     NSMutableString *des = [NSMutableString stringWithFormat:@"TableCellInfo:"];
-    [des appendString:[NSString stringWithFormat:@"column:%d row:%d ",self.column ,self.row]];
-    [des appendString:[NSString stringWithFormat:@"columnSpan:%d rowSpan:%d ",columnSpan ,rowSpan]];
+    [des appendString:[NSString stringWithFormat:@"column:%d row:%d ",(int)self.column ,(int)self.row]];
+    [des appendString:[NSString stringWithFormat:@"columnSpan:%d rowSpan:%d ",(int)columnSpan ,(int)rowSpan]];
     [des appendString:[NSString stringWithFormat:@"isSpan:%@ ignore:%@ ",isSpan?@"YES":@"NO" ,ignore?@"YES":@"NO"]];
     
     return des;
@@ -132,7 +132,7 @@ static CUSTableData *CUSTableDataInstance;
     if(!array){
         [self showError:@"数组不能为空"];
     }
-    for (NSInteger i = 0; i < [array count]; i++) {
+    for (int i = 0; i < [array count]; i++) {
         id obj = [array objectAtIndex:i];
         if(![obj isKindOfClass:[CUSValue class]]){
             [self showError:[NSString stringWithFormat:@"数组中第[%d]个参数不是CUSValue类型",i]];

@@ -29,14 +29,14 @@
  @param index
  @param value
  */
--(void)replaceFloatAtIndex:(NSUInteger)index withFloat:(CGFloat)value;
+-(void)replaceFloatAtIndex:(NSInteger)index withFloat:(CGFloat)value;
 
 /**
  @abstract internal method
  @param animate
  @result CGFloat
  */
--(CGFloat)floatAtIndex:(NSUInteger)index;
+-(CGFloat)floatAtIndex:(NSInteger)index;
 @end
 
 
@@ -57,14 +57,14 @@
  @param index
  @param value
  */
--(void)replaceRectAtIndex:(NSUInteger)index withRect:(CGRect)value;
+-(void)replaceRectAtIndex:(NSInteger)index withRect:(CGRect)value;
 
 /**
  @abstract internal method
  @param index
  @result CGRect
  */
--(CGRect)CGRectAtIndex:(NSUInteger)index;
+-(CGRect)CGRectAtIndex:(NSInteger)index;
 @end
 
 
@@ -76,8 +76,8 @@
 @property (nonatomic,assign) NSInteger rowCount;
 @property (nonatomic,assign,readonly) NSInteger columnCount;
 
--(id)init:(NSUInteger)rowCount atColumnCount:(NSUInteger)columnCount;
-- (id)objectAtRow:(NSUInteger)row atColumn:(NSUInteger)column;
-- (void)addObject:(id)anObject atRow:(NSUInteger)row atColumn:(NSUInteger)column;
-- (void)removeObjectAtRow:(NSUInteger)row_ atColumn:(NSUInteger)column_;
+-(id)init:(NSInteger)rowCount atColumnCount:(NSInteger)columnCount;
+- (id)objectAtRow:(NSInteger)row atColumn:(NSInteger)column;
+- (void)addObject:(id)anObject atRow:(NSInteger)row atColumn:(NSInteger)column;
+- (void)removeObjectAtRow:(NSInteger)row_ atColumn:(NSInteger)column_;
 @end
