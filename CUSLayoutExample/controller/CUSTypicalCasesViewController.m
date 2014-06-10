@@ -123,10 +123,15 @@
     scrollView.delegate = self;
     [self.view addSubview:scrollView];
     self.dataArray = [NSMutableArray array];
-    [self buttonItemClicked];
+    [self addMoreControls];
 }
 
 -(void)buttonItemClicked{
+    [self addMoreControls];
+    [scrollView CUSLayout:YES];
+}
+
+-(void)addMoreControls{
     self.pageCounter++;
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.pageCounter * 5 * (60 + 5));
     //prepare data
@@ -141,7 +146,7 @@
     [self.dataArray addObject:[FallEntity createR:rowIndex + 3 C:0 RS:2 CS:1]];
     [self.dataArray addObject:[FallEntity createR:rowIndex + 3 C:2 RS:1 CS:1]];
     [self.dataArray addObject:[FallEntity createR:rowIndex + 4 C:1 RS:1 CS:2]];
-
+    
     //init layou data
     NSMutableArray *colums = [NSMutableArray array];
     for (int i = 0 ; i < 3; i++) {
@@ -159,30 +164,21 @@
     }
     
     //create views
-    NSInteger endIndex = [self.dataArray count];
-    NSArray *subArray = [NSArray arrayWithArray:scrollView.subviews];
-    for (UIView *v in scrollView.subviews) {
-        [v removeFromSuperview];
-    }
-
-    for (int i = 0; i < endIndex; i++) {
-        if (i < startIndex) {
-            //iOS system will add tow UIImageView to ScrollView subviews when it scrolled.
-            [scrollView addSubview:[subArray objectAtIndex:i]];
-        }else{
-            UIView *subView = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button %i",i]];
-            //animate start frame
-            subView.frame = CGRectMake(160, 0, 0, 0);
-            [scrollView addSubview:subView];
-        }
+    for (int i = startIndex; i < [self.dataArray count]; i++) {
+        UIView *subView = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button %i",i]];
+        //animate start frame
+        subView.frame = CGRectMake(160, 0, 0, 0);
+        [scrollView addSubview:subView];
     }
     
     scrollView.layoutFrame = layout;
-    [scrollView CUSLayout:YES];
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.pageCounter * 5 * (60 + 5));
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView_{
+    
 }
 @end
