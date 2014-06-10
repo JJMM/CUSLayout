@@ -35,6 +35,14 @@
         NSMutableArray *groupArray2 = [NSMutableArray array];
         [groupArray2 addObject:[NSArray arrayWithObjects:@"LayoutManager",@"Long press to drag",@"CUSLayoutManagerSampleViewController", nil]];
         [self.dataItems addObject:groupArray2];
+        
+        NSMutableArray *groupArray3 = [NSMutableArray array];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Single View Fill",@"",@"CUSSingleViewFillViewController", nil]];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Tow View Divided",@"",@"CUSTowViewDividedViewController", nil]];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Three View Extend",@"",@"CUSThreeViewExtendViewController", nil]];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Multi View Divided",@"",@"CUSMultiViewDividedViewController", nil]];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Waterfall",@"",@"CUSWaterfallViewController", nil]];
+        [self.dataItems addObject:groupArray3];
     }
     return self;
 }
@@ -80,6 +88,8 @@
         return @"Advance Layout";
     }else if (section == 2) {
         return @"Other";
+    }else if (section == 3) {
+        return @"Typical";
     }else{
         return @"";
     }

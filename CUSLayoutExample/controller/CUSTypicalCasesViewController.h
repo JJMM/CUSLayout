@@ -14,6 +14,19 @@
 
 @end
 
-@interface CUSTowViewDivideViewController : CUSViewController
+@interface CUSTowViewDividedViewController : CUSViewController
 
 @end
+
+@interface CUSThreeViewExtendViewController : CUSViewController
+
+@end
+
+@interface CUSMultiViewDividedViewController : CUSViewController
+
+@end
+
+@interface CUSWaterfallViewController : CUSViewController
+
+@end
+
