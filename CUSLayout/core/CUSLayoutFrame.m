@@ -39,7 +39,7 @@
             if ([subView isKindOfClass:[UIImageView class]]) {
                 UIImage *image = ((UIImageView *)subView).image;
                 if ([image isKindOfClass:NSClassFromString(@"_UIResizableImage")]) {
-                    if (image.size.width == 3.5 || image.size.height == 3.5) {
+                    if (image.size.width == 3.5 || image.size.width == 7 || image.size.height == 3.5 || image.size.height == 7) {
                         continue;
                     }
                 }
