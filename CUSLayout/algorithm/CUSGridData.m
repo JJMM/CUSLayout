@@ -7,8 +7,8 @@
 #import "UIView+CUSLayout.h"
 #import <Availability.h>
 @implementation CUSGridData{
-    int defaultWhint, defaultHhint, defaultWidth, defaultHeight;
-    int currentWhint, currentHhint, currentWidth, currentHeight;
+    NSInteger defaultWhint, defaultHhint, defaultWidth, defaultHeight;
+    NSInteger currentWhint, currentHhint, currentWidth, currentHeight;
     
 }
 @synthesize verticalAlignment;
@@ -49,7 +49,7 @@
     }
     return self;
 }
--(void) computeSize:(UIView *)control wHint:(int)wHint hHint:(int)hHint flushCache:(BOOL)flushCache {
+-(void) computeSize:(UIView *)control wHint:(NSInteger)wHint hHint:(NSInteger)hHint flushCache:(BOOL)flushCache {
 	if (cacheWidth != -1 && cacheHeight != -1) return;
 	if (wHint == self.widthHint && hHint == self.heightHint) {
 		if (defaultWidth == -1 || defaultHeight == -1 || wHint != defaultWhint || hHint != defaultHhint) {

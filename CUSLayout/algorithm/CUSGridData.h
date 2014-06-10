@@ -31,10 +31,10 @@
 @property (nonatomic,assign) CGFloat minimumHeight;//Default:0
 
 //===========internel
-@property (nonatomic,assign) int cacheWidth;//Default:-1
-@property (nonatomic,assign) int cacheHeight;//Default:-1
+@property (nonatomic,assign) NSInteger cacheWidth;//Default:-1
+@property (nonatomic,assign) NSInteger cacheHeight;//Default:-1
 
--(void) computeSize:(UIView *)control wHint:(int)wHint hHint:(int)hHint flushCache:(BOOL)flushCache;
+-(void) computeSize:(UIView *)control wHint:(NSInteger)wHint hHint:(NSInteger)hHint flushCache:(BOOL)flushCache;
 -(void) flushCache;
 @end
 

@@ -66,7 +66,7 @@
         return;
     }
 
-    for (int i = rowCount; i < rowCount_; i++) {
+    for (NSInteger i = rowCount; i < rowCount_; i++) {
         NSMutableArray *rowArray = [NSMutableArray array];
         for (int j = 0; j < self.columnCount; j++) {
             [rowArray addObject:[NSNull null]];
@@ -110,7 +110,7 @@
             return;
         }
     }
-    NSLog(@"2D array insert error:%@  row:%i column:%i", anObject, row_, column_);
+    NSLog(@"2D array insert error:%@  row:%d column:%d", anObject, row_, column_);
 }
 - (void)removeObjectAtRow:(NSUInteger)row_ atColumn:(NSUInteger)column_{
     if (row_ < self.rowCount) {
@@ -120,7 +120,7 @@
             return;
         }
     }
-    NSLog(@"2D array delete error:row:%i column:%i", row_, column_);
+    NSLog(@"2D array delete error:row:%d column:%d", row_, column_);
 }
 
 -(NSString *)description{

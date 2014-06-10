@@ -64,8 +64,8 @@
 
 -(NSString *)description{
     NSMutableString *des = [NSMutableString stringWithFormat:@"TableCellInfo:"];
-    [des appendString:[NSString stringWithFormat:@"column:%i row:%i ",self.column ,self.row]];
-    [des appendString:[NSString stringWithFormat:@"columnSpan:%i rowSpan:%i ",columnSpan ,rowSpan]];
+    [des appendString:[NSString stringWithFormat:@"column:%d row:%d ",self.column ,self.row]];
+    [des appendString:[NSString stringWithFormat:@"columnSpan:%d rowSpan:%d ",columnSpan ,rowSpan]];
     [des appendString:[NSString stringWithFormat:@"isSpan:%@ ignore:%@ ",isSpan?@"YES":@"NO" ,ignore?@"YES":@"NO"]];
     
     return des;
@@ -112,9 +112,9 @@ static CUSTableData *CUSTableDataInstance;
         [self checkArrayAvailable:self.rowHeights];
         self.cellInfos = [NSMutableArray array];
         
-		for (int i = 0; i < [self getRowCount]; i++) {
+		for (NSInteger i = 0; i < [self getRowCount]; i++) {
             NSMutableArray *rowArray = [NSMutableArray array];
-			for (int j = 0; j < [self getColumnCount]; j++) {
+			for (NSInteger j = 0; j < [self getColumnCount]; j++) {
                 TableCellInfo *cell = [[TableCellInfo alloc]initWithColumn:j column:i];
                 [rowArray addObject:cell];
 			}
@@ -132,10 +132,10 @@ static CUSTableData *CUSTableDataInstance;
     if(!array){
         [self showError:@"数组不能为空"];
     }
-    for (int i = 0; i < [array count]; i++) {
+    for (NSInteger i = 0; i < [array count]; i++) {
         id obj = [array objectAtIndex:i];
         if(![obj isKindOfClass:[CUSValue class]]){
-            [self showError:[NSString stringWithFormat:@"数组中第[%i]个参数不是CUSValue类型",i]];
+            [self showError:[NSString stringWithFormat:@"数组中第[%d]个参数不是CUSValue类型",i]];
         }
     }
 }
@@ -153,12 +153,12 @@ static CUSTableData *CUSTableDataInstance;
  *            行数
  */
 -(void) merge:(NSInteger)column row:(NSInteger)row colspan:(NSInteger) colspan rowspan:(NSInteger) rowspan {
-    int ltx = column;
-    int lty = row;
-    int rbx = column + colspan - 1;
-    int rby = row + rowspan - 1;
-    for (int i = lty; i <= rby; i++) {
-        for (int j = ltx; j <= rbx; j++) {
+	NSInteger ltx = column;
+	NSInteger lty = row;
+	NSInteger rbx = column + colspan - 1;
+	NSInteger rby = row + rowspan - 1;
+    for (NSInteger i = lty; i <= rby; i++) {
+        for (NSInteger j = ltx; j <= rbx; j++) {
             TableCellInfo *cell = [self getTableCellInfo:j row:i];
             if (i == lty && j == ltx) {
                 cell.columnSpan = rbx - ltx + 1;
@@ -184,12 +184,12 @@ static CUSTableData *CUSTableDataInstance;
  */
 -(void)unmerge:(NSInteger)column row:(NSInteger)row{
     TableCellInfo *selfCell = [self getTableCellInfo:column row:row];
-    int ltx = column;
-    int lty = row;
-    int rbx = column + selfCell.columnSpan - 1;
-    int rby = row + selfCell.rowSpan - 1;
-    for (int i = lty; i <= rby; i++) {
-        for (int j = ltx; j <= rbx; j++) {
+	NSInteger ltx = column;
+	NSInteger lty = row;
+	NSInteger rbx = column + selfCell.columnSpan - 1;
+	NSInteger rby = row + selfCell.rowSpan - 1;
+    for (NSInteger i = lty; i <= rby; i++) {
+        for (NSInteger j = ltx; j <= rbx; j++) {
             TableCellInfo *cell = [self getTableCellInfo:j row:i];
             cell.columnSpan = 1;
             cell.rowSpan = 1;
@@ -213,10 +213,10 @@ static CUSTableData *CUSTableDataInstance;
     return self.rowHeights != nil ? [self.rowHeights count] : 0;
 }
 
--(TableCellInfo *)getTableCellInfo:(int)column row:(int)row{
+-(TableCellInfo *)getTableCellInfo:(NSInteger)column row:(NSInteger)row{
     return [self getTableCellInfo:column row:row original:YES];
 }
--(TableCellInfo *)getTableCellInfo:(int)column row:(int)row original:(BOOL) original {
+-(TableCellInfo *)getTableCellInfo:(NSInteger)column row:(NSInteger)row original:(BOOL) original {
     if (column < 0 || column >= [self getColumnCount] || row < 0
         || row >= [self getRowCount]) {
         return nil;
@@ -323,10 +323,10 @@ static CUSTableData *CUSTableDataInstance;
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - self.marginLeft - self.marginRight;
-	int height = rect.size.height - self.marginTop - self.marginBottom;
+	NSInteger width = rect.size.width - self.marginLeft - self.marginRight;
+	NSInteger height = rect.size.height - self.marginTop - self.marginBottom;
     CGRect tableRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
 
     NSInteger allWidth = tableRect.size.width - (([self getColumnCount] - 1)*spacing);
@@ -343,8 +343,8 @@ static CUSTableData *CUSTableDataInstance;
  * @return
  */
 -(CGRect)computeTableBounds:(CGRect) rect {
-	int width = rect.size.width - self.marginLeft - self.marginRight;
-	int height = rect.size.height - self.marginTop - self.marginBottom;
+	NSInteger width = rect.size.width - self.marginLeft - self.marginRight;
+	NSInteger height = rect.size.height - self.marginTop - self.marginBottom;
     CGRect tableRect = CGRectMake(rect.origin.x + self.marginLeft, rect.origin.y + self.marginTop, width, height);
 
     return tableRect;
@@ -361,12 +361,12 @@ static CUSTableData *CUSTableDataInstance;
 -(NSMutableArray *)computeValueByCurrent:(NSInteger)allWidth userSet:(NSArray *)userSet composite:(UIView *)composite isComputingHeight:(BOOL)isComputingHeight{
     NSMutableArray *localRealColumnWidths = [NSMutableArray array];
     NSNumber *number = [NSNumber numberWithFloat:0];
-    for (int i = 0; i < [userSet count]; i++) {
+    for (NSInteger i = 0; i < [userSet count]; i++) {
         [localRealColumnWidths addObject:number];
     }
     
-    int integerWidth = 0;
-    int percentWidth = 0;
+	NSInteger integerWidth = 0;
+	NSInteger percentWidth = 0;
     if (self.pixelFirst) {
         integerWidth = [self computeInteger:localRealColumnWidths userSet:userSet remainNum:allWidth parent:composite isComputingHeight:isComputingHeight];
         percentWidth = [self computePercent:localRealColumnWidths userSet:userSet allNum:allWidth remainNum:allWidth - integerWidth];
@@ -376,9 +376,9 @@ static CUSTableData *CUSTableDataInstance;
         integerWidth = [self computeInteger:localRealColumnWidths userSet:userSet remainNum:allWidth - percentWidth parent:composite isComputingHeight:isComputingHeight];
     }
     
-    int defaultWidth = [self computeDefault:localRealColumnWidths userSet:userSet remainNum:allWidth - percentWidth - integerWidth];
+	NSInteger defaultWidth = [self computeDefault:localRealColumnWidths userSet:userSet remainNum:allWidth - percentWidth - integerWidth];
     
-    int remainWidth = allWidth - percentWidth - integerWidth - defaultWidth;
+	NSInteger remainWidth = allWidth - percentWidth - integerWidth - defaultWidth;
     if (remainWidth > 0 && [localRealColumnWidths count] > 0) {
         NSInteger lastIndex = [localRealColumnWidths count] - 1;
         CGFloat f = [localRealColumnWidths floatAtIndex:lastIndex];
@@ -402,9 +402,9 @@ static CUSTableData *CUSTableDataInstance;
  * @return
  */
 -(NSArray *) computeTableCellsControlIndex{
-    int colLen = [self getColumnCount];
-    int rowLen = [self getRowCount];
-    int controlIndex = 0;
+	NSInteger colLen = [self getColumnCount];
+	NSInteger rowLen = [self getRowCount];
+	NSInteger controlIndex = 0;
     NSMutableArray *controlIndexArray = [NSMutableArray array];
 //    int[][] controlIndexArray = new int[rowLen][colLen];
     for (int currentRow = 0; currentRow < rowLen; currentRow++) {
@@ -418,7 +418,7 @@ static CUSTableData *CUSTableDataInstance;
                 [rowArray addObject:[NSNumber numberWithInt:-2]];
                
             } else {
-                [rowArray addObject:[NSNumber numberWithInt:controlIndex++]];
+                [rowArray addObject:[NSNumber numberWithUnsignedInteger:controlIndex++]];
             }
         }
         [controlIndexArray addObject:rowArray];
@@ -452,7 +452,7 @@ static CUSTableData *CUSTableDataInstance;
     for (int currentRow = 0; currentRow < [cellIndex count]; currentRow++) {
         for (int currentCol = 0; currentCol < [[cellIndex objectAtIndex:currentRow] count]; currentCol++) {
             NSNumber *cIndex = [[cellIndex objectAtIndex:currentRow] objectAtIndex:currentCol];
-            int controlIndex = [[[controlIndexArray objectAtIndex:currentRow] objectAtIndex:currentCol] intValue];
+        	NSInteger controlIndex = [[[controlIndexArray objectAtIndex:currentRow] objectAtIndex:currentCol] intValue];
             
             if ([cIndex boolValue] && controlIndex > -1) {
  
@@ -474,8 +474,8 @@ static CUSTableData *CUSTableDataInstance;
     if (controls == nil || [controls count] == 0) {
         return 0;
     }
-    int bestSize = 0;
-    for (int i = 0; i < [controls count]; i++) {
+	NSInteger bestSize = 0;
+    for (NSInteger i = 0; i < [controls count]; i++) {
         UIView * control = [controls objectAtIndex:i];
         CGSize p = [self computeSize:control];
         // 计算格子的最佳高或宽需将格子的位置偏移量计算在内
@@ -500,16 +500,16 @@ static CUSTableData *CUSTableDataInstance;
     BOOL hasPercent = [self hasPercent:userSet];
     BOOL hasDefault = [self hasDefault:userSet];
     BOOL hasInteger = [self hasInteger:userSet];
-    int retWidth = 0;
+	NSInteger retWidth = 0;
     float sum = 0;
-    for (int i = 0; i < [userSet count]; i++) {
+    for (NSInteger i = 0; i < [userSet count]; i++) {
         CUSValue *value = [userSet objectAtIndex:i];
         if ([value getDataType] == CUSLayoutDataTypePercent) {
             sum += [value getValue]; //计算比例和
         }
     }
     if (allNum <= 0) { // 总高或宽设置的负值，那么所有比例设置都无效，大小置为0
-        for (int i = 0; i < [userSet count]; i++) {
+        for (NSInteger i = 0; i < [userSet count]; i++) {
             CUSValue *value = [userSet objectAtIndex:i];
             if ([value getDataType] == CUSLayoutDataTypePercent) {
                 [reals replaceObjectAtIndex:i withObject:[NSNumber numberWithFloat:0]];
@@ -517,7 +517,7 @@ static CUSTableData *CUSTableDataInstance;
         }
     } else {
         if (hasPercent) {
-            for (int i = 0; i < [userSet count]; i++) {
+            for (NSInteger i = 0; i < [userSet count]; i++) {
                 CUSValue *value = [userSet objectAtIndex:i];
                 CGFloat fvalue=  [value getValue];
                 if ([value getDataType] == CUSLayoutDataTypePercent) {
@@ -576,15 +576,15 @@ static CUSTableData *CUSTableDataInstance;
     BOOL hasPercent = [self hasPercent:userSet];
     BOOL hasDefault = [self hasDefault:userSet];
     BOOL hasInteger = [self hasInteger:userSet];
-    int retWidth = 0;
+	NSInteger retWidth = 0;
 
     if (remainNum <= 0) {
-        for (int i = 0; i < [userSet count]; i++) {
+        for (NSInteger i = 0; i < [userSet count]; i++) {
             CUSValue *value = [userSet objectAtIndex:i];
             if ([value getDataType] == CUSLayoutDataTypeDefault && self.pixelFirst) { //如果该行或列是计算最佳 && 像素优先
                 // 计算第i行行高或第i列列宽
-                int totalRowCount = [self getRowCount];
-                int totalColCount = [self getColumnCount];
+            	NSInteger totalRowCount = [self getRowCount];
+            	NSInteger totalColCount = [self getColumnCount];
                 // 计算出一个二维数组，数组中为true的格子表示要计算该格子中控件的最佳大小
                 NSMutableArray *compusteArray = [NSMutableArray array];
                 
@@ -592,7 +592,7 @@ static CUSTableData *CUSTableDataInstance;
                 for (int currentRow = 0; currentRow < totalRowCount; currentRow++) {
                     for (int currentCol = 0; currentCol < totalColCount; currentCol++) {
                         NSMutableArray *rwoArray = [NSMutableArray array];
-                        int computeIndex = isComputingHeight ? currentRow : currentCol; // 判断是算行还是算列
+                    	NSInteger computeIndex = isComputingHeight ? currentRow : currentCol; // 判断是算行还是算列
                         if (computeIndex == i) {
                             [rwoArray addObject:[NSNumber numberWithBool:YES]];
                         } else {
@@ -617,7 +617,7 @@ static CUSTableData *CUSTableDataInstance;
         if (hasInteger) {
             if (hasDefault || (hasPercent && pixelFirst)) { //  有设置负值 或者 (有比例且是像素优先)
                 float sum = 0;
-                for (int i = 0; i < [reals count]; i++) {
+                for (NSInteger i = 0; i < [reals count]; i++) {
                     CUSValue *value = [userSet objectAtIndex:i];
                     CGFloat fvalue=  [value getValue];
                     if ([value getDataType] == CUSLayoutDataTypeFloat) {
@@ -625,7 +625,7 @@ static CUSTableData *CUSTableDataInstance;
                     }
                 }
                 if (sum > remainNum) {  //余下的大小不够，平分给每行或没列
-                    for (int i = 0; i < [reals count]; i++) {
+                    for (NSInteger i = 0; i < [reals count]; i++) {
                         CUSValue *value = [userSet objectAtIndex:i];
                         CGFloat fvalue=  [value getValue];
                         if ([value getDataType] == CUSLayoutDataTypeFloat) {
@@ -635,7 +635,7 @@ static CUSTableData *CUSTableDataInstance;
                         }
                     }
                 } else {
-                    for (int i = 0; i < [reals count]; i++) {
+                    for (NSInteger i = 0; i < [reals count]; i++) {
                         CUSValue *value = [userSet objectAtIndex:i];
                         CGFloat fvalue=  [value getValue];
                         if ([value getDataType] == CUSLayoutDataTypeFloat) {
@@ -647,14 +647,14 @@ static CUSTableData *CUSTableDataInstance;
                 }
             } else { //  没有设置负值 且 (没有比例或比例优先)
                 float sum = 0;
-                for (int i = 0; i < [reals count]; i++) {
+                for (NSInteger i = 0; i < [reals count]; i++) {
                     CUSValue *value = [userSet objectAtIndex:i];
                     CGFloat fvalue=  [value getValue];
                     if ([value getDataType] == CUSLayoutDataTypeFloat) {
                         sum += fvalue; //累和
                     }
                 }
-                for (int i = 0; i < [reals count]; i++) {
+                for (NSInteger i = 0; i < [reals count]; i++) {
                     CUSValue *value = [userSet objectAtIndex:i];
                     CGFloat fvalue=  [value getValue];
                     if ([value getDataType] == CUSLayoutDataTypeFloat) { // 计算比例并分配
@@ -678,11 +678,11 @@ static CUSTableData *CUSTableDataInstance;
  * @return
  */
 -(NSInteger)computeDefault:(NSMutableArray *)reals userSet:(NSArray *)userSet remainNum:(NSInteger)remainNum{
-    int retWidth = 0;
+	NSInteger retWidth = 0;
     BOOL hasDefault = [self hasDefault:userSet];
     
     if (remainNum <= 0) {
-        for (int i = 0; i < [reals count]; i++) {
+        for (NSInteger i = 0; i < [reals count]; i++) {
             CUSValue *value = [userSet objectAtIndex:i];
             if ([value getDataType] == CUSLayoutDataTypeDefault) {
                 [reals replaceFloatAtIndex:i withFloat:0];
@@ -690,14 +690,14 @@ static CUSTableData *CUSTableDataInstance;
         }
     } else {
         if (hasDefault) {
-            int defaultCount = 0;
-            for (int i = 0; i < [reals count]; i++) {
+        	NSInteger defaultCount = 0;
+            for (NSInteger i = 0; i < [reals count]; i++) {
                 CUSValue *value = [userSet objectAtIndex:i];
                 if ([value getDataType] == CUSLayoutDataTypeDefault) {
                     defaultCount++;
                 }
             }
-            for (int i = 0; i < [reals count]; i++) { //余下大小平分给default
+            for (NSInteger i = 0; i < [reals count]; i++) { //余下大小平分给default
                 CUSValue *value = [userSet objectAtIndex:i];
                 if ([value getDataType] == CUSLayoutDataTypeDefault) {
                     CGFloat freal = remainNum / defaultCount;
@@ -719,9 +719,9 @@ static CUSTableData *CUSTableDataInstance;
  */
 
 -(void)setControlsBounds:(NSArray *) children clientArea:(CGRect)clientArea{
-    int childIndex = -1;
-    for (int i = 0; i < [self getRowCount]; i++) {
-        for (int j = 0; j < [self getColumnCount]; j++) {
+	NSInteger childIndex = -1;
+    for (NSInteger i = 0; i < [self getRowCount]; i++) {
+        for (NSInteger j = 0; j < [self getColumnCount]; j++) {
             TableCellInfo *cellInfo = [self getTableCellInfo:j row:i];
             // 如果当前区域已被合并，则继续循环
             if (cellInfo.isSpan == YES) {
@@ -736,10 +736,10 @@ static CUSTableData *CUSTableDataInstance;
             if (childIndex >= [children count]) {
                 break;
             }
-            int x = [self getXByColumn:j];
-            int y = [self getYByRow:i];
-            int w = [self getColumnSpanWidth:j columnSpan:cellInfo.columnSpan];
-            int h = [self getRowSpanHeight:i rowSpan:cellInfo.rowSpan];
+        	NSInteger x = [self getXByColumn:j];
+        	NSInteger y = [self getYByRow:i];
+        	NSInteger w = [self getColumnSpanWidth:j columnSpan:cellInfo.columnSpan];
+        	NSInteger h = [self getRowSpanHeight:i rowSpan:cellInfo.rowSpan];
 
             CGRect rect = CGRectMake(x, y, w, h);
             UIView *control = [children objectAtIndex:childIndex];
@@ -751,7 +751,7 @@ static CUSTableData *CUSTableDataInstance;
     
     // 行列较少，剩余控件隐藏
     if (childIndex + 1< [children count]) {
-        for (int i = childIndex + 1; i < [children count]; i++) {
+        for (NSInteger i = childIndex + 1; i < [children count]; i++) {
             CGRect rect = CGRectMake(-1, -1, 0, 0);
             UIView *control = [children objectAtIndex:i];
             [self setControlFrame:control withFrame:rect];
@@ -767,7 +767,7 @@ static CUSTableData *CUSTableDataInstance;
  */
 -(NSInteger) getXByColumn:(NSInteger) column{
     NSInteger beforeTheRowX = 0;
-    for (int i = 0; i < column; i++) {
+    for (NSInteger i = 0; i < column; i++) {
         beforeTheRowX += [self.realColumnWidths floatAtIndex:i];
         beforeTheRowX += spacing;
     }
@@ -782,7 +782,7 @@ static CUSTableData *CUSTableDataInstance;
  */
 -(NSInteger) getYByRow:(NSInteger)row{
     NSInteger beforeTheRowY = 0;
-    for (int i = 0; i < row; i++) {
+    for (NSInteger i = 0; i < row; i++) {
         beforeTheRowY += [self.realRowHeights floatAtIndex:i];
         beforeTheRowY += spacing;
     }
@@ -790,8 +790,8 @@ static CUSTableData *CUSTableDataInstance;
 }
 
 -(NSInteger) getColumnSpanWidth:(NSInteger)column columnSpan:(NSInteger)columnSpan{
-    int spanWidth = 0;
-    for (int i = column; i < column + columnSpan && i < [self.columnWidths count]; i++) {
+	NSInteger spanWidth = 0;
+    for (NSInteger i = column; i < column + columnSpan && i < [self.columnWidths count]; i++) {
         spanWidth += [self.realColumnWidths floatAtIndex:i] ;
         if(i > column){
             spanWidth += spacing;
@@ -801,8 +801,8 @@ static CUSTableData *CUSTableDataInstance;
 }
 
 -(NSInteger) getRowSpanHeight:(NSInteger)row rowSpan:(NSInteger)rowSpan{
-    int spanHeight = 0;
-    for (int i = row; i < row + rowSpan && i < [self.rowHeights count]; i++) {
+	NSInteger spanHeight = 0;
+    for (NSInteger i = row; i < row + rowSpan && i < [self.rowHeights count]; i++) {
         spanHeight += [self.realRowHeights floatAtIndex:i];
         if(i > row){
             spanHeight += spacing;
@@ -841,7 +841,7 @@ static CUSTableData *CUSTableDataInstance;
         bounds.origin.x += data.horizontalIndent;
         bounds.size.width = MIN(rect.size.width - data.horizontalIndent, size.width);
     } else if (data.horizontalAlignment == CUSLayoutAlignmentCenter) {
-        int realWidth = MIN(rect.size.width - data.horizontalIndent, size.width);
+    	NSInteger realWidth = MIN(rect.size.width - data.horizontalIndent, size.width);
         bounds.origin.x += data.horizontalIndent + (rect.size.width - data.horizontalIndent - realWidth) / 2;
         bounds.size.width += realWidth;
     } else if (data.horizontalAlignment == CUSLayoutAlignmentRight) {
@@ -857,7 +857,7 @@ static CUSTableData *CUSTableDataInstance;
         bounds.origin.y += data.verticalIndent;
         bounds.size.height = MIN(rect.size.height - data.verticalIndent, size.height);
     } else if (data.verticalAlignment == CUSLayoutAlignmentCenter) {
-        int realHeight = MIN(rect.size.height - data.verticalIndent, size.height);
+    	NSInteger realHeight = MIN(rect.size.height - data.verticalIndent, size.height);
         bounds.origin.y += data.verticalIndent + (rect.size.height - data.verticalIndent - realHeight) / 2;
         bounds.size.height += realHeight;
     } else if (data.verticalAlignment == CUSLayoutAlignmentRight) {

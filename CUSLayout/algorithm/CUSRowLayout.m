@@ -252,11 +252,11 @@
 	}
 	for (int i = 0; i < [bounds count]; i++) {
 		NSMutableArray *list = [bounds objectAtIndex:i];
-        int listLength = [list count];
+        NSInteger listLength = [list count];
 		if (listLength < 1) {
 			continue;
 		}
-		int remain = 0;
+		NSInteger remain = 0;
         CGRect rectValue = [list CGRectAtIndex:listLength - 1];
 		if (self.type == CUSLayoutTypeHorizontal) {
 			remain = rectAll.size.width - (rectValue.origin.x + rectValue.size.width);
@@ -264,8 +264,8 @@
 			remain = rectAll.size.height - (rectValue.origin.y + rectValue.size.height);
 		}
 		if (remain > 1) {
-			int spare = remain / (listLength + 1);
-			int addNow = 0;
+			NSInteger spare = remain / (listLength + 1);
+			NSInteger addNow = 0;
 			for (int j = 0; j < listLength; j++) {
                 CGRect rectangle = [list CGRectAtIndex:j];
                 
@@ -285,11 +285,11 @@
 };
 
 -(void)setControlsBounds:(NSArray *)children bounds:(NSMutableArray *)bounds{
-	int index = 0;
+	NSInteger index = 0;
 	for (int i = 0; i < [bounds count]; i++) {
 		NSMutableArray *list = [bounds objectAtIndex:i];
-        int listLength = [list count];
-		int max = 0;
+        NSInteger listLength = [list count];
+		NSInteger max = 0;
 		if (self.type == CUSLayoutTypeHorizontal) {
 			for (int j = 0; j < listLength; j++) {
                 CGRect rectangle = [list CGRectAtIndex:j];

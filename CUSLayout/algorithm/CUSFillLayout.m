@@ -28,12 +28,12 @@
 		return CGSizeMake(wHint, hHint);
 	}
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) {
 		return CGSizeMake(wHint != CUS_LAY_DEFAULT ? wHint : 0,
                                hHint != CUS_LAY_DEFAULT ? hHint : 0);
 	} else {
-		int child_wHint = wHint, child_hHint = hHint;
+		NSInteger child_wHint = wHint, child_hHint = hHint;
 		if (type == CUSLayoutTypeHorizontal && wHint != CUS_LAY_DEFAULT) {
 			child_wHint = round(MAX(0,
                                               (wHint - (count - 1) * spacing - marginWidth * 2) / count));
@@ -71,17 +71,17 @@
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - (self.marginLeft + self.marginRight);
-	int height = rect.size.height - (self.marginTop + self.marginBottom);
+	NSInteger width = rect.size.width - (self.marginLeft + self.marginRight);
+	NSInteger height = rect.size.height - (self.marginTop + self.marginBottom);
 	if (type == CUSLayoutTypeHorizontal) {
 		width -= (count - 1) * spacing;
-		int x = rect.origin.x + self.marginLeft, extra = width % count;
-		int y = rect.origin.y + self.marginTop, cellWidth = width / count;
+		NSInteger x = rect.origin.x + self.marginLeft, extra = width % count;
+		NSInteger y = rect.origin.y + self.marginTop, cellWidth = width / count;
 		for (int i=0; i<count; i++) {
 			UIView *child = [children objectAtIndex:i];
-			int childWidth = cellWidth;
+			NSInteger childWidth = cellWidth;
 			if (i == 0) {
 				childWidth += extra / 2;
 			} else {
@@ -92,11 +92,11 @@
 		}
 	} else {
 		height -= (count - 1) * spacing;
-		int x = rect.origin.x + self.marginLeft, cellHeight = height / count;
-		int y = rect.origin.y + self.marginTop, extra = height % count;
+		NSInteger x = rect.origin.x + self.marginLeft, cellHeight = height / count;
+		NSInteger y = rect.origin.y + self.marginTop, extra = height % count;
 		for (int i=0; i<count; i++) {
 			UIView *child = [children objectAtIndex:i];
-			int childHeight = cellHeight;
+			NSInteger childHeight = cellHeight;
 			if (i == 0) {
 				childHeight += extra / 2;
 			} else {

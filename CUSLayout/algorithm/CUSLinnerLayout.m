@@ -30,7 +30,7 @@
 		return CGSizeMake(wHint, hHint);
 	}
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) {
 		return CGSizeMake(wHint != CUS_LAY_DEFAULT ? wHint : 0,
                           hHint != CUS_LAY_DEFAULT ? hHint : 0);
@@ -66,10 +66,10 @@
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) return;
-	int width = rect.size.width - self.marginLeft - self.marginRight;
-	int height = rect.size.height - self.marginTop - self.marginBottom;
+	NSInteger width = rect.size.width - self.marginLeft - self.marginRight;
+	NSInteger height = rect.size.height - self.marginTop - self.marginBottom;
     CGRect areaRect;
     //Replace the coordinates, through the exchange, only a layout algorithm, can support for horizontal and vertical direction in the layout
     if(self.type == CUSLayoutTypeHorizontal){
@@ -102,7 +102,7 @@
 
 -(NSMutableArray *)computeSizes:(NSArray *)children clientAreaSize:(CGRect)areaRect{
     NSMutableArray *boudns = [NSMutableArray array];
-    int count = [children count];
+    NSInteger count = [children count];
 	NSInteger width = areaRect.size.width - (count - 1) * spacing;
     NSInteger fillControllCounter = 0;
     //compute unfill size

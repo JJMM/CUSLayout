@@ -34,7 +34,7 @@
 		return CGSizeMake(wHint, hHint);
 	}
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) {
 		return CGSizeMake(wHint != CUS_LAY_DEFAULT ? wHint : 0,
                           hHint != CUS_LAY_DEFAULT ? hHint : 0);
@@ -63,12 +63,12 @@
 -(void)layout:(UIView *)composite{
     CGRect rect = [composite getClientArea];
 	NSArray *children = [self getUsealbeChildren:composite];
-	int count = [children count];
+	NSInteger count = [children count];
 	if (count == 0) return;
     int x = self.marginLeft;
     int y = self.marginTop;
     int width = rect.size.width - (self.marginLeft + self.marginRight);
-	int height = rect.size.height - (self.marginTop + self.marginBottom) * 2;
+	NSInteger height = rect.size.height - (self.marginTop + self.marginBottom) * 2;
     
     if(showViewIndex < 0 || showViewIndex >= [children count]){
         return;
