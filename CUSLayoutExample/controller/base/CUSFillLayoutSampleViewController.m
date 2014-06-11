@@ -1,46 +1,36 @@
 //
-//  CUSLinnerLayoutSampleViewController.m
+//  CUSFillLayoutSampleViewController.m
 //  CUSLayout
 //
-//  Created by zhangyu on 13-4-16.
+//  Created by zhangyu on 13-4-9.
 //  Copyright (c) 2013年 zhangyu. All rights reserved.
 //
 
-#import "CUSLinnerLayoutSampleViewController.h"
- 
-@implementation CUSLinnerLayoutSampleViewController
+#import "CUSFillLayoutSampleViewController.h"
+
+@implementation CUSFillLayoutSampleViewController
 @synthesize contentView;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    NSInteger controlCounter = 3;
-    for (int i = 0; i < controlCounter; i++) {
-        UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
-        if(i == controlCounter - 2){
-            CUSLinnerData *layoutData = [[CUSLinnerData alloc]init];
-            layoutData.fill = YES;
-            button.layoutData = layoutData;
-        }else{
-            button.layoutData = CUSLAYOUT.share_linnerData;
-        }
-        [self.contentView addSubview:button];
+    for (int i = 0; i < 4; i++) {
         
-        
+        UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
+        [self.contentView addSubview:view];
     }
-    CUSLinnerLayout *layout = [[CUSLinnerLayout alloc]init];
+    CUSFillLayout *layout = [[CUSFillLayout alloc]init];
     self.contentView.layoutFrame = layout;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+//    CUSLinnerLayout *viewLayout = [[CUSLinnerLayout alloc]init];
+//    viewLayout.spacing = 0;
+//    self.view.layoutFrame = viewLayout;
+    
 }
 
 -(IBAction)toolItemClicked:(id)sender{
     UIBarButtonItem *btn = (UIBarButtonItem *)sender;
-    CUSLinnerLayout *layout = (CUSLinnerLayout *)self.contentView.layoutFrame;
+    CUSFillLayout *layout = (CUSFillLayout *)self.contentView.layoutFrame;
     if(btn.tag == 0){
         if(layout.type == CUSLayoutTypeHorizontal){
             layout.type = CUSLayoutTypeVertical;
@@ -70,5 +60,4 @@
     
     [self.contentView CUSLayout:YES];
 }
-
 @end

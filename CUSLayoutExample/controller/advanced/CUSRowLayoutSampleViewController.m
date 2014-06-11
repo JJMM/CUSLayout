@@ -31,7 +31,6 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
     for (int i = 0; i < 15; i++) {
         UIButton *button = (UIButton *)[CUSLayoutSampleFactory createControl];
         button.layoutData = CUSLAYOUT.share_rowData;
@@ -47,13 +46,9 @@
     CUSFillLayout *fillLayout = [[CUSFillLayout alloc]init];
     fillLayout.spacing = 0;
     self.scrollView.layoutFrame = fillLayout;
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    UIBarButtonItem *toolButton = [[UIBarButtonItem alloc]initWithTitle:@"tool" style:UIBarButtonItemStyleBordered target:self action:@selector(toolButtonClicked)];
+    self.navigationItem.rightBarButtonItem = toolButton;
 }
 
 -(IBAction)toolItemClicked:(id)sender{
@@ -103,5 +98,13 @@
     }
     
     [self.contentView CUSLayout:YES];
+}
+
+-(void)toolButtonClicked{
+    if (self.scrollView.contentOffset.x == 0) {
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0) animated:YES];
+    }else{
+        [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
 }
 @end

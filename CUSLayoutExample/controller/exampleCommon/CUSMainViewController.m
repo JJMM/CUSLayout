@@ -43,6 +43,14 @@
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Multi View Divided",@"",@"CUSMultiViewDividedViewController", nil]];
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Waterfall",@"",@"CUSWaterfallViewController", nil]];
         [self.dataItems addObject:groupArray3];
+        
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"9 Grid",@"",@"CUS9GridViewController", nil]];
+        [self.dataItems addObject:groupArray3];
+        
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"click move",@"",@"CUSPassViewController", nil]];
+        [self.dataItems addObject:groupArray3];
+        
+        
     }
     return self;
 }

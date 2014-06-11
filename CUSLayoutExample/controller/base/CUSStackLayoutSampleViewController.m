@@ -23,12 +23,6 @@
     self.contentView.layoutFrame = layout;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(IBAction)toolItemClicked:(id)sender{
     UIBarButtonItem *btn = (UIBarButtonItem *)sender;
     CUSStackLayout *layout = (CUSStackLayout *)self.contentView.layoutFrame;
