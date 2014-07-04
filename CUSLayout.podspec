@@ -1,6 +1,6 @@
 Pod::Spec.new do |s| 
   s.name         = "CUSLayout"
-  s.version      = "1.1.4"
+  s.version      = "1.1.5"
   s.summary      = "iOS Auto Layout Manager."
   s.homepage     = "https://github.com/JJMM/CUSLayout"
   s.license      = "Apache License, Version 2.0"
