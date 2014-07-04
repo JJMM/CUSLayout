@@ -50,7 +50,7 @@
         }
         [self.contentView CUSLayout];
     }else if(btn.tag == 12){
-        UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",[self.contentView.subviews count]]];
+        UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%ld",[self.contentView.subviews count]]];
         view.alpha = 0.5;
         [self.contentView addSubview:view];
         [self.contentView CUSLayout];

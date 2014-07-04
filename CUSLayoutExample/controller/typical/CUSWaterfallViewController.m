@@ -96,7 +96,7 @@
     }
     
     //create views
-    for (int i = startIndex; i < [self.dataArray count]; i++) {
+    for (int i = (int)startIndex; i < [self.dataArray count]; i++) {
         UIView *subView = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button %i",i]];
         //animate start frame
         subView.frame = CGRectMake(160, 0, 0, 0);

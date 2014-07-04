@@ -16,6 +16,7 @@
     
     for (int i = 0; i < 9; i++) {
         UIView *view = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"%i",i]];
+        view.tag = i;
         CUSGridData *data = [[CUSGridData alloc]init];
         data.grabExcessHorizontalSpace = YES;
         data.grabExcessVerticalSpace = YES;
