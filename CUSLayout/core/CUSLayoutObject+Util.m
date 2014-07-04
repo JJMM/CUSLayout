@@ -109,7 +109,7 @@
             return;
         }
     }
-    NSLog(@"2D array insert error:%@  row:%ld column:%ld", anObject, row, column);
+    NSLog(@"2D array insert error:%@  row:%i column:%i", anObject, (int)row, (int)column);
 }
 - (void)removeObjectAtRow:(NSInteger)row atColumn:(NSInteger)column{
     if (row < self.rowCount) {
@@ -119,7 +119,7 @@
             return;
         }
     }
-    NSLog(@"2D array delete error:row:%ld column:%ld", row, column);
+    NSLog(@"2D array delete error:row:%i column:%i", (int)row, (int)column);
 }
 
 -(NSString *)description{

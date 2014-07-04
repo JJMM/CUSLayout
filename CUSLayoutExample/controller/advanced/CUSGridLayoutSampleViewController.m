@@ -69,7 +69,7 @@
             [lastView removeFromSuperview];
         }
     }else if(btn.tag == 4){
-        UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%ld",[self.contentView.subviews count]]];
+        UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",(int)[self.contentView.subviews count]]];
         button.layoutData = [CUSGridData createGrab];
         [self.contentView addSubview:button];
     }else if(btn.tag == 5){
