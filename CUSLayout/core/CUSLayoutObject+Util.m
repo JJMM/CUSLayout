@@ -47,40 +47,39 @@
     NSMutableArray *mainArray;
     
 }
-@synthesize rowCount;
-@synthesize columnCount;
+@synthesize rowCount = _rowCount;
+@synthesize columnCount = _columnCount;
 
--(id)init:(NSInteger)rowCount_ atColumnCount:(NSInteger)columnCount_
-{
+-(id)init:(NSInteger)rowCount atColumnCount:(NSInteger)columnCount{
     self = [super init];
     if (self) {
-        rowCount = rowCount_;
-        columnCount = columnCount_;
-        mainArray = [self buildArray:rowCount_ atColumn:columnCount_];
+        _rowCount = rowCount;
+        _columnCount = columnCount;
+        mainArray = [self buildArray:rowCount atColumn:columnCount];
     }
     return self;
 }
 
--(void)setRowCount:(NSInteger)rowCount_{
-    if (rowCount_<=rowCount) {
+-(void)setRowCount:(NSInteger)rowCount{
+    if (rowCount<=_rowCount) {
         return;
     }
 
-    for (NSInteger i = rowCount; i < rowCount_; i++) {
+    for (NSInteger i = _rowCount; i < rowCount; i++) {
         NSMutableArray *rowArray = [NSMutableArray array];
         for (int j = 0; j < self.columnCount; j++) {
             [rowArray addObject:[NSNull null]];
         }
         [mainArray addObject:rowArray];
     }
-    rowCount = rowCount_;
+    _rowCount = rowCount;
 }
--(NSMutableArray *)buildArray:(NSInteger)rowCount_ atColumn:(NSInteger)columnCount_{
+-(NSMutableArray *)buildArray:(NSInteger)rowCount atColumn:(NSInteger)columnCount{
     NSMutableArray *array = [NSMutableArray array];
     
-    for (int i = 0; i < rowCount_; i++) {
+    for (int i = 0; i < rowCount; i++) {
         NSMutableArray *rowArray = [NSMutableArray array];
-        for (int j = 0; j < columnCount_; j++) {
+        for (int j = 0; j < columnCount; j++) {
             [rowArray addObject:[NSNull null]];
         }
         [array addObject:rowArray];
@@ -88,11 +87,11 @@
     return array;
 }
 
-- (id)objectAtRow:(NSInteger)row_ atColumn:(NSInteger)column_{
-    if (row_ < self.rowCount) {
-        NSMutableArray * rowArray = [mainArray objectAtIndex:row_];
-        if (column_ < self.columnCount) {
-            id obj = [rowArray objectAtIndex:column_];
+- (id)objectAtRow:(NSInteger)row atColumn:(NSInteger)column{
+    if (row < self.rowCount) {
+        NSMutableArray * rowArray = [mainArray objectAtIndex:row];
+        if (column < self.columnCount) {
+            id obj = [rowArray objectAtIndex:column];
             if ([NSNull null] == obj) {
                 return nil;
             }else{
@@ -102,25 +101,25 @@
     }
     return nil;
 }
-- (void)addObject:(id)anObject atRow:(NSInteger)row_ atColumn:(NSInteger)column_{
-    if (row_ < self.rowCount) {
-        NSMutableArray * rowArray = [mainArray objectAtIndex:row_];
-        if (column_ < self.columnCount) {
-            [rowArray replaceObjectAtIndex:column_ withObject:anObject];
+- (void)addObject:(id)anObject atRow:(NSInteger)row atColumn:(NSInteger)column{
+    if (row < self.rowCount) {
+        NSMutableArray * rowArray = [mainArray objectAtIndex:row];
+        if (column < self.columnCount) {
+            [rowArray replaceObjectAtIndex:column withObject:anObject];
             return;
         }
     }
-    NSLog(@"2D array insert error:%@  row:%d column:%d", anObject, (int)row_, (int)column_);
+    NSLog(@"2D array insert error:%@  row:%ld column:%ld", anObject, row, column);
 }
-- (void)removeObjectAtRow:(NSInteger)row_ atColumn:(NSInteger)column_{
-    if (row_ < self.rowCount) {
-        NSMutableArray * rowArray = [mainArray objectAtIndex:row_];
-        if (column_ < self.columnCount) {
-            [rowArray replaceObjectAtIndex:column_ withObject:[NSNull null]];
+- (void)removeObjectAtRow:(NSInteger)row atColumn:(NSInteger)column{
+    if (row < self.rowCount) {
+        NSMutableArray * rowArray = [mainArray objectAtIndex:row];
+        if (column < self.columnCount) {
+            [rowArray replaceObjectAtIndex:column withObject:[NSNull null]];
             return;
         }
     }
-    NSLog(@"2D array delete error:row:%d column:%d", (int)row_, (int)column_);
+    NSLog(@"2D array delete error:row:%ld column:%ld", row, column);
 }
 
 -(NSString *)description{

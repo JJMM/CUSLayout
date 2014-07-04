@@ -72,7 +72,7 @@
         }
     }
     data = [[CUSGridData alloc]init];
-    control.layoutData = data;
+    [control setLayoutData:data];
     return data;
 }
 
@@ -194,11 +194,11 @@
 	NSInteger availableWidth = width - horizontalSpacing * (columnCount - 1) - (self.marginLeft + self.marginRight);
     
 	NSInteger expandCount = 0;
-    NSInteger *widths = malloc(columnCount * sizeof(int));
+    NSInteger *widths = malloc(columnCount * sizeof(NSInteger));
     for (int i = 0; i < columnCount; i++) {
         widths[i] = 0;
     }
-    NSInteger *minWidths = malloc(columnCount * sizeof(int));
+    NSInteger *minWidths = malloc(columnCount * sizeof(NSInteger));
     for (int i = 0; i < columnCount; i++) {
         minWidths[i] = 0;
     }
@@ -211,7 +211,7 @@
 		for (int i=0; i<rowCount; i++) {
         
                 
-			CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
+			CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
 			if (data != nil) {
 				NSInteger hSpan = MAX (1, MIN (data.horizontalSpan, columnCount));
 				if (hSpan == 1) {
@@ -230,7 +230,7 @@
 			}
 		}
 		for (int i=0; i<rowCount; i++) {
-            CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
+            CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
 			if (data != nil) {
 				NSInteger hSpan = MAX (1, MIN (data.horizontalSpan, columnCount));
 				if (hSpan > 1) {
@@ -328,7 +328,7 @@
 				
 				for (int j=0; j<columnCount; j++) {
 					for (int i=0; i<rowCount; i++) {
-                        CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
+                        CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
 						if (data != nil) {
 							NSInteger hSpan = MAX (1, MIN (data.horizontalSpan, columnCount));
 							if (hSpan > 1) {
@@ -378,7 +378,7 @@
 	if (width != CUS_LAY_DEFAULT) {
 		for (int j=0; j<columnCount; j++) {
 			for (int i=0; i<rowCount; i++) {
-                CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
+                CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
 				if (data != nil) {
 					if (data.heightHint == CUS_LAY_DEFAULT) {
 						UIView *child = [grid objectAtRow:i atColumn:j];
@@ -411,11 +411,11 @@
 	/* Row heights */
 	NSInteger availableHeight = height - verticalSpacing * (rowCount - 1) - (self.marginTop  + self.marginBottom);
 	expandCount = 0;
-    NSInteger *heights = malloc(rowCount * sizeof(int));
+    NSInteger *heights = malloc(rowCount * sizeof(NSInteger));
     for (int i = 0; i < rowCount; i++) {
         heights[i] = 0;
     }
-	NSInteger *minHeights = malloc(rowCount * sizeof(int));
+	NSInteger *minHeights = malloc(rowCount * sizeof(NSInteger));
     for (int i = 0; i < rowCount; i++) {
         minHeights[i] = 0;
     }
@@ -425,7 +425,7 @@
     }
 	for (int i=0; i<rowCount; i++) {
 		for (int j=0; j<columnCount; j++) {
-            CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
+            CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
 			if (data != nil) {
 				NSInteger vSpan = MAX (1, MIN (data.verticalSpan, rowCount));
 				if (vSpan == 1) {
@@ -445,7 +445,7 @@
 			}
 		}
 		for (int j=0; j<columnCount; j++) {
-			CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
+			CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
 			if (data != nil) {
 				NSInteger vSpan = MAX (1, MIN (data.verticalSpan, rowCount));
 				if (vSpan > 1) {
@@ -521,7 +521,7 @@
 			
 			for (int i=0; i<rowCount; i++) {
 				for (int j=0; j<columnCount; j++) {
-					CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
+					CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:NO];
 					if (data != nil) {
 						NSInteger vSpan = MAX (1, MIN (data.verticalSpan, rowCount));
 						if (vSpan > 1) {
@@ -569,7 +569,7 @@
 		for (int i=0; i<rowCount; i++) {
 			CGFloat gridX = x + self.marginLeft;
 			for (int j=0; j<columnCount; j++) {
-				CUSGridData *data = [self getData:(CUS2DArray *)grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
+				CUSGridData *data = [self getData:grid row:i column:j rowCount:rowCount columnCount:columnCount first:YES];
 				if (data != nil) {
 					NSInteger hSpan = MAX (1, MIN (data.horizontalSpan, columnCount));
 					NSInteger vSpan = MAX (1, data.verticalSpan);

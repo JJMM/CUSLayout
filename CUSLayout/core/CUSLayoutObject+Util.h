@@ -79,5 +79,5 @@
 -(id)init:(NSInteger)rowCount atColumnCount:(NSInteger)columnCount;
 - (id)objectAtRow:(NSInteger)row atColumn:(NSInteger)column;
 - (void)addObject:(id)anObject atRow:(NSInteger)row atColumn:(NSInteger)column;
-- (void)removeObjectAtRow:(NSInteger)row_ atColumn:(NSInteger)column_;
+- (void)removeObjectAtRow:(NSInteger)row atColumn:(NSInteger)column;
 @end
