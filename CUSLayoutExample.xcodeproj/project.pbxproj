@@ -45,6 +45,7 @@
 		2A3330F4192C912D00998BBF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F2192C912D00998BBF /* Icon.png */; };
 		2A3330F5192C912D00998BBF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F3192C912D00998BBF /* Icon@2x.png */; };
 		2A3330F7192C920800998BBF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2A3330F6192C920800998BBF /* README.txt */; };
+		2A5895A519885AF4001731DB /* CUSFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5895A419885AF4001731DB /* CUSFlowViewController.m */; };
 		2A7A6B7D1947F6F500529E51 /* CUSGridLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B5A1947F6F500529E51 /* CUSGridLayoutSampleViewController.m */; };
 		2A7A6B7E1947F6F500529E51 /* CUSGridLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B5B1947F6F500529E51 /* CUSGridLayoutSampleViewController.xib */; };
 		2A7A6B7F1947F6F500529E51 /* CUSRowLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B5D1947F6F500529E51 /* CUSRowLayoutSampleViewController.m */; };
@@ -169,6 +170,8 @@
 		2A3330F2192C912D00998BBF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2A3330F3192C912D00998BBF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2A3330F6192C920800998BBF /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2A5895A319885AF4001731DB /* CUSFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFlowViewController.h; sourceTree = "<group>"; };
+		2A5895A419885AF4001731DB /* CUSFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFlowViewController.m; sourceTree = "<group>"; };
 		2A7A6B591947F6F500529E51 /* CUSGridLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSGridLayoutSampleViewController.h; sourceTree = "<group>"; };
 		2A7A6B5A1947F6F500529E51 /* CUSGridLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSGridLayoutSampleViewController.m; sourceTree = "<group>"; };
 		2A7A6B5B1947F6F500529E51 /* CUSGridLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSGridLayoutSampleViewController.xib; sourceTree = "<group>"; };
@@ -521,6 +524,8 @@
 				2A7A6BA11947F7CD00529E51 /* CUS9GridViewController.m */,
 				2A7A6BA31947F7D700529E51 /* CUSPassViewController.h */,
 				2A7A6BA41947F7D700529E51 /* CUSPassViewController.m */,
+				2A5895A319885AF4001731DB /* CUSFlowViewController.h */,
+				2A5895A419885AF4001731DB /* CUSFlowViewController.m */,
 			);
 			path = typical;
 			sourceTree = "<group>";
@@ -706,6 +711,7 @@
 				2A7A6BA51947F7D700529E51 /* CUSPassViewController.m in Sources */,
 				2A7A6B7F1947F6F500529E51 /* CUSRowLayoutSampleViewController.m in Sources */,
 				2A7A6B831947F6F500529E51 /* CUSFillLayoutSampleViewController.m in Sources */,
+				2A5895A519885AF4001731DB /* CUSFlowViewController.m in Sources */,
 				2A7A6B961947F7A600529E51 /* CUSTowViewDividedViewController.m in Sources */,
 				2A7A6B8E1947F6F500529E51 /* CUSLayoutManagerSampleViewController.m in Sources */,
 				2A7A6B8B1947F6F500529E51 /* CUSLayoutSampleFactory.m in Sources */,

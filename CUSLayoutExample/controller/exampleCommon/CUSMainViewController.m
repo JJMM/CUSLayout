@@ -40,6 +40,7 @@
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Single View Fill",@"",@"CUSSingleViewFillViewController", nil]];
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Tow View Divided",@"",@"CUSTowViewDividedViewController", nil]];
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Three View Extend",@"",@"CUSThreeViewExtendViewController", nil]];
+        [groupArray3 addObject:[NSArray arrayWithObjects:@"Scroll Flow View",@"",@"CUSFlowViewController", nil]];
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Multi View Divided",@"",@"CUSMultiViewDividedViewController", nil]];
         [groupArray3 addObject:[NSArray arrayWithObjects:@"Waterfall",@"",@"CUSWaterfallViewController", nil]];
         
