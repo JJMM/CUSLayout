@@ -27,7 +27,7 @@
     scrollView.scrollEnabled = YES;
     scrollView.showsVerticalScrollIndicator = YES;
     scrollView.delegate = self;
-    scrollView.layoutFrame = CUSLAYOUT.share_linnerLayout_V;
+    scrollView.layoutFrame = CUSLAYOUT.share_linearLayout_V;
     [self.view addSubview:scrollView];
     [self addMoreControls];
     
@@ -42,7 +42,7 @@
 -(void)addMoreControls{
     UIView *subView = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button %i",self.pageCounter]];
     subView.frame = CGRectMake(0, -44, 320, 44);
-    CUSLinnerData *topData = [[CUSLinnerData alloc]init];
+    CUSLinearData *topData = [[CUSLinearData alloc]init];
     topData.height = 44;
     subView.layoutData = topData;
     [scrollView addSubview:subView];

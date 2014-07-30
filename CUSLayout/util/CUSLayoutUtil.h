@@ -16,8 +16,8 @@
 #import "CUSLayoutData.h"
 
 #import "CUSFillLayout.h"
-#import "CUSLinnerLayout.h"
-#import "CUSLinnerData.h"
+#import "CUSLinearLayout.h"
+#import "CUSLinearData.h"
 #import "CUSRowLayout.h"
 #import "CUSRowData.h"
 #import "CUSTableLayout.h"
@@ -34,9 +34,9 @@
 @property (nonatomic,strong) CUSFillLayout *share_fillLayout_H;
 @property (nonatomic,strong) CUSFillLayout *share_fillLayout_V;
 
-@property (nonatomic,strong) CUSLinnerLayout *share_linnerLayout_H;
-@property (nonatomic,strong) CUSLinnerLayout *share_linnerLayout_V;
-@property (nonatomic,strong) CUSLinnerData *share_linnerData;
+@property (nonatomic,strong) CUSLinearLayout *share_linearLayout_H;
+@property (nonatomic,strong) CUSLinearLayout *share_linearLayout_V;
+@property (nonatomic,strong) CUSLinearData *share_linearData;
 
 @property (nonatomic,strong) CUSRowLayout *share_rowLayout_H;
 @property (nonatomic,strong) CUSRowLayout *share_rowLayout_V;

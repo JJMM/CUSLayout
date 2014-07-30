@@ -12,15 +12,15 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.view.layoutFrame = CUSLAYOUT.share_linnerLayout_V;
+    self.view.layoutFrame = CUSLAYOUT.share_linearLayout_V;
     UIView *topView = [[UIView alloc]init];
-    CUSLinnerData *topData = [[CUSLinnerData alloc]init];
+    CUSLinearData *topData = [[CUSLinearData alloc]init];
     topData.height = 44;
     topView.layoutData = topData;
     [self.view addSubview:topView];
     
     UIView *centerView = [CUSLayoutSampleFactory createControl:@"center"];
-    CUSLinnerData *centerData = [[CUSLinnerData alloc]init];
+    CUSLinearData *centerData = [[CUSLinearData alloc]init];
     centerData.fill = YES;
     centerView.layoutData = centerData;
     [self.view addSubview:centerView];

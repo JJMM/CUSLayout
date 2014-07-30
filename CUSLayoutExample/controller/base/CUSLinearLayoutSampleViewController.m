@@ -1,14 +1,14 @@
 //
-//  CUSLinnerLayoutSampleViewController.m
+//  CUSLinearLayoutSampleViewController.m
 //  CUSLayout
 //
 //  Created by zhangyu on 13-4-16.
 //  Copyright (c) 2013年 zhangyu. All rights reserved.
 //
 
-#import "CUSLinnerLayoutSampleViewController.h"
+#import "CUSLinearLayoutSampleViewController.h"
  
-@implementation CUSLinnerLayoutSampleViewController
+@implementation CUSLinearLayoutSampleViewController
 @synthesize contentView;
 
 - (void)viewDidLoad{
@@ -18,23 +18,23 @@
     for (int i = 0; i < controlCounter; i++) {
         UIView *button = [CUSLayoutSampleFactory createControl:[NSString stringWithFormat:@"button%i",i]];
         if(i == controlCounter - 2){
-            CUSLinnerData *layoutData = [[CUSLinnerData alloc]init];
+            CUSLinearData *layoutData = [[CUSLinearData alloc]init];
             layoutData.fill = YES;
             button.layoutData = layoutData;
         }else{
-            button.layoutData = CUSLAYOUT.share_linnerData;
+            button.layoutData = CUSLAYOUT.share_linearData;
         }
         [self.contentView addSubview:button];
         
         
     }
-    CUSLinnerLayout *layout = [[CUSLinnerLayout alloc]init];
+    CUSLinearLayout *layout = [[CUSLinearLayout alloc]init];
     self.contentView.layoutFrame = layout;
 }
 
 -(IBAction)toolItemClicked:(id)sender{
     UIBarButtonItem *btn = (UIBarButtonItem *)sender;
-    CUSLinnerLayout *layout = (CUSLinnerLayout *)self.contentView.layoutFrame;
+    CUSLinearLayout *layout = (CUSLinearLayout *)self.contentView.layoutFrame;
     if(btn.tag == 0){
         if(layout.type == CUSLayoutTypeHorizontal){
             layout.type = CUSLayoutTypeVertical;

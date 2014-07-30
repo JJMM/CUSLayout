@@ -13,7 +13,7 @@
 #import "CUSLayoutConstant.h"
 
 /**
- @class CUSLinnerLayout
+ @class CUSLinearLayout
  @abstract The subview in the parent view layout to a row or column
  */
 @interface CUSRowLayout : CUSLayoutFrame

@@ -3,9 +3,9 @@
  @copyright Copyright (c) 2013 zhangyu. All rights reserved.
  */
 
-#import "CUSLinnerLayout.h"
-#import "CUSLinnerData.h"
-@implementation CUSLinnerLayout
+#import "CUSLinearLayout.h"
+#import "CUSLinearData.h"
+@implementation CUSLinearLayout
 @synthesize type;
 @synthesize alignment;
 @synthesize spacing;
@@ -177,7 +177,7 @@
     if(!control){
         return NO;
     }
-    CUSLinnerData *data = [self getLayoutDataByControll:control];
+    CUSLinearData *data = [self getLayoutDataByControll:control];
     if(data){
         if(data.fill){
             return YES;
@@ -198,7 +198,7 @@
 
 -(CGSize)computeChildSize:(UIView *)control wHint:(CGFloat)wHint hHint:(CGFloat)hHint{
     CGSize size = CGSizeMake(0, 0);
-	CUSLinnerData *data = [self getLayoutDataByControll:control];
+	CUSLinearData *data = [self getLayoutDataByControll:control];
 	if (data != nil) {
 		wHint = data.width;
 		hHint = data.height;
@@ -214,11 +214,11 @@
 	}
     return size;
 }
--(CUSLinnerData *)getLayoutDataByControll:(UIView *)control{
+-(CUSLinearData *)getLayoutDataByControll:(UIView *)control{
     CUSLayoutData *data = [control getLayoutData];
     if (data) {
-        if([data isKindOfClass:[CUSLinnerData class]]){
-            return (CUSLinnerData *)data;
+        if([data isKindOfClass:[CUSLinearData class]]){
+            return (CUSLinearData *)data;
         }
     }
     return nil;

@@ -1,5 +1,5 @@
 /**
- @header CUSLinnerLayout.h
+ @header CUSLinearLayout.h
  @abstract
  @code
  
@@ -13,10 +13,10 @@
 #import "CUSLayoutConstant.h"
 
 /**
- @class CUSLinnerLayout
- @abstract A simple and efficient layout.Similar to HTML layout or Android LinnerLayout.
+ @class CUSLinearLayout
+ @abstract A simple and efficient layout.Similar to HTML layout or Android LinearLayout.
  */
-@interface CUSLinnerLayout : CUSLayoutFrame
+@interface CUSLinearLayout : CUSLayoutFrame
 @property (nonatomic,assign) CUSLayoutType type;//Default:CUSLayoutTypeVertical
 @property (nonatomic,assign) CUSLayoutAlignmentType alignment;//Default:CUSLayoutAlignmentFill
 @property (nonatomic,assign) CGFloat spacing;//Default:5

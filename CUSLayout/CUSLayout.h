@@ -16,8 +16,8 @@
 #import "CUSLayoutData.h"
 
 #import "CUSFillLayout.h"
-#import "CUSLinnerLayout.h"
-#import "CUSLinnerData.h"
+#import "CUSLinearLayout.h"
+#import "CUSLinearData.h"
 #import "CUSRowLayout.h"
 #import "CUSRowData.h"
 #import "CUSTableLayout.h"

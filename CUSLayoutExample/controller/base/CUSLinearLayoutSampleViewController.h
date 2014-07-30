@@ -1,5 +1,5 @@
 //
-//  CUSLinnerLayoutSampleViewController.h
+//  CUSLinearLayoutSampleViewController.h
 //  CUSLayout
 //
 //  Created by zhangyu on 13-4-16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CUSLayoutSampleFactory.h"
-@interface CUSLinnerLayoutSampleViewController : CUSViewController
+@interface CUSLinearLayoutSampleViewController : CUSViewController
 @property (nonatomic,strong) IBOutlet UIView *contentView;
 
 -(IBAction)toolItemClicked:(id)sender;

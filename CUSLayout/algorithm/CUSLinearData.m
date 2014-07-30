@@ -3,9 +3,9 @@
  @copyright Copyright (c) 2013 zhangyu. All rights reserved.
  */
 
-#import "CUSLinnerData.h"
+#import "CUSLinearData.h"
 
-@implementation CUSLinnerData
+@implementation CUSLinearData
 @synthesize width;
 @synthesize height;
 @synthesize fill;

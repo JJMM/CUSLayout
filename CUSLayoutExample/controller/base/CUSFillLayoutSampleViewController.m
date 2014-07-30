@@ -22,7 +22,7 @@
     CUSFillLayout *layout = [[CUSFillLayout alloc]init];
     self.contentView.layoutFrame = layout;
     
-//    CUSLinnerLayout *viewLayout = [[CUSLinnerLayout alloc]init];
+//    CUSLinearLayout *viewLayout = [[CUSLinearLayout alloc]init];
 //    viewLayout.spacing = 0;
 //    self.view.layoutFrame = viewLayout;
     

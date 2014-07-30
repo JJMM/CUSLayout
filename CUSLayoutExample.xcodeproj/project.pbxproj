@@ -31,8 +31,8 @@
 		2A333092192C8F6F00998BBF /* UIView+CUSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333089192C8F6F00998BBF /* UIView+CUSLayout.m */; };
 		2A333093192C8F6F00998BBF /* CUSLayoutObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33308B192C8F6F00998BBF /* CUSLayoutObject+Util.m */; };
 		2A3330AB192C8FB000998BBF /* CUSFillLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A333098192C8FB000998BBF /* CUSFillLayout.m */; };
-		2A3330AC192C8FB000998BBF /* CUSLinnerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309A192C8FB000998BBF /* CUSLinnerData.m */; };
-		2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */; };
+		2A3330AC192C8FB000998BBF /* CUSLinearData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309A192C8FB000998BBF /* CUSLinearData.m */; };
+		2A3330AD192C8FB000998BBF /* CUSLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309C192C8FB000998BBF /* CUSLinearLayout.m */; };
 		2A3330AE192C8FB000998BBF /* CUSRowData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33309E192C8FB000998BBF /* CUSRowData.m */; };
 		2A3330AF192C8FB000998BBF /* CUSRowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A0192C8FB000998BBF /* CUSRowLayout.m */; };
 		2A3330B0192C8FB000998BBF /* CUSTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3330A2192C8FB000998BBF /* CUSTableData.m */; };
@@ -54,8 +54,8 @@
 		2A7A6B821947F6F500529E51 /* CUSTableLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B611947F6F500529E51 /* CUSTableLayoutSampleViewController.xib */; };
 		2A7A6B831947F6F500529E51 /* CUSFillLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B641947F6F500529E51 /* CUSFillLayoutSampleViewController.m */; };
 		2A7A6B841947F6F500529E51 /* CUSFillLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B651947F6F500529E51 /* CUSFillLayoutSampleViewController.xib */; };
-		2A7A6B851947F6F500529E51 /* CUSLinnerLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B671947F6F500529E51 /* CUSLinnerLayoutSampleViewController.m */; };
-		2A7A6B861947F6F500529E51 /* CUSLinnerLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B681947F6F500529E51 /* CUSLinnerLayoutSampleViewController.xib */; };
+		2A7A6B851947F6F500529E51 /* CUSLinearLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B671947F6F500529E51 /* CUSLinearLayoutSampleViewController.m */; };
+		2A7A6B861947F6F500529E51 /* CUSLinearLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B681947F6F500529E51 /* CUSLinearLayoutSampleViewController.xib */; };
 		2A7A6B871947F6F500529E51 /* CUSStackLayoutSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B6A1947F6F500529E51 /* CUSStackLayoutSampleViewController.m */; };
 		2A7A6B881947F6F500529E51 /* CUSStackLayoutSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A6B6B1947F6F500529E51 /* CUSStackLayoutSampleViewController.xib */; };
 		2A7A6B891947F6F500529E51 /* CUSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6B6E1947F6F500529E51 /* CUSAboutViewController.m */; };
@@ -147,10 +147,10 @@
 		2A333096192C8F8000998BBF /* CUSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLayout.h; sourceTree = "<group>"; };
 		2A333097192C8FB000998BBF /* CUSFillLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayout.h; sourceTree = "<group>"; };
 		2A333098192C8FB000998BBF /* CUSFillLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayout.m; sourceTree = "<group>"; };
-		2A333099192C8FB000998BBF /* CUSLinnerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerData.h; sourceTree = "<group>"; };
-		2A33309A192C8FB000998BBF /* CUSLinnerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerData.m; sourceTree = "<group>"; };
-		2A33309B192C8FB000998BBF /* CUSLinnerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerLayout.h; sourceTree = "<group>"; };
-		2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerLayout.m; sourceTree = "<group>"; };
+		2A333099192C8FB000998BBF /* CUSLinearData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinearData.h; sourceTree = "<group>"; };
+		2A33309A192C8FB000998BBF /* CUSLinearData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinearData.m; sourceTree = "<group>"; };
+		2A33309B192C8FB000998BBF /* CUSLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinearLayout.h; sourceTree = "<group>"; };
+		2A33309C192C8FB000998BBF /* CUSLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinearLayout.m; sourceTree = "<group>"; };
 		2A33309D192C8FB000998BBF /* CUSRowData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRowData.h; sourceTree = "<group>"; };
 		2A33309E192C8FB000998BBF /* CUSRowData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSRowData.m; sourceTree = "<group>"; };
 		2A33309F192C8FB000998BBF /* CUSRowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSRowLayout.h; sourceTree = "<group>"; };
@@ -184,9 +184,9 @@
 		2A7A6B631947F6F500529E51 /* CUSFillLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSFillLayoutSampleViewController.h; sourceTree = "<group>"; };
 		2A7A6B641947F6F500529E51 /* CUSFillLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSFillLayoutSampleViewController.m; sourceTree = "<group>"; };
 		2A7A6B651947F6F500529E51 /* CUSFillLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSFillLayoutSampleViewController.xib; sourceTree = "<group>"; };
-		2A7A6B661947F6F500529E51 /* CUSLinnerLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinnerLayoutSampleViewController.h; sourceTree = "<group>"; };
-		2A7A6B671947F6F500529E51 /* CUSLinnerLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinnerLayoutSampleViewController.m; sourceTree = "<group>"; };
-		2A7A6B681947F6F500529E51 /* CUSLinnerLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLinnerLayoutSampleViewController.xib; sourceTree = "<group>"; };
+		2A7A6B661947F6F500529E51 /* CUSLinearLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSLinearLayoutSampleViewController.h; sourceTree = "<group>"; };
+		2A7A6B671947F6F500529E51 /* CUSLinearLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSLinearLayoutSampleViewController.m; sourceTree = "<group>"; };
+		2A7A6B681947F6F500529E51 /* CUSLinearLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSLinearLayoutSampleViewController.xib; sourceTree = "<group>"; };
 		2A7A6B691947F6F500529E51 /* CUSStackLayoutSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSStackLayoutSampleViewController.h; sourceTree = "<group>"; };
 		2A7A6B6A1947F6F500529E51 /* CUSStackLayoutSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSStackLayoutSampleViewController.m; sourceTree = "<group>"; };
 		2A7A6B6B1947F6F500529E51 /* CUSStackLayoutSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CUSStackLayoutSampleViewController.xib; sourceTree = "<group>"; };
@@ -380,10 +380,10 @@
 				2A333098192C8FB000998BBF /* CUSFillLayout.m */,
 				2A3330A5192C8FB000998BBF /* CUSStackLayout.h */,
 				2A3330A6192C8FB000998BBF /* CUSStackLayout.m */,
-				2A33309B192C8FB000998BBF /* CUSLinnerLayout.h */,
-				2A33309C192C8FB000998BBF /* CUSLinnerLayout.m */,
-				2A333099192C8FB000998BBF /* CUSLinnerData.h */,
-				2A33309A192C8FB000998BBF /* CUSLinnerData.m */,
+				2A33309B192C8FB000998BBF /* CUSLinearLayout.h */,
+				2A33309C192C8FB000998BBF /* CUSLinearLayout.m */,
+				2A333099192C8FB000998BBF /* CUSLinearData.h */,
+				2A33309A192C8FB000998BBF /* CUSLinearData.m */,
 				2A33309F192C8FB000998BBF /* CUSRowLayout.h */,
 				2A3330A0192C8FB000998BBF /* CUSRowLayout.m */,
 				2A33309D192C8FB000998BBF /* CUSRowData.h */,
@@ -469,9 +469,9 @@
 				2A7A6B631947F6F500529E51 /* CUSFillLayoutSampleViewController.h */,
 				2A7A6B641947F6F500529E51 /* CUSFillLayoutSampleViewController.m */,
 				2A7A6B651947F6F500529E51 /* CUSFillLayoutSampleViewController.xib */,
-				2A7A6B661947F6F500529E51 /* CUSLinnerLayoutSampleViewController.h */,
-				2A7A6B671947F6F500529E51 /* CUSLinnerLayoutSampleViewController.m */,
-				2A7A6B681947F6F500529E51 /* CUSLinnerLayoutSampleViewController.xib */,
+				2A7A6B661947F6F500529E51 /* CUSLinearLayoutSampleViewController.h */,
+				2A7A6B671947F6F500529E51 /* CUSLinearLayoutSampleViewController.m */,
+				2A7A6B681947F6F500529E51 /* CUSLinearLayoutSampleViewController.xib */,
 				2A7A6B691947F6F500529E51 /* CUSStackLayoutSampleViewController.h */,
 				2A7A6B6A1947F6F500529E51 /* CUSStackLayoutSampleViewController.m */,
 				2A7A6B6B1947F6F500529E51 /* CUSStackLayoutSampleViewController.xib */,
@@ -667,7 +667,7 @@
 				2A7A6B881947F6F500529E51 /* CUSStackLayoutSampleViewController.xib in Resources */,
 				2A7A6B8A1947F6F500529E51 /* CUSAboutViewController.xib in Resources */,
 				2A7A6B801947F6F500529E51 /* CUSRowLayoutSampleViewController.xib in Resources */,
-				2A7A6B861947F6F500529E51 /* CUSLinnerLayoutSampleViewController.xib in Resources */,
+				2A7A6B861947F6F500529E51 /* CUSLinearLayoutSampleViewController.xib in Resources */,
 				2A3330F4192C912D00998BBF /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,7 +705,7 @@
 				2A7A6B9F1947F7C300529E51 /* CUSWaterfallViewController.m in Sources */,
 				2A7A6B931947F79B00529E51 /* CUSSingleViewFillViewController.m in Sources */,
 				2A7A6B991947F7B100529E51 /* CUSThreeViewExtendViewController.m in Sources */,
-				2A7A6B851947F6F500529E51 /* CUSLinnerLayoutSampleViewController.m in Sources */,
+				2A7A6B851947F6F500529E51 /* CUSLinearLayoutSampleViewController.m in Sources */,
 				2A7A6B8C1947F6F500529E51 /* CUSMainViewController.m in Sources */,
 				2A7A6B7D1947F6F500529E51 /* CUSGridLayoutSampleViewController.m in Sources */,
 				2A7A6BA51947F7D700529E51 /* CUSPassViewController.m in Sources */,
@@ -737,7 +737,7 @@
 				2A3330AE192C8FB000998BBF /* CUSRowData.m in Sources */,
 				2A3330B4192C8FB000998BBF /* CUSGridData.m in Sources */,
 				2A3330ED192C904C00998BBF /* CUSLayoutDesignerView.m in Sources */,
-				2A3330AD192C8FB000998BBF /* CUSLinnerLayout.m in Sources */,
+				2A3330AD192C8FB000998BBF /* CUSLinearLayout.m in Sources */,
 				2A333091192C8F6F00998BBF /* CUSLayoutData.m in Sources */,
 				2A3330B2192C8FB000998BBF /* CUSStackLayout.m in Sources */,
 				2A3330B1192C8FB000998BBF /* CUSTableLayout.m in Sources */,
@@ -747,7 +747,7 @@
 				2A3330B3192C8FB000998BBF /* CUSGridLayout.m in Sources */,
 				2A333092192C8F6F00998BBF /* UIView+CUSLayout.m in Sources */,
 				2A3330AF192C8FB000998BBF /* CUSRowLayout.m in Sources */,
-				2A3330AC192C8FB000998BBF /* CUSLinnerData.m in Sources */,
+				2A3330AC192C8FB000998BBF /* CUSLinearData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

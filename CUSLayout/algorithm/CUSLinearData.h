@@ -1,5 +1,5 @@
 /**
- @header CUSLinnerData.h
+ @header CUSLinearData.h
  @abstract
  @code
  
@@ -13,10 +13,10 @@
 #import "CUSLayoutConstant.h"
 
 /**
- @class CUSLinnerData
+ @class CUSLinearData
  @abstract
  */
-@interface CUSLinnerData : CUSLayoutData
+@interface CUSLinearData : CUSLayoutData
 @property (nonatomic,assign) CGFloat width;//Default:CUS_LAY_DEFAULT
 @property (nonatomic,assign) CGFloat height;//Default:CUS_LAY_DEFAULT
 @property (nonatomic,assign) BOOL fill;//Default:NO

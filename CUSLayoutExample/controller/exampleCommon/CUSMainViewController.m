@@ -20,7 +20,7 @@
         NSMutableArray *groupArray0 = [NSMutableArray array];
          [groupArray0 addObject:[NSArray arrayWithObjects:@"FillLayout",@"Simple, easy to use, efficient",@"CUSFillLayoutSampleViewController", nil]];
         [groupArray0 addObject:[NSArray arrayWithObjects:@"StackLayout",@"Cascading Display",@"CUSStackLayoutSampleViewController", nil]];
-        [groupArray0 addObject:[NSArray arrayWithObjects:@"LinnerLayout",@"Simple to HTML or LinnerLayout in Android",@"CUSLinnerLayoutSampleViewController", nil]];
+        [groupArray0 addObject:[NSArray arrayWithObjects:@"LinearLayout",@"Simple to HTML or LinearLayout in Android",@"CUSLinearLayoutSampleViewController", nil]];
         [self.dataItems addObject:groupArray0];
         
         NSMutableArray *groupArray1 = [NSMutableArray array];

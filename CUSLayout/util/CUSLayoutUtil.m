@@ -10,9 +10,9 @@ static CUSLayoutUtil  *CUSLayoutInstance;
 @synthesize share_fillLayout_H;
 @synthesize share_fillLayout_V;
 
-@synthesize share_linnerLayout_H;
-@synthesize share_linnerLayout_V;
-@synthesize share_linnerData;
+@synthesize share_linearLayout_H;
+@synthesize share_linearLayout_V;
+@synthesize share_linearData;
 
 @synthesize share_rowLayout_H;
 @synthesize share_rowLayout_V;
@@ -33,11 +33,11 @@ static CUSLayoutUtil  *CUSLayoutInstance;
         
         self.share_rowData = [[CUSRowData alloc]init];
         
-        self.share_linnerLayout_H = [[CUSLinnerLayout alloc]init];
-        self.share_linnerLayout_H.type = CUSLayoutTypeHorizontal;
-        self.share_linnerLayout_V = [[CUSLinnerLayout alloc]init];
+        self.share_linearLayout_H = [[CUSLinearLayout alloc]init];
+        self.share_linearLayout_H.type = CUSLayoutTypeHorizontal;
+        self.share_linearLayout_V = [[CUSLinearLayout alloc]init];
 
-        self.share_linnerData = [[CUSLinnerData alloc]init];
+        self.share_linearData = [[CUSLinearData alloc]init];
         self.share_tableData =  [[CUSTableData alloc]init];
         
     }

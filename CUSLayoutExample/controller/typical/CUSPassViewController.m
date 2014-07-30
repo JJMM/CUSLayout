@@ -19,11 +19,11 @@
 @synthesize bottomView;
 -(void)viewDidLoad{
     [super viewDidLoad];
-    CUSLinnerLayout *layout = [[CUSLinnerLayout alloc]init];
+    CUSLinearLayout *layout = [[CUSLinearLayout alloc]init];
     self.view.layoutFrame = layout;
-    CUSLinnerData *fillData = [[CUSLinnerData alloc]init];
+    CUSLinearData *fillData = [[CUSLinearData alloc]init];
     fillData.fill = YES;
-    CUSLinnerData *centerData = [[CUSLinnerData alloc]init];
+    CUSLinearData *centerData = [[CUSLinearData alloc]init];
     centerData.height = 50;
     
     topView = [[UIView alloc]init];
