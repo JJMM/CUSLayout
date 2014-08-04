@@ -21,4 +21,23 @@
 @property (nonatomic,assign) CGFloat height;//Default:CUS_LAY_DEFAULT
 @property (nonatomic,assign) BOOL fill;//Default:NO
 
+- (instancetype)initWithWidth:(CGFloat)width;
+
+- (instancetype)initWithHeight:(CGFloat)height;
+
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height;
+
+- (instancetype)initWithFill:(CGFloat)fill;
+@end
+
+
+@interface CUSLinearData(Factory)
+
++ (CUSLinearData *)createWithWidth:(CGFloat)width;
+
++ (CUSLinearData *)createWithHeight:(CGFloat)height;
+
++ (CUSLinearData *)createWithWidth:(CGFloat)width height:(CGFloat)height;
+
++ (CUSLinearData *)createWithFill:(CGFloat)fill;
 @end
